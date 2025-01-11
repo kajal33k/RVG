@@ -1,291 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('components.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Walkover Careers</title>
+@section('content')
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateZ(20px); }
+            50% { transform: translateY(-15px) translateZ(30px); }
+        }
 
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+        .slider-container {
+            transform-style: preserve-3d;
+            perspective: 2000px;
+        }
 
-    <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/img/logo (2).png') }}" type="image/x-icon">
-</head>
+        .slide {
+            transform-style: preserve-3d;
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+        }
 
-<body class="bg-white text-gray-800">
-    <!-- Navigation Bar -->
-    <nav class="bg-transparent absolute w-full top-0 z-10">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-bold">
-                <img src="{{ asset('assets/img/logo.png') }}" alt="Walkover Logo" class="w-44 h-auto">
-            </a>
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0) rotateY(0) translateZ(0);
+        }
 
-            <!-- Navigation Links -->
-            <ul class="flex space-x-6">
-                <li><a href="#" class="text-white hover:text-gray-300">HOME</a></li>
-                <li><a href="#" class="text-white hover:text-gray-300">JOBS</a></li>
-            </ul>
+        .slide.prev {
+            opacity: 0.7;
+            transform: translateX(-100%) rotateY(30deg) translateZ(-200px);
+        }
+
+        .slide.next {
+            opacity: 0.7;
+            transform: translateX(100%) rotateY(-30deg) translateZ(-200px);
+        }
+
+        .slide-image {
+            transform-style: preserve-3d;
+            transition: all 0.6s ease;
+            box-shadow: 
+                20px 20px 60px rgba(0,0,0,0.3),
+                -20px -20px 60px rgba(255,255,255,0.3);
+        }
+
+        .slide-content {
+            transform: translateZ(50px);
+            transition: all 0.6s ease;
+        }
+
+        .nav-button {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-5px) translateZ(20px);
+            box-shadow: 
+                0 10px 20px rgba(0,0,0,0.2),
+                0 6px 6px rgba(0,0,0,0.1);
+        }
+
+        .thumbnail {
+            transition: all 0.4s ease;
+            transform-style: preserve-3d;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1) translateZ(20px);
+        }
+
+        .thumbnail.active {
+            border: 3px solid #ef4444;
+            transform: scale(1.1) translateZ(30px);
+        }
+
+        @keyframes spotlight {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 0.3; }
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                transparent,
+                rgba(255,255,255,0.3),
+                transparent
+            );
+            transform: skewX(-25deg);
+            animation: spotlight 3s infinite;
+        }
+    </style>
+
+    <div class="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
+        <!-- Hero Section -->
+        <div class="container mx-auto px-6 lg:px-16 text-center mb-16">
+            <h1 class="text-5xl font-bold text-black mb-6">Our Gallery</h1>
+            <p class="text-xl text-gray-700">Experience our collection in stunning 3D presentation</p>
         </div>
-    </nav>
 
-    <!-- Banner Section -->
-    <section class="relative">
-        <img src="{{ asset('assets/img/banner.jpeg') }}" alt="Career opportunities at Walkover" class="w-full h-[600px] object-cover">
+        <!-- Main Slider -->
+        <div class="container mx-auto px-6 lg:px-16 relative">
+            <div class="slider-container h-[600px] relative overflow-hidden">
+                <!-- Slides -->
+                <div class="slide active">
+                    <div class="relative rounded-3xl overflow-hidden">
+                        <img src="{{ asset('assets/img/about.png') }}" class="slide-image w-full h-[600px] object-cover rounded-3xl" alt="Slide 1">
+                        <div class="slide-content absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/80 to-transparent">
+                            <h2 class="text-3xl font-bold text-white mb-4">Elegant Collection</h2>
+                            <p class="text-lg text-gray-200">Discover our finest pieces crafted with precision</p>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Text Overlay -->
-        <div class="absolute inset-0 flex items-center justify-center">
-            <div class="text-center bg-black bg-opacity-60 text-white p-8 rounded-md w-full h-full flex flex-col items-center justify-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Find the Career of Your Dreams</h1>
-                <h2 class="text-xl font-semibold mb-4">We are Walkover. A Journey to Innovation!</h2>
-                <p class="text-lg mb-6 leading-relaxed">
-                    We know that finding a meaningful and rewarding job can be a long journey. Our goal is to make that process as easy as possible for you and to create a work environment that's satisfying—one where you'll look forward to coming every day. Start your journey with us by exploring available opportunities.
-                </p>
-                <a href="#jobs" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 transition duration-200 rounded-md">
-                    View Openings
-                </a>
+                <div class="slide next">
+                    <div class="relative rounded-3xl overflow-hidden">
+                        <img src="{{ asset('assets/img/calling.jpg') }}" class="slide-image w-full h-[600px] object-cover rounded-3xl" alt="Slide 2">
+                        <div class="slide-content absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/80 to-transparent">
+                            <h2 class="text-3xl font-bold text-white mb-4">Modern Design</h2>
+                            <p class="text-lg text-gray-200">Contemporary styles for modern aesthetics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide prev">
+                    <div class="relative rounded-3xl overflow-hidden">
+                        <img src="{{ asset('assets/img/imager.jpg') }}" class="slide-image w-full h-[600px] object-cover rounded-3xl" alt="Slide 3">
+                        <div class="slide-content absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/80 to-transparent">
+                            <h2 class="text-3xl font-bold text-white mb-4">Classic Beauty</h2>
+                            <p class="text-lg text-gray-200">Timeless pieces that never go out of style</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="nav-button absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 text-black p-4 rounded-full shadow-xl">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="nav-button absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 text-black p-4 rounded-full shadow-xl">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="container mx-auto px-6 lg:px-16 mt-12">
+            <div class="flex justify-center gap-6">
+                <div class="thumbnail active w-24 h-24 rounded-xl overflow-hidden cursor-pointer">
+                    <img src="{{ asset('assets/img/slide1.jpg') }}" class="w-full h-full object-cover" alt="Thumbnail 1">
+                </div>
+                <div class="thumbnail w-24 h-24 rounded-xl overflow-hidden cursor-pointer">
+                    <img src="{{ asset('assets/img/slide2.jpg') }}" class="w-full h-full object-cover" alt="Thumbnail 2">
+                </div>
+                <div class="thumbnail w-24 h-24 rounded-xl overflow-hidden cursor-pointer">
+                    <img src="{{ asset('assets/img/slide3.jpg') }}" class="w-full h-full object-cover" alt="Thumbnail 3">
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- Filters and Job Listings -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto p-6">
-        <!-- Filters Section -->
-        <section class="bg-white p-4 shadow-md rounded-lg">
-            <h2 class="text-2xl font-semibold mb-4">Filters</h2>
-
-            <div class="space-y-4">
-                <!-- Job Type Filter -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-2">Job Type</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-red-500">
-                                <span class="ml-2 text-gray-700">Full time (5)</span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Industry Filter -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-2">Industry</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-red-500">
-                                <span class="ml-2 text-gray-700">IT Services (4)</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-red-500">
-                                <span class="ml-2 text-gray-700">Technology (1)</span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- City Filter -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-2">City</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-red-500">
-                                <span class="ml-2 text-gray-700">Indore (5)</span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Country Filter -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-2">Country</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-red-500">
-                                <span class="ml-2 text-gray-700">India (5)</span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Job Search and Listings Section -->
-        <section class="space-y-6">
-            <!-- Job Search Form -->
-            <div class="bg-white p-6 shadow-md rounded-lg">
-                <h1 class="text-xl font-bold mb-2">Join Us</h1>
-                <p class="text-gray-600 mb-4">Current Openings</p>
-                <form action="/search-jobs" method="GET" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <!-- Job Title Input -->
-                    <div>
-                        <label for="job-title" class="block text-sm font-medium text-gray-700 mb-1">What</label>
-                        <input type="text" id="job-title" name="job_title" placeholder="Job title or skill"
-                            class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-500">
-                    </div>
-
-                    <!-- Location Input -->
-                    <div>
-                        <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Where</label>
-                        <input type="text" id="location" name="location" placeholder="City, state/province, or country"
-                            class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-500">
-                    </div>
-
-                    <!-- Search Button -->
-                    <div class="flex items-end">
-                        <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-200">
-                            Search
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Job Listings -->
-            <div class="space-y-0 overflow-y-scroll max-h-[400px]">
-                <!-- Job Posting Card -->
-                <div class="bg-white shadow-md rounded-lg p-6 border border-gray-200">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <h2 class="text-2xl font-semibold text-gray-800">Sales Executive</h2>
-                            <p class="text-gray-600 mt-1">Indore, Madhya Pradesh, India</p>
-                            <p class="text-gray-500 text-sm mt-1">Experience: 0-1 year</p>
-                            <p class="text-gray-700 mt-4">
-                                We are looking for a competitive and trustworthy Sales Development Executive to help us build up our business activities for our in-house product.
-                            </p>
-                        </div>
-
-                        <div class="mt-6 md:mt-0 flex flex-col items-start md:items-end">
-                            <span class="inline-block bg-red-500 text-white text-sm font-semibold py-1 px-3 rounded-lg">Full time</span>
-                            <p class="text-gray-400 text-sm mt-2">Posted on: 05/28/2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                  <!-- Job Posting Card -->
-                  <div class="bg-white shadow-md rounded-lg p-6 border border-gray-200">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <h2 class="text-2xl font-semibold text-gray-800">Sales Executive</h2>
-                            <p class="text-gray-600 mt-1">Indore, Madhya Pradesh, India</p>
-                            <p class="text-gray-500 text-sm mt-1">Experience: 0-1 year</p>
-                            <p class="text-gray-700 mt-4">
-                                We are looking for a competitive and trustworthy Sales Development Executive to help us build up our business activities for our in-house product.
-                            </p>
-                        </div>
-
-                        <div class="mt-6 md:mt-0 flex flex-col items-start md:items-end">
-                            <span class="inline-block bg-red-500 text-white text-sm font-semibold py-1 px-3 rounded-lg">Full time</span>
-                            <p class="text-gray-400 text-sm mt-2">Posted on: 05/28/2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                  <!-- Job Posting Card -->
-                  <div class="bg-white shadow-md rounded-lg p-6 border border-gray-200">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <h2 class="text-2xl font-semibold text-gray-800">Sales Executive</h2>
-                            <p class="text-gray-600 mt-1">Indore, Madhya Pradesh, India</p>
-                            <p class="text-gray-500 text-sm mt-1">Experience: 0-1 year</p>
-                            <p class="text-gray-700 mt-4">
-                                We are looking for a competitive and trustworthy Sales Development Executive to help us build up our business activities for our in-house product.
-                            </p>
-                        </div>
-
-                        <div class="mt-6 md:mt-0 flex flex-col items-start md:items-end">
-                            <span class="inline-block bg-red-500 text-white text-sm font-semibold py-1 px-3 rounded-lg">Full time</span>
-                            <p class="text-gray-400 text-sm mt-2">Posted on: 05/28/2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                  <!-- Job Posting Card -->
-                  <div class="bg-white shadow-md rounded-lg p-6 border border-gray-200">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <h2 class="text-2xl font-semibold text-gray-800">Sales Executive</h2>
-                            <p class="text-gray-600 mt-1">Indore, Madhya Pradesh, India</p>
-                            <p class="text-gray-500 text-sm mt-1">Experience: 0-1 year</p>
-                            <p class="text-gray-700 mt-4">
-                                We are looking for a competitive and trustworthy Sales Development Executive to help us build up our business activities for our in-house product.
-                            </p>
-                        </div>
-
-                        <div class="mt-6 md:mt-0 flex flex-col items-start md:items-end">
-                            <span class="inline-block bg-red-500 text-white text-sm font-semibold py-1 px-3 rounded-lg">Full time</span>
-                            <p class="text-gray-400 text-sm mt-2">Posted on: 05/28/2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                  <!-- Job Posting Card -->
-                  <div class="bg-white shadow-md rounded-lg p-6 border border-gray-200">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <h2 class="text-2xl font-semibold text-gray-800">Sales Executive</h2>
-                            <p class="text-gray-600 mt-1">Indore, Madhya Pradesh, India</p>
-                            <p class="text-gray-500 text-sm mt-1">Experience: 0-1 year</p>
-                            <p class="text-gray-700 mt-4">
-                                We are looking for a competitive and trustworthy Sales Development Executive to help us build up our business activities for our in-house product.
-                            </p>
-                        </div>
-
-                        <div class="mt-6 md:mt-0 flex flex-col items-start md:items-end">
-                            <span class="inline-block bg-red-500 text-white text-sm font-semibold py-1 px-3 rounded-lg">Full time</span>
-                            <p class="text-gray-400 text-sm mt-2">Posted on: 05/28/2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                  <!-- Job Posting Card -->
-                  <div class="bg-white shadow-md rounded-lg p-6 border border-gray-200">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <h2 class="text-2xl font-semibold text-gray-800">Sales Executive</h2>
-                            <p class="text-gray-600 mt-1">Indore, Madhya Pradesh, India</p>
-                            <p class="text-gray-500 text-sm mt-1">Experience: 0-1 year</p>
-                            <p class="text-gray-700 mt-4">
-                                We are looking for a competitive and trustworthy Sales Development Executive to help us build up our business activities for our in-house product.
-                            </p>
-                        </div>
-
-                        <div class="mt-6 md:mt-0 flex flex-col items-start md:items-end">
-                            <span class="inline-block bg-red-500 text-white text-sm font-semibold py-1 px-3 rounded-lg">Full time</span>
-                            <p class="text-gray-400 text-sm mt-2">Posted on: 05/28/2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                  <!-- Job Posting Card -->
-                  <div class="bg-white shadow-md rounded-lg p-6 border border-gray-200">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <h2 class="text-2xl font-semibold text-gray-800">Sales Executive</h2>
-                            <p class="text-gray-600 mt-1">Indore, Madhya Pradesh, India</p>
-                            <p class="text-gray-500 text-sm mt-1">Experience: 0-1 year</p>
-                            <p class="text-gray-700 mt-4">
-                                We are looking for a competitive and trustworthy Sales Development Executive to help us build up our business activities for our in-house product.
-                            </p>
-                        </div>
-
-                        <div class="mt-6 md:mt-0 flex flex-col items-start md:items-end">
-                            <span class="inline-block bg-red-500 text-white text-sm font-semibold py-1 px-3 rounded-lg">Full time</span>
-                            <p class="text-gray-400 text-sm mt-2">Posted on: 05/28/2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Duplicate job cards for multiple listings -->
-            </div>
-        </section>
     </div>
-</body>
 
-</html>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const prevBtn = document.querySelector('.nav-button:first-child');
+            const nextBtn = document.querySelector('.nav-button:last-child');
+            let currentSlide = 0;
+
+            function updateSlides() {
+                slides.forEach((slide, index) => {
+                    slide.className = 'slide';
+                    if (index === currentSlide) {
+                        slide.classList.add('active');
+                    } else if (index === (currentSlide + 1) % slides.length) {
+                        slide.classList.add('next');
+                    } else {
+                        slide.classList.add('prev');
+                    }
+                });
+
+                thumbnails.forEach((thumb, index) => {
+                    thumb.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlides();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                updateSlides();
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            thumbnails.forEach((thumb, index) => {
+                thumb.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlides();
+                });
+            });
+
+            // Auto-play
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+@endsection
