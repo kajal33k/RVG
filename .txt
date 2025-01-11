@@ -1,256 +1,500 @@
-@extends('components.main')
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- First Section -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-16 px-6 lg:px-16 lg:mt-44 mt-24">
-        <div class="space-y-6" data-aos="fade-up" data-aos-duration="1000">
-            <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 poppins-medium">
-                We are a team of Developers, Designers, Innovators...
-            </h2>
-            <h1 class="text-4xl sm:text-5xl poppins-serif text-gray-900 drop-shadow-md">365 days 365 posters
-                your brand, your story , our design</h1>
-            <h2 class="text-xl sm:text-2xl poppins-extralight text-gray-700">A journey to innovation!</h2>
-            <div class="mt-2">
-                <a href="{{ route('frontend.join') }}">
-                    <button
-                        class="bg-red-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-black transition-colors duration-300 poppins-thin">Join
-                        us now</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RealVictoryGroups</title>
+
+    {{-- fonts --}}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Tailwind CSS via CDN (can be replaced with Vite if you're using a build process) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Vite directive to include compiled CSS, replace if necessary with your build system -->
+    @vite('resources/css/app.css')
+</head>
+
+<body class="flex flex-col  bg-[#F3F6E8] text-gray-900">
+    <style>
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .poppins-extralight {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .poppins-light {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .poppins-medium {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .poppins-extrabold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .poppins-black {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .poppins-thin-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .poppins-extralight-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        .poppins-light-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .poppins-regular-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .poppins-medium-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .poppins-semibold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .poppins-bold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .poppins-extrabold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .poppins-black-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+    </style>
+
+    
+    <!-- Include the header component -->
+
+    @include('components.header')
+
+    <!-- Main content section -->
+    <main class="flex-grow py-16">
+
+        @yield('content')
+    </main>
+
+    <!-- Include the footer component -->
+    @include('components.footer')
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
+
+
+
+// happines
+
+@extends('components.main')
+
+@section('content')
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(2deg); }
+            50% { transform: translateY(-10px) rotate(-2deg); }
+        }
+        
+        .card-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            backface-visibility: hidden;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+            box-shadow: 
+                20px 20px 60px #00000030,
+                -20px -20px 60px #ffffff50;
+        }
+        
+        .mission-card {
+            transform-style: preserve-3d;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            background: linear-gradient(145deg, #ffffff, #f3f3f3);
+        }
+        
+        .mission-card:hover {
+            transform: translateZ(20px) rotateX(10deg) rotateY(10deg);
+            box-shadow: 
+                20px 20px 60px #00000040,
+                -20px -20px 60px #ffffff60;
+        }
+        
+        .hanging-card {
+            animation: float 4s ease-in-out infinite;
+            box-shadow: 
+                0 10px 20px rgba(0,0,0,0.3),
+                0 6px 6px rgba(0,0,0,0.2);
+        }
+    </style>
+
+    <div class="bg-gray-100 py-16">
+        <!-- Hero Section -->
+        <div class="container mx-auto px-6 lg:px-16 text-center">
+            <h1 class="text-4xl font-bold text-black mb-4 transform transition-all hover:scale-105">About Us</h1>
+            <p class="text-lg text-gray-700">
+                Discover who we are, our mission, and what we strive to achieve every day.
+            </p>
+        </div>
+
+        <!-- 3D Cards Section -->
+        <div class="container mx-auto px-6 lg:px-16 mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Mission Card -->
+            <div class="mission-card p-8 rounded-2xl">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-black mb-4">Our Mission</h2>
+                    <p class="text-gray-700">
+                        To provide exceptional services that improve the lives of our clients.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vision Card -->
+            <div class="mission-card p-8 rounded-2xl">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-black mb-4">Our Vision</h2>
+                    <p class="text-gray-700">
+                        To lead the industry with innovation, integrity, and excellence.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Values Card -->
+            <div class="mission-card p-8 rounded-2xl">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-black mb-4">Our Values</h2>
+                    <p class="text-gray-700">
+                        Commitment, teamwork, and respect guide everything we do.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="container mx-auto px-6 lg:px-16 mt-16">
+            <h2 class="text-3xl font-bold text-center text-black mb-12">Meet Our Team</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Cards -->
+                <div class="team-card bg-white rounded-2xl shadow-xl transition-all duration-500">
+                    <img class="rounded-t-2xl w-full h-64 object-cover" src="{{ asset('assets/img/team-member-1.jpg') }}" alt="Team Member 1">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-black">John Doe</h3>
+                        <p class="text-gray-600">CEO</p>
+                    </div>
+                </div>
+
+                <div class="team-card bg-white rounded-2xl shadow-xl transition-all duration-500">
+                    <img class="rounded-t-2xl w-full h-64 object-cover" src="{{ asset('assets/img/team-member-2.jpg') }}" alt="Team Member 2">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-black">Jane Smith</h3>
+                        <p class="text-gray-600">CTO</p>
+                    </div>
+                </div>
+
+                <div class="team-card bg-white rounded-2xl shadow-xl transition-all duration-500">
+                    <img class="rounded-t-2xl w-full h-64 object-cover" src="{{ asset('assets/img/team-member-3.jpg') }}" alt="Team Member 3">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-black">Emily Johnson</h3>
+                        <p class="text-gray-600">CFO</p>
+                    </div>
+                </div>
+
+                <div class="team-card bg-white rounded-2xl shadow-xl transition-all duration-500">
+                    <img class="rounded-t-2xl w-full h-64 object-cover" src="{{ asset('assets/img/team-member-4.jpg') }}" alt="Team Member 4">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-black">Chris Evans</h3>
+                        <p class="text-gray-600">COO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hanging Cards Section -->
+        <div class="container mx-auto px-6 lg:px-16 mt-20 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <!-- Achievement Card 1 -->
+            <div class="relative flex flex-col items-center">
+                <div class="absolute -top-3 z-10">
+                    <div class="w-6 h-6 bg-red-600 rounded-full shadow-lg"></div>
+                </div>
+                <div class="hanging-card w-full bg-black text-white p-8 rounded-xl">
+                    <div class="text-center">
+                        <h2 class="text-2xl font-bold">6+ Years of Excellence</h2>
+                        <p class="mt-4 text-gray-300">Since 2018, we are serving all over India.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievement Card 2 -->
+            <div class="relative flex flex-col items-center">
+                <div class="absolute -top-3 z-10">
+                    <div class="w-6 h-6 bg-red-600 rounded-full shadow-lg"></div>
+                </div>
+                <div class="hanging-card w-full bg-black text-white p-8 rounded-xl">
+                    <div class="text-center">
+                        <h2 class="text-2xl font-bold">Industry Leader</h2>
+                        <p class="mt-4 text-gray-300">Serving most jewelers in India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+
+
+//header
+
+<!-- Navbar -->
+<nav
+    class="fixed inset-x-0 top-0 z-50 mx-auto mt-4 flex w-[98%] max-w-[85rem] items-center justify-between rounded-2xl px-4 py-2 bg-white/50 backdrop-blur-xl shadow-lg shadow-black/50">
+    <!-- Logo Section -->
+    <div>
+        <a href="/">
+            <img src="{{ asset('assets/img/logo (2).png') }}" alt="Logo"
+                class="h-[40px] w-[100px] object-contain md:h-[60px] md:w-[150px]" />
+        </a>
+    </div>
+
+    <!-- Navigation Links (Desktop) -->
+    <div class="hidden md:flex items-center space-x-6">
+        <a href="/resources"
+            class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Resources</a>
+        <a href="/features"
+            class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Features</a>
+        <a href="/pricing"
+            class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Pricing</a>
+        <a href="/login"
+            class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Login</a>
+        <a href="/signup"
+            class="ml-4 px-8 py-3 bg-black text-white text-sm font-medium rounded-xl shadow hover:bg-gray-900 transition-colors duration-200">
+            Sign Up
+        </a>
+    </div>
+
+    <!-- Mobile Menu Icon -->
+    <div class="flex md:hidden">
+        <button id="mobile-menu-toggle" class="text-gray-700">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu"
+    class="fixed inset-x-0 top-0 bg-white/50 backdrop-blur-lg shadow-lg shadow-black/50 rounded-lg p-4 mt-20 mx-4 hidden transform transition-all duration-500 ease-in-out max-h-screen overflow-y-auto z-40">
+    <a href="/resources"
+        class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Resources</a>
+    <a href="/features"
+        class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Features</a>
+    <a href="/pricing"
+        class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Pricing</a>
+    <a href="/login"
+        class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Login</a>
+    <a href="/signup"
+        class="block bg-black text-white text-sm font-medium rounded-xl shadow hover:bg-gray-900 text-center py-3 mt-4 transition-colors duration-200">
+        Sign Up
+    </a>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Get the toggle button and mobile menu
+    const toggleButton = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Add event listener for toggle button
+    toggleButton.addEventListener('click', () => {
+        // Toggle the visibility of the mobile menu
+        if (mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.style.transform = "translateY(0)"; // Slide the menu down
+            }, 10); // Allow time for the class toggle to take effect
+        } else {
+            mobileMenu.style.transform = "translateY(-100%)"; // Slide the menu up
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 500); // Wait for the transition to finish before hiding
+        }
+    });
+</script>
+
+
+
+
+//footer
+
+<footer class="w-full py-12 font-sans bg-gradient-to-b from-red-500 to-red-600 backdrop-blur-xl shadow-lg shadow-black/50 rounded-3xl">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info Section -->
+            <div
+                class="bg-white rounded-3xl transform translate-z-0 shadow-xl shadow-black/20 p-6 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 border border-red-100">
+                <h3 class="text-2xl font-bold mb-4 text-red-600">Real Victory Groups</h3>
+                <p class="mb-4 text-gray-600 leading-relaxed">
+                    73 Basement, Ekta Enclave Society, Lakhanpur, Khyora,
+                </p>
+                <a href="#" class="text-red-500 hover:text-red-700 font-medium transition-colors duration-300">
+                    <span class="flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8 16l4-4m0 0l4 4m-4-4v12" />
+                        </svg>
+                        <span>See on map</span>
+                    </span>
                 </a>
             </div>
+
+            <!-- Contact Information Section -->
+            <div
+                class="bg-white rounded-3xl transform translate-z-0 shadow-xl shadow-black/20 p-6 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 border border-red-100">
+                <h3 class="text-2xl font-serif mb-4 text-red-600">Contact Us</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Email: 
+                    <a href="mailto:realvictorygroups.in"
+                        class="text-red-500 hover:text-red-700 font-medium transition-colors duration-300">
+                        realvictorygroups.in
+                    </a>
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Phone: 
+                    <a href="tel:+917312560056"
+                        class="text-red-500 hover:text-red-700 font-medium transition-colors duration-300">
+                        +918299012292
+                    </a>
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Timings: Monday to Saturday, 10:00 AM - 6:30 PM
+                </p>
+            </div>
+
+            <!-- Social Media Section -->
+            <div
+                class="bg-white rounded-3xl transform translate-z-0 shadow-xl shadow-black/20 p-6 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 border border-red-100">
+                <h3 class="text-2xl font-semibold mb-4 font-serif text-red-600">Follow Us</h3>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#" aria-label="Facebook"
+                        class="bg-gray-50 p-3 rounded-full hover:bg-red-50 hover:scale-110 transition-transform duration-300">
+                        <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" alt="Facebook"
+                            class="h-6 w-auto filter invert" />
+                    </a>
+                    <a href="#" aria-label="Twitter"
+                        class="bg-gray-50 p-3 rounded-full hover:bg-red-50 hover:scale-110 transition-transform duration-300">
+                        <img src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg" alt="Twitter"
+                            class="h-6 w-auto filter invert" />
+                    </a>
+                    <a href="#" aria-label="Instagram"
+                        class="bg-gray-50 p-3 rounded-full hover:bg-red-50 hover:scale-110 transition-transform duration-300">
+                        <img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" alt="Instagram"
+                            class="h-6 w-auto filter invert" />
+                    </a>
+                    <a href="#" aria-label="LinkedIn"
+                        class="bg-gray-50 p-3 rounded-full hover:bg-red-50 hover:scale-110 transition-transform duration-300">
+                        <img src="https://www.svgrepo.com/show/28145/linkedin.svg" alt="LinkedIn"
+                            class="h-6 w-auto filter invert" />
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="flex justify-center items-center" data-aos="fade-left" data-aos-duration="1000">
-            <img src="{{ asset('assets/img/jewellery post  banner.avif') }}" alt="Innovation" class="w-full h-auto max-w-md drop-shadow-2xl">
+
+        <div class="mt-12 pt-8 border-t border-white/50">
+            <div class="flex flex-col sm:flex-row items-center justify-between">
+                <div class="text-sm text-center sm:text-left mb-6 sm:mb-0 font-medium text-white">
+                    <p>© 2024 Real Victory Groups. | All Rights Reserved</p>
+                </div>
+                <div>
+                    <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">
+                        Privacy Policy
+                    </a>
+                    <span class="mx-2 text-gray-200">|</span>
+                    <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
-
-{{-- slider --}}
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <!-- Custom Styles -->
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #f5f5f5;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-      max-height: 400px; /* Adjust for your needs */
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
-
-  <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="{{asset('assets/img/attendence.jpg')}}" alt="Slide 1"></div>
-      <div class="swiper-slide"><img src="{{asset('assets/img/jewellery post  banner.avif')}}" alt="Slide 2"></div>
-      <div class="swiper-slide"><img src="{{asset('assets/img/growth1.gif')}}" alt="Slide 3"></div>
-      <div class="swiper-slide"><img src="{{asset('assets/img/lab.gif')}}" alt="Slide 4"></div>
-      <div class="swiper-slide"><img src="{{asset('assets/img/innovation.gif')}}" alt="Slide 5"></div>
     </div>
-    {{-- <!-- Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Navigation Buttons -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div> --}}
-  </div>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      autoplay: {
-        delay: 3000, // Delay in milliseconds (3 seconds)
-        disableOnInteraction: false, // Autoplay won't stop after user interaction
-      },
-      loop: true, // Enable infinite loop
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true, // Make pagination dots clickable
-      },
-    //   navigation: {
-    //     nextEl: ".swiper-button-next",
-    //     prevEl: ".swiper-button-prev",
-    //   },
-    });
-  </script>
-
-
-
-    <!-- Mission -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-16 px-6 lg:px-16 mt-4">
-        <div class="flex justify-center items-center" data-aos="fade-right" data-aos-duration="1000">
-            <img src="{{ asset('assets/img/growth1.gif') }}" alt="Innovation" class="w-full h-auto max-w-md">
-        </div>
-        <div class="space-y-6" data-aos="fade-left" data-aos-duration="1000">
-            <h2 class="text-4xl sm:text-5xl poppins-serif text-gray-900">Building a better Business!</h2>
-            <p class="text-xl sm:text-2xl poppins-light text-gray-900">
-                On a mission to help start-ups in their vision of making the world a better place.
-            </p>
-            <button
-                class="bg-red-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-black transition-colors duration-300 poppins-thin">Join
-                us now</button>
-        </div>
-    </section>
-    <!-- Experiments Section -->
-    <section class="py-16 px-6 lg:px-16 mt-4">
-        <div class="text-center mb-12" data-aos="zoom-in" data-aos-duration="1000">
-            <h1 class="text-3xl font-bold text-gray-900">Our Experiments!</h1>
-            <p class="text-xl text-gray-700 mt-4 max-w-3xl mx-auto font-light">
-                We believe in simplicity; so we design and build impactful, user-friendly IT products. We majorly stand on
-                the three pillars—DESIGN, CULTURE & TECHNOLOGY.
-            </p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Experiment 1 -->
-            <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center" data-aos="flip-left"
-                data-aos-duration="1000">
-                <img src="assets/img/msg91_logo.svg" alt="MSG91" class="w-24 h-24 object-contain">
-                <p class="text-gray-700 text-sm mt-4 font-medium">Cloud communication platform delivering 1 SMS every month.
-                </p>
-                <p class="text-gray-600 text-sm mt-2 font-mono">PHP, MySQL, MongoDB, AWS and Python.</p>
-                <button
-                    class="mt-4 border border-red-500 text-red-800 px-4 py-2 rounded-lg text-sm hover:bg-red-500 hover:text-white transition duration-300 font-thin">
-                    Know more
-                </button>
-            </div>
-            <!-- Experiment 2 -->
-            <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center" data-aos="flip-up"
-                data-aos-duration="1000">
-                <img src="assets/img/socket_logo.svg" alt="Socket" class="w-24 h-24 object-contain">
-                <p class="text-gray-700 text-sm mt-4 font-medium">Third-party integrations made super easy.</p>
-                <p class="text-gray-600 text-sm mt-2 font-mono">ROR, Angular, ES6, pgSQL, and Node. 5000 API hits
-                    free/month.</p>
-                <button
-                    class="mt-4 border border-red-500 text-red-800 px-4 py-2 rounded-lg text-sm hover:bg-red-500 hover:text-white transition duration-300 font-thin">
-                    Know more
-                </button>
-            </div>
-            <!-- Experiment 3 -->
-            <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center" data-aos="flip-right"
-                data-aos-duration="1000">
-                <img src="assets/img/space_logo.svg" alt="Space" class="w-24 h-24 object-contain">
-                <p class="text-gray-700 text-sm mt-4 font-medium">Team collaboration app with best facilities.</p>
-                <p class="text-gray-600 text-sm mt-2 font-mono">PHP, MySQL, MongoDB, AWS, NGINX, MERN, Angular and Python.
-                </p>
-                <button
-                    class="mt-4 border border-red-500 text-red-800 px-4 py-2 rounded-lg text-sm hover:bg-red-500 hover:text-white transition duration-300 font-thin">
-                    Know more
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- SUCESS AND LEARNING -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-16 px-6 lg:px-16 mt-4">
-        <div class="flex justify-center items-center" data-aos="fade-right" data-aos-duration="1000">
-            <img src="{{ asset('assets/img/simple_culture_image.svg') }}" alt="Innovation" class="w-full h-auto max-w-md">
-        </div>
-        <div class="space-y-6" data-aos="fade-left" data-aos-duration="1000">
-            <h2 class="text-4xl sm:text-5xl poppins-regular text-gray-900">Be it a Success or a Learning, we simply Walkover
-                :)</h2>
-            <p class="text-xl sm:text-2xl poppins-medium text-gray-900">
-                A team of 150+ Spartans working remotely, we put people first, pursue passions, embrace failures, conduct
-                responsibly & strive to be a force of change. And, yes, we choose to be HAPPY, HEARTY & HEALTHY!
-            </p>
-            <button
-                class="bg-red-600 text-white px-6 py-3 rounded-lg text-lg poppins-thin hover:bg-black transition-colors duration-300">Join
-                us now</button>
-        </div>
-    </section>
-
-    <!-- RIGHT PATH -->
-    <section class="py-16 px-6 lg:px-16">
-        <div class="max-w-screen-xl mx-auto">
-
-            <!-- First Section -->
-            <article class="mb-12" data-aos="fade-up" data-aos-duration="1000">
-                <h1 class="text-3xl poppins-serif text-gray-900 mb-4">You are at the right place</h1>
-                <p class="text-lg text-gray-700 leading-relaxed poppins-light">
-                    We believe in hiring passionate humans who can help in making other people’s lives better—we are
-                    currently hiring for remote working designing and software jobs. If that sounds potential to you, then
-                    get ready to innovate with one of the best IT startups.
-                </p>
-            </article>
-
-            <!-- Second Section -->
-            <article class="mb-12" data-aos="fade-right" data-aos-duration="1000">
-                <h3 class="text-2xl poppins-serif text-gray-900 mb-4 ">Sane hours to balance work and passion</h3>
-                <p class="text-lg text-gray-700 leading-relaxed poppins-thin">
-                    Flexibility while we work comes ahead of everything. We work immensely hard, but we also understand that
-                    to come out with their best version, our team needs their space.
-                </p>
-            </article>
-
-            <!-- Third Section -->
-            <article class="mb-12" data-aos="fade-left" data-aos-duration="1000">
-                <h2 class="text-2xl poppins-serif text-gray-900 mb-4">The way you do anything is the way you do everything.
-                </h2>
-                <p class="text-lg text-gray-700 leading-relaxed mb-4 poppins-thin">
-                    How you work on any experience in your life or even your daily tasks, is how you probably handle all of
-                    it. We try and do it all with a smile :)
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6 poppins-light">
-                    What’s most rewarding for us is to collaborate with smart, intelligent, witty people across any part of
-                    the world.
-                </p>
-                <button
-                    class="bg-red-600 poppins-thin hover:bg-black text-white px-6 py-3 rounded-lg text-lg transition-colors duration-300">
-                    Apply Now
-                </button>
-            </article>
-
-
-            <!-- Fourth Section: Video -->
-            <div class="py-20 px-6 lg:px-16 bg-gray-50">
-                <article class="text-center space-y-6" data-aos="zoom-in" data-aos-duration="1000">
-                    <!-- Section Heading -->
-                    <h1 class="text-4xl font-serif text-gray-900 mb-4">
-                        Freedom + Responsibility at Walkover
-                    </h1>
-                    <!-- Description (optional) -->
-                    <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-                        At Walkover, we believe in empowering our team to innovate, take responsibility, and grow in an
-                        environment that fosters creativity and freedom.
-                    </p>
-                    <!-- Video Embed -->
-                    <div class="relative w-full max-w-4xl mx-auto" style="padding-top: 56.25%;">
-                        <!-- 16:9 Aspect Ratio -->
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-                            src="https://www.youtube.com/embed/iAJn9pIyJws" frameborder="0" allowfullscreen>
-                        </iframe>
-                    </div>
-                </article>
-            </div>
-
-        </div>
-    </section>
-@endsection
+</footer>

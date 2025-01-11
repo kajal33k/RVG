@@ -141,7 +141,7 @@
     @include('components.header')
 
     <!-- Main content section -->
-    <main class="flex-grow ">
+    <main class="flex-grow py-16">
 
         @yield('content')
     </main>
