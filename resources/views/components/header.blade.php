@@ -1,6 +1,6 @@
 
 <nav class="bg-gray-50 fixed top-0 left-0 w-full z-50">
-    <div class="container mx-auto flex items-center justify-between px-4 py-4 md:px-24">
+    <div class="container mx-auto flex items-center justify-between px-4 py-2 md:px-24">
         <!-- Logo Section -->
         <div class="flex items-center">
             <a href="/" class="hover:opacity-90 transition-opacity duration-300">

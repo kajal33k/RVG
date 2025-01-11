@@ -15,6 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
 
+          <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <!-- Tailwind CSS via CDN (can be replaced with Vite if you're using a build process) -->
@@ -24,7 +27,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="flex flex-col  bg-[#F3F6E8] text-gray-900">
+<body class="flex flex-col  bg-white text-gray-900">
     <style>
         .poppins-thin {
             font-family: "Poppins", sans-serif;
@@ -135,13 +138,14 @@
         }
     </style>
 
-    
+
     <!-- Include the header component -->
 
     @include('components.header')
 
     <!-- Main content section -->
-    <main class="flex-grow ">
+    <main class="flex-grow min-h-screen">
+
 
         @yield('content')
     </main>
