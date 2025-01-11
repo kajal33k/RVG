@@ -1,18 +1,18 @@
 @extends('components.main')
 @section('content')
-<div class="relative h-screen flex items-center justify-center bg-gradient-to-r from-red-500 to-black-500 text-white p-10 rounded-lg shadow-lg">
+<div class="relative h-screen flex items-center justify-center bg-gradient-to-r from-[#E63636] to-black-500 text-white p-10 rounded-lg shadow-lg">
   <!-- Overlay Text -->
-  <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+  <div class="absolute inset-0 bg-black opacity-0 rounded-lg"></div>
   
   <!-- Content Section -->
   <div class="z-10 text-center space-y-4">
-    <h1 class=" text-4xl font-extrabold text-white leading-tight transform transition duration-500 ease-out opacity-90 hover:opacity-100 hover:translate-y-4">
+    <h1 class=" text-4xl font-extrabold text-black leading-tight transform transition duration-500 ease-out opacity-90 hover:opacity-100 hover:translate-y-4">
         365 Days, 365 Posters
     </h1>
-    <p class="text-xl font-semibold text-white transform transition duration-500 ease-out opacity-90 hover:opacity-100 hover:translate-y-4">
+    <p class="text-xl font-semibold text-black transform transition duration-500 ease-out opacity-90 hover:opacity-100 hover:translate-y-4">
         Your Brand, Your Story,
     </p>
-    <p class="text-2xl font-semibold text-red-300 transform transition duration-500 ease-out opacity-90 hover:opacity-100 hover:translate-y-4">
+    <p class="text-2xl font-semibold text-black transform transition duration-500 ease-out opacity-90 hover:opacity-100 hover:translate-y-4">
         Our Design
     </p>
 </div>
@@ -25,7 +25,7 @@
 
 
 
-<section class="bg-gradient-to-br from-red-500 to-gray-700 text-white py-16">
+<section class="bg-gradient-to-br from-[#E63636] to-gray-700 text-white py-16">
   <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
     <!-- Image Section -->
     <div class="w-full lg:w-1/2 relative">
