@@ -1,4 +1,5 @@
-<footer class="w-full py-12 font-sans bg-gradient-to-b from-red-500 to-red-600 backdrop-blur-xl shadow-lg shadow-black/50 rounded-3xl">
+<footer
+    class="w-full py-12 font-sans bg-gradient-to-b from-red-500 to-red-600 backdrop-blur-xl shadow-lg shadow-black/50 rounded-3xl">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Company Info Section -->
@@ -12,8 +13,7 @@
                     <span class="flex items-center space-x-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M8 16l4-4m0 0l4 4m-4-4v12" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 16l4-4m0 0l4 4m-4-4v12" />
                         </svg>
                         <span>See on map</span>
                     </span>
@@ -25,14 +25,14 @@
                 class="bg-white rounded-3xl transform translate-z-0 shadow-xl shadow-black/20 p-6 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 border border-red-100">
                 <h3 class="text-2xl font-serif mb-4 text-red-600">Contact Us</h3>
                 <p class="text-gray-600 leading-relaxed">
-                    Email: 
+                    Email:
                     <a href="mailto:realvictorygroups.in"
                         class="text-red-500 hover:text-red-700 font-medium transition-colors duration-300">
                         realvictorygroups.in
                     </a>
                 </p>
                 <p class="text-gray-600 leading-relaxed">
-                    Phone: 
+                    Phone:
                     <a href="tel:+917312560056"
                         class="text-red-500 hover:text-red-700 font-medium transition-colors duration-300">
                         +918299012292
