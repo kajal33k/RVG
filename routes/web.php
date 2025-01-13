@@ -11,6 +11,7 @@ Route::get('/', function () {
 
 
 Route::get('/happiness', [HomeController::class, 'happiness'])->name('frontend.happiness');
-Route::get('/join',[HomeController::class, 'join'])->name('frontend.join');
-Route::get('/product',[HomeController::class,'product'])->name('frontend.product');
+Route::get('/join', [HomeController::class, 'join'])->name('frontend.join');
+Route::get('/product', [HomeController::class, 'product'])->name('frontend.product');
 Route::get('/career', [HomeController::class, 'career'])->name('frontend.career');
+Route::get('/pricing', [HomeController::class, 'pricing'])->name('pricing');;

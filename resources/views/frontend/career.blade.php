@@ -1,83 +1,144 @@
 @extends('components.main')
 
 @section('content')
-    <!-- Header -->
-    <header class="bg-red-600 text-white py-6 mt-44" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container mx-auto px-6 md:px-12">
-            <h1 class="text-3xl font-bold">Join Our Team</h1>
-            <p class="mt-2 text-lg">Be part of a company that values innovation, collaboration, and growth.</p>
-        </div>
-    </header>
+    <style>
+        .multi-slider-container {
+            transform-style: preserve-3d;
+            perspective: 2000px;
+        }
 
-    <!-- Introduction Section -->
-    <section class="py-12" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container mx-auto px-6 md:px-12">
-            <h2 class="text-2xl font-bold mb-4">Why Work With Us?</h2>
-            <p class="text-gray-700 mb-6">At [Software Company], we are passionate about building world-class solutions that make a difference. Join us to work on challenging projects, learn from talented peers, and make an impact in the tech world.</p>
-            <ul class="space-y-4">
-                <li class="flex items-start" data-aos="fade-left" data-aos-duration="800">
-                    <div class="flex-shrink-0 w-8 h-8 text-red-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </div>
-                    <p class="ml-4">Competitive salaries and comprehensive benefits.</p>
-                </li>
-                <li class="flex items-start" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
-                    <div class="flex-shrink-0 w-8 h-8 text-red-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </div>
-                    <p class="ml-4">Flexible work schedules and remote options.</p>
-                </li>
-                <li class="flex items-start" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-                    <div class="flex-shrink-0 w-8 h-8 text-red-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </div>
-                    <p class="ml-4">Opportunities for professional growth and development.</p>
-                </li>
-            </ul>
-        </div>
-    </section>
+        .slider {
+            width: calc(25% - 1rem);
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
 
-    <!-- Open Positions Section -->
-    <section class="bg-white py-12" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container mx-auto px-6 md:px-12">
-            <h2 class="text-2xl font-bold mb-4">Current Openings</h2>
-            <p class="text-gray-700 mb-6">Explore the roles we are currently hiring for. We’re excited to have you on board!</p>
+        .slider:hover {
+            transform: translateZ(20px);
+        }
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Position Card -->
-                <div class="p-6 border rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="text-xl font-semibold mb-2">Frontend Developer</h3>
-                    <p class="text-gray-600 mb-4">Build intuitive user interfaces using modern frameworks and tools.</p>
-                    <a href="#" class="text-red-600 hover:underline">View Details</a>
-                </div>
-                <!-- Position Card -->
-                <div class="p-6 border rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <h3 class="text-xl font-semibold mb-2">Backend Engineer</h3>
-                    <p class="text-gray-600 mb-4">Design scalable backend systems to support our applications.</p>
-                    <a href="#" class="text-red-600 hover:underline">View Details</a>
-                </div>
-                <!-- Position Card -->
-                <div class="p-6 border rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <h3 class="text-xl font-semibold mb-2">Product Manager</h3>
-                    <p class="text-gray-600 mb-4">Lead product development and ensure customer satisfaction.</p>
-                    <a href="#" class="text-red-600 hover:underline">View Details</a>
+        .image-container {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .main-nav-button {
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white/90;
+            padding: 1rem;
+            border-radius: 9999px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            z-index: 20;
+        }
+
+        .main-nav-button:hover {
+            background: white;
+        }
+    </style>
+
+    <div class="bg-gradient-to-b from-gray-50 to-gray-100 py-12">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold text-center mb-12">Featured Collections</h1>
+            
+            <!-- Main container with navigation buttons -->
+            <div class="relative">
+                <button id="prevButton" class="main-nav-button left-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <button id="nextButton" class="main-nav-button right-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+
+                <!-- Main container for all sliders -->
+                <div class="multi-slider-container flex gap-4">
+                    <!-- First Slider -->
+                    <div class="slider relative">
+                        <div class="h-[400px] relative rounded-xl overflow-hidden shadow-lg">
+                            <img src="{{ asset('assets/img/about.png') }}" class="image-container w-full h-full object-cover" alt="Image 1">
+                        </div>
+                    </div>
+
+                    <!-- Second Slider -->
+                    <div class="slider relative">
+                        <div class="h-[400px] relative rounded-xl overflow-hidden shadow-lg">
+                            <img src="{{ asset('assets/img/calling.jpg') }}" class="image-container w-full h-full object-cover" alt="Image 2">
+                        </div>
+                    </div>
+
+                    <!-- Third Slider -->
+                    <div class="slider relative">
+                        <div class="h-[400px] relative rounded-xl overflow-hidden shadow-lg">
+                            <img src="{{ asset('assets/img/banner.jpeg') }}" class="image-container w-full h-full object-cover" alt="Image 3">
+                        </div>
+                    </div>
+
+                    <!-- Fourth Slider -->
+                    <div class="slider relative">
+                        <div class="h-[400px] relative rounded-xl overflow-hidden shadow-lg">
+                            <img src="{{ asset('assets/img/attendence.jpg') }}" class="image-container w-full h-full object-cover" alt="Image 4">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Call to Action Section -->
-    <section class="bg-red-600 text-white py-12 mb-10" data-aos="zoom-in" data-aos-duration="1000">
-        <div class="container mx-auto px-6 md:px-12 text-center">
-            <h2 class="text-2xl font-bold mb-4">Ready to Make a Difference?</h2>
-            <p class="text-lg mb-6">Join us and let’s build something amazing together. We can’t wait to see what you bring to the table.</p>
-            <a href="#" class="bg-white text-red-600 px-6 py-3 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300">Apply Now</a>
-        </div>
-    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliders = document.querySelectorAll('.slider');
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+            let currentImageIndex = 1;
+            const totalImages = 4;
+
+            function updateAllSliders(newIndex) {
+                sliders.forEach((slider, index) => {
+                    const img = slider.querySelector('img');
+                    // Calculate image index for each slider
+                    let imageIndex = ((newIndex + index - 1) % totalImages) + 1;
+                    if (imageIndex < 1) imageIndex = totalImages;
+                    img.src = `{{ asset('assets/img/slider${imageIndex}.jpg') }}`;
+                });
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentImageIndex = currentImageIndex > 1 ? currentImageIndex - 1 : totalImages;
+                updateAllSliders(currentImageIndex);
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentImageIndex = currentImageIndex < totalImages ? currentImageIndex + 1 : 1;
+                updateAllSliders(currentImageIndex);
+            });
+
+            // Touch support
+            let touchStartX = 0;
+            const container = document.querySelector('.multi-slider-container');
+            
+            container.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+            }, { passive: true });
+
+            container.addEventListener('touchend', (e) => {
+                const touchEndX = e.changedTouches[0].clientX;
+                const diff = touchStartX - touchEndX;
+
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        currentImageIndex = currentImageIndex < totalImages ? currentImageIndex + 1 : 1;
+                    } else {
+                        currentImageIndex = currentImageIndex > 1 ? currentImageIndex - 1 : totalImages;
+                    }
+                    updateAllSliders(currentImageIndex);
+                }
+            }, { passive: true });
+        });
+    </script>
 @endsection
