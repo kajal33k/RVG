@@ -27,4 +27,8 @@ class HomeController extends Controller
     public function pricing(){
         return view('frontend.pricing');
     }
+
+    public function features(){
+        return view('frontend.features');
+    }
 }
