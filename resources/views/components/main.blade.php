@@ -27,7 +27,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="flex flex-col  bg-white text-gray-900">
+<body class="flex flex-col  bg-gray-200 text-gray-900">
 
     <!-- Include the header component -->
 
