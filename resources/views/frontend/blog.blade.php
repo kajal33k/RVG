@@ -2,6 +2,7 @@
 
 @section('content')
     <style>
+        /* Slider and Animation Styles */
         @keyframes float {
             0%, 100% { transform: translateY(0) translateZ(20px); }
             50% { transform: translateY(-15px) translateZ(30px); }
@@ -105,8 +106,8 @@
     <div class="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
         <!-- Hero Section -->
         <div class="container mx-auto px-6 lg:px-16 text-center mb-16">
-            <h1 class="text-5xl font-bold text-black mb-6">Our Gallery</h1>
-            <p class="text-xl text-gray-700">Experience our collection in stunning 3D presentation</p>
+            <h1 class="text-5xl font-bold text-black mb-6">Our Blog</h1>
+            <p class="text-xl text-gray-700">Explore our latest articles and insights</p>
         </div>
 
         <!-- Main Slider -->
@@ -115,30 +116,30 @@
                 <!-- Slides -->
                 <div class="slide active">
                     <div class="relative rounded-3xl overflow-hidden">
-                        <img src="{{ asset('assets/img/about.png') }}" class="slide-image w-full h-[600px] object-cover rounded-3xl" alt="Slide 1">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" class="slide-image w-full h-[600px] object-cover rounded-3xl" alt="Slide 1">
                         <div class="slide-content absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/80 to-transparent">
-                            <h2 class="text-3xl font-bold text-white mb-4">Elegant Collection</h2>
-                            <p class="text-lg text-gray-200">Discover our finest pieces crafted with precision</p>
+                            <h2 class="text-3xl font-bold text-white mb-4">Latest Blog Post</h2>
+                            <p class="text-lg text-gray-200">Discover the insights from our latest article</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="slide next">
                     <div class="relative rounded-3xl overflow-hidden">
-                        <img src="{{ asset('assets/img/calling.jpg') }}" class="slide-image w-full h-[600px] object-cover rounded-3xl" alt="Slide 2">
+                        <img src="{{ asset('assets/img/banner.jpeg') }}" class="slide-image w-full h-[600px] object-cover rounded-3xl" alt="Slide 2">
                         <div class="slide-content absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/80 to-transparent">
-                            <h2 class="text-3xl font-bold text-white mb-4">Modern Design</h2>
-                            <p class="text-lg text-gray-200">Contemporary styles for modern aesthetics</p>
+                            <h2 class="text-3xl font-bold text-white mb-4">Tech Trends in 2025</h2>
+                            <p class="text-lg text-gray-200">Stay ahead with the latest tech developments</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="slide prev">
                     <div class="relative rounded-3xl overflow-hidden">
-                        <img src="{{ asset('assets/img/imager.jpg') }}" class="slide-image w-full h-[600px] object-cover rounded-3xl" alt="Slide 3">
+                        <img src="{{ asset('assets/img/about.png') }}" class="slide-image w-full h-[600px] object-cover rounded-3xl" alt="Slide 3">
                         <div class="slide-content absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/80 to-transparent">
-                            <h2 class="text-3xl font-bold text-white mb-4">Classic Beauty</h2>
-                            <p class="text-lg text-gray-200">Timeless pieces that never go out of style</p>
+                            <h2 class="text-3xl font-bold text-white mb-4">Health Tips for 2025</h2>
+                            <p class="text-lg text-gray-200">Learn about the best practices for a healthy lifestyle</p>
                         </div>
                     </div>
                 </div>
@@ -161,13 +162,13 @@
         <div class="container mx-auto px-6 lg:px-16 mt-12">
             <div class="flex justify-center gap-6">
                 <div class="thumbnail active w-24 h-24 rounded-xl overflow-hidden cursor-pointer">
-                    <img src="{{ asset('assets/img/calling.jpg') }}" class="w-full h-full object-cover" alt="Thumbnail 1">
+                    <img src="{{ asset('assets/img/attendence.jpg') }}" class="w-full h-full object-cover" alt="Thumbnail 1">
                 </div>
                 <div class="thumbnail w-24 h-24 rounded-xl overflow-hidden cursor-pointer">
-                    <img src="{{ asset('assets/img/slide2.jpg') }}" class="w-full h-full object-cover" alt="Thumbnail 2">
+                    <img src="{{ asset('assets/img/banner.jpeg') }}" class="w-full h-full object-cover" alt="Thumbnail 2">
                 </div>
                 <div class="thumbnail w-24 h-24 rounded-xl overflow-hidden cursor-pointer">
-                    <img src="{{ asset('assets/img/slide3.jpg') }}" class="w-full h-full object-cover" alt="Thumbnail 3">
+                    <img src="{{ asset('assets/img/about.png') }}" class="w-full h-full object-cover" alt="Thumbnail 3">
                 </div>
             </div>
         </div>
