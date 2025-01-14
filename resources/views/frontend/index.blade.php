@@ -16,71 +16,40 @@
         Our Design
     </p>
 </div> --}}
-    <section class="dark:bg-gray-100 dark:text-gray-800">
-        <div class="container flex flex-col justify-center p-4 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-            <div class="flex flex-col justify-center p-4 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                <h1 class="text-4xl font-bold leading-none sm:text-4xl">We are growth partners who genuinely care about you
-                    and your success.
-                    <span class="dark:text-red-600"> 365 days , <br> 365 posters</span>
-                </h1>
-                <p class="mt-6 mb-8 text-lg sm:mb-12">Your brand, your story,
-                    <br class="hidden md:inline lg:hidden">our design
-                </p>
-                <div
-                    class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                    <a rel="noopener noreferrer" href="#"
-                        class="px-8 py-3 text-lg font-semibold rounded dark:bg-red-600 border dark:border-gray-500 hover:bg-transparent hover:text-black">Get
-                        Started</a>
-                    <a rel="noopener noreferrer" href="#"
-                        class="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800 hover:bg-red-500 ">Learn
-                        More</a>
-                </div>
-            </div>
-            <!-- Hero Images Section -->
-            <div
-                class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 perspective-1000">
-                <div
-                    class="flex space-x-6 transform hover:rotate-x-12 hover:rotate-y-12 transition-transform duration-500 ease-in-out">
-                    <div class="flip-container">
-                        <div class="flip-inner">
-                            <div class="flip-front transform hover:scale-105 transition-transform duration-500 ease-in-out">
-                                <img src="{{ asset('assets/img/attendence.jpg') }}" alt=""
-                                    class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
-                            </div>
-                            <div class="flip-back transform hover:scale-105 transition-transform duration-500 ease-in-out">
-                                <img src="{{ asset('assets/img/attendence.jpg') }}" alt=""
-                                    class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-container">
-                        <div class="flip-inner">
-                            <div class="flip-front transform hover:scale-105 transition-transform duration-500 ease-in-out">
-                                <img src="{{ asset('assets/img/calling.jpg') }}" alt=""
-                                    class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
-                            </div>
-                            <div class="flip-back transform hover:scale-105 transition-transform duration-500 ease-in-out">
-                                <img src="{{ asset('assets/img/calling.jpg') }}" alt=""
-                                    class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-container">
-                        <div class="flip-inner">
-                            <div class="flip-front transform hover:scale-105 transition-transform duration-500 ease-in-out">
-                                <img src="{{ asset('assets/img/hero.jpg') }}" alt=""
-                                    class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
-                            </div>
-                            <div class="flip-back transform hover:scale-105 transition-transform duration-500 ease-in-out">
-                                <img src="{{ asset('assets/img/hero.jpg') }}" alt=""
-                                    class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="dark:bg-gray-100 dark:text-gray-800">
+  <div class="container mx-auto flex flex-col justify-center p-4 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+      <!-- Text Section -->
+      <div class="flex flex-col justify-center p-4 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+          <h1 class="text-4xl font-bold leading-none sm:text-4xl">
+              We are growth partners who genuinely care about you and your success.
+              <span class="dark:text-red-600">365 days, <br> 365 posters</span>
+          </h1>
+          <p class="mt-6 mb-8 text-lg sm:mb-12">
+              Your brand, your story, 
+              <br class="hidden md:inline lg:hidden">our design.
+          </p>
+          <div
+              class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+              <a href="#"
+                  class="px-8 py-3 text-lg font-semibold rounded dark:bg-red-600 text-white hover:bg-red-700 transition">
+                  Get Started
+              </a>
+              <a href="#"
+                  class="px-8 py-3 text-lg font-semibold border rounded border-gray-800 hover:bg-red-500 hover:text-white transition">
+                  Learn More
+              </a>
+          </div>
+      </div>
+
+      <!-- Hero Image Section -->
+      <div class="flex items-center justify-center mt-8 lg:mt-0">
+          <img src="{{ asset('assets/img/hero.jpg') }}" 
+              alt="Hero design image" 
+              class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
+      </div>
+  </div>
+</section>
+
 
     <!-- Image and Content Section -->
     <section class="bg-gradient-to-br from-[#E63636] to-gray-700 text-white py-16">
@@ -436,102 +405,69 @@
 
     <!-- Include Slick Carousel Script -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <style>
-        /* Custom styles for Slick Slider navigation */
-        .slick-prev,
-        .slick-next {
-            font-size: 24px;
-            color: white;
-            z-index: 10;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slick-prev {
-            left: -50px;
-        }
-
-        .slick-next {
-            right: -50px;
-        }
-
-        .slick-prev:hover,
-        .slick-next:hover {
-            background-color: rgba(255, 255, 255, 0.7);
-            color: black;
-        }
-
-        /* Ensures consistent image rendering */
-        .slick-slide img {
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        /* Hide default slick dots */
-        .slick-dots {
-            display: none !important;
-        }
-    </style>
-
-    <!-- Slider Section -->
-    <section class="w-full flex justify-center py-10 bg-red-900">
-        <div class="slider w-full max-w-5xl">
-            <!-- Slide 1 -->
-            <div class="relative">
-                <img src="{{ asset('assets/img/imgg.avif') }}" alt="First Slide"
-                    class="w-full h-72 md:h-96 object-cover rounded-lg">
-                <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">First Slide</h2>
-                    <p class="text-sm md:text-lg">Explore the amazing features of our demo.</p>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="relative">
-                <img src="{{ asset('assets/img/jewellery post banner.avif') }}" alt="Second Slide"
-                    class="w-full h-72 md:h-96 object-cover rounded-lg">
-                <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Second Slide</h2>
-                    <p class="text-sm md:text-lg">Learn more about what we offer in this section.</p>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="relative">
-                <img src="{{ asset('assets/img/imgg.avif') }}" alt="Third Slide"
-                    class="w-full h-72 md:h-96 object-cover rounded-lg">
-                <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Third Slide</h2>
-                    <p class="text-sm md:text-lg">Check out our stunning features in action.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Slick Slider Initialization Script -->
-    <script>
-        $(document).ready(function() {
-            // Initialize the slick slider
-            $('.slider').slick({
-                infinite: true, // Infinite loop
-                speed: 500, // Transition speed
-                fade: true, // Fade effect between slides
-                autoplay: true, // Enable autoplay
-                autoplaySpeed: 3000, // Set autoplay speed (3 seconds)
-                prevArrow: '<button type="button" class="slick-prev" aria-label="Previous Slide"></button>',
-                nextArrow: '<button type="button" class="slick-next" aria-label="Next Slide"></button>',
-                dots: false, // Disable dots
-                arrows: true, // Enable arrows
-            });
-        });
-    </script>
-
+      /* Ensures consistent image rendering */
+      .slick-slide img {
+          border-radius: 8px;
+          object-fit: cover;
+      }
+  
+      /* Hide default slick dots */
+      .slick-dots {
+          display: none !important;
+      }
+  </style>
+  
+  <!-- Slider Section -->
+  <section class="w-full flex justify-center py-10 bg-red-900">
+      <div class="slider w-full max-w-5xl">
+          <!-- Slide 1 -->
+          <div class="relative">
+              <img src="{{ asset('assets/img/imgg.avif') }}" alt="First Slide"
+                  class="w-full h-72 md:h-96 object-cover rounded-lg">
+              <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
+                  <h2 class="text-3xl md:text-4xl font-bold mb-2">First Slide</h2>
+                  <p class="text-sm md:text-lg">Explore the amazing features of our demo.</p>
+              </div>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="relative">
+              <img src="{{ asset('assets/img/jewellery post banner.avif') }}" alt="Second Slide"
+                  class="w-full h-72 md:h-96 object-cover rounded-lg">
+              <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
+                  <h2 class="text-3xl md:text-4xl font-bold mb-2">Second Slide</h2>
+                  <p class="text-sm md:text-lg">Learn more about what we offer in this section.</p>
+              </div>
+          </div>
+  
+          <!-- Slide 3 -->
+          <div class="relative">
+              <img src="{{ asset('assets/img/imgg.avif') }}" alt="Third Slide"
+                  class="w-full h-72 md:h-96 object-cover rounded-lg">
+              <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
+                  <h2 class="text-3xl md:text-4xl font-bold mb-2">Third Slide</h2>
+                  <p class="text-sm md:text-lg">Check out our stunning features in action.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <!-- Slick Slider Initialization Script -->
+  <script>
+      $(document).ready(function() {
+          // Initialize the slick slider
+          $('.slider').slick({
+              infinite: true, // Infinite loop
+              speed: 500, // Transition speed
+              fade: true, // Fade effect between slides
+              autoplay: true, // Enable autoplay
+              autoplaySpeed: 3000, // Set autoplay speed (3 seconds)
+              arrows: false, // Disable navigation arrows
+          });
+      });
+  </script>
+  
 
 
 
@@ -1134,70 +1070,77 @@
     </section>
 
 
-    <div class="bg-[#fff2f4] h-screen">
-        <section class="max-w-5xl mx-auto py-10 sm:py-20">
-            <div class="flex items-center justify-center flex-col gap-y-2 py-5">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold">Frequently asked questions</h2>
-                <p class="text-lg font-medium text-slate-700/70">Questions related to web hosting</p>
-            </div>
-            <div class="w-full px-7 md:px-10 xl:px-2 py-4">
-                <div class="mx-auto w-full max-w-5xl border border-slate-400/20 rounded-lg bg-white">
-                    <div class="border-b border-[#0A071B]/10">
-                        <button
-                            class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
-                            data-toggle="answer-1"><span>What types of hosting plans do you offer?</span><svg
-                                stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                class=" mt-1.5 md:mt-0 flex-shrink-0 rotate-180 transform h-5 w-5 text-[#5B5675]"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                            </svg></button>
-                        <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-1"
-                            style="display: none;">We offer shared hosting, VPS hosting, dedicated server hosting, and
-                            cloud hosting
-                            plans.</div>
-                    </div>
-                    <div class="border-b border-[#0A071B]/10">
-                        <button
-                            class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
-                            data-toggle="answer-2"><span>What is the uptime guarantee for your hosting services?</span><svg
-                                stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                class=" mt-1.5 md:mt-0 flex-shrink-0  h-5 w-5 text-[#5B5675]" height="1em"
-                                width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                            </svg></button>
-                        <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-2"
-                            style="display: none;">We guarantee an uptime of 99.9% for all our hosting services.</div>
-                    </div>
-                    <div class="border-b border-[#0A071B]/10">
-                        <button
-                            class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
-                            data-toggle="answer-3"><span>Do you provide website migration assistance?</span><svg
-                                stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                class=" mt-1.5 md:mt-0 flex-shrink-0  h-5 w-5 text-[#5B5675]" height="1em"
-                                width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                            </svg></button>
-                        <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-3"
-                            style="display: none;">Yes, we offer free website migration assistance for new customers.</div>
-                    </div>
-                    <div class="">
-                        <button
-                            class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
-                            data-toggle="answer-4"><span>What security measures do you have in place?</span><svg
-                                stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                class=" mt-1.5 md:mt-0 flex-shrink-0  h-5 w-5 text-[#5B5675]" height="1em"
-                                width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                            </svg></button>
-                        <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-4"
-                            style="display: none;">We employ advanced security measures including firewalls, DDoS
-                            protection, and
-                            regular security audits.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+    <div class="bg-[#fff2f4] min-h-screen">
+      <section class="max-w-full mx-auto py-10 sm:py-20 px-4">
+          <div class="flex items-center justify-center flex-col gap-y-2 py-5">
+              <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Frequently asked questions</h2>
+              <p class="text-lg font-medium text-slate-700/70 text-center">Questions related to web hosting</p>
+          </div>
+          <div class="w-full py-4">
+              <div class="mx-auto w-full max-w-7xl border border-slate-400/20 rounded-lg bg-white">
+                  <div class="border-b border-[#0A071B]/10">
+                      <button
+                          class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                          data-toggle="answer-1">
+                          <span>What types of hosting plans do you offer?</span>
+                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                              class="mt-1.5 md:mt-0 flex-shrink-0 rotate-180 transform h-5 w-5 text-[#5B5675]" height="1em"
+                              width="1em" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                          </svg>
+                      </button>
+                      <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-1"
+                          style="display: none;">We offer shared hosting, VPS hosting, dedicated server hosting, and cloud hosting
+                          plans.</div>
+                  </div>
+                  <div class="border-b border-[#0A071B]/10">
+                      <button
+                          class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                          data-toggle="answer-2">
+                          <span>What is the uptime guarantee for your hosting services?</span>
+                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                              class="mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675]" height="1em" width="1em"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                          </svg>
+                      </button>
+                      <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-2"
+                          style="display: none;">We guarantee an uptime of 99.9% for all our hosting services.</div>
+                  </div>
+                  <div class="border-b border-[#0A071B]/10">
+                      <button
+                          class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                          data-toggle="answer-3">
+                          <span>Do you provide website migration assistance?</span>
+                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                              class="mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675]" height="1em" width="1em"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                          </svg>
+                      </button>
+                      <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-3"
+                          style="display: none;">Yes, we offer free website migration assistance for new customers.</div>
+                  </div>
+                  <div>
+                      <button
+                          class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                          data-toggle="answer-4">
+                          <span>What security measures do you have in place?</span>
+                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                              class="mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675]" height="1em" width="1em"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                          </svg>
+                      </button>
+                      <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-4"
+                          style="display: none;">We employ advanced security measures including firewalls, DDoS protection, and
+                          regular security audits.</div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+  
 
 
     <section class="min-h-screen bg-cover "
