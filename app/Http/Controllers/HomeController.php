@@ -6,15 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function happiness()
+    public function about()
     {
-        // Return the 'happiness' view
-        return view('frontend.happiness');
-    }
-
-    public function join()
-    {
-        return view('frontend.join');
+        return view('frontend.about');
     }
 
     public function product(){
@@ -30,5 +24,13 @@ class HomeController extends Controller
 
     public function features(){
         return view('frontend.features');
+    }
+
+    public function contact(){
+        return view('frontend.contact');
+    }
+
+    public function blog(){
+        return view('frontend.blog');
     }
 }
