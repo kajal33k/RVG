@@ -816,6 +816,11 @@
             }
         }
     </style> --}}
+  
+    
+
+
+
     
 
     {{-- VIDEO------- --}}
@@ -1200,7 +1205,7 @@
         <div class="flex flex-col min-h-screen bg-red/60">
             <div class="container flex flex-col flex-1 px-6 py-12 mx-auto">
                 <div class="flex-1 lg:flex lg:items-center lg:-mx-6">
-                    <div class="text-white lg:w-1/2 lg:mx-6">
+                    <div class="text-white lg:w-1/2 lg:mx-6 bg-black py-8 px-8 z-30 rounded-lg" >
                         <h1 class="text-2xl font-semibold capitalize lg:text-3xl">Ultimate design solution</h1>
 
                         <p class="max-w-xl mt-6">
@@ -1264,7 +1269,7 @@
                         </div>
                     </div>
 
-                    <div class="mt-8 lg:w-1/2 lg:mx-6">
+                    <div class="mt-8 lg:w-1/2 lg:-mx-2 ">
                         <div
                             class="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-red-900 lg:max-w-xl">
                             <h1 class="text-xl font-medium text-red-700 dark:text-gray-200">Contact form</h1>
@@ -1305,6 +1310,8 @@
             </div>
         </div>
     </section>
+
+   
 
 
     <script>
