@@ -30,50 +30,111 @@
 				<a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800 hover:bg-red-500 ">Learn More</a>
 			</div>
 		</div>
-		<div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-			<img src="{{asset('assets/img/hero.jpg')}}" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+		<!-- Hero Images Section -->
+		<div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 perspective-1000">
+			<div class="flex space-x-6 transform hover:rotate-x-12 hover:rotate-y-12 transition-transform duration-500 ease-in-out">
+				<div class="flip-container">
+					<div class="flip-inner">
+						<div class="flip-front transform hover:scale-105 transition-transform duration-500 ease-in-out">
+							<img src="{{asset('assets/img/attendence.jpg')}}" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
+						</div>
+						<div class="flip-back transform hover:scale-105 transition-transform duration-500 ease-in-out">
+							<img src="{{asset('assets/img/attendence.jpg')}}" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
+						</div>
+					</div>
+				</div>
+				<div class="flip-container">
+					<div class="flip-inner">
+						<div class="flip-front transform hover:scale-105 transition-transform duration-500 ease-in-out">
+							<img src="{{asset('assets/img/calling.jpg')}}" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
+						</div>
+						<div class="flip-back transform hover:scale-105 transition-transform duration-500 ease-in-out">
+							<img src="{{asset('assets/img/calling.jpg')}}" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
+						</div>
+					</div>
+				</div>
+				<div class="flip-container">
+					<div class="flip-inner">
+						<div class="flip-front transform hover:scale-105 transition-transform duration-500 ease-in-out">
+							<img src="{{asset('assets/img/hero.jpg')}}" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
+						</div>
+						<div class="flip-back transform hover:scale-105 transition-transform duration-500 ease-in-out">
+							<img src="{{asset('assets/img/hero.jpg')}}" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
 
-
-
-
-
+<!-- Image and Content Section -->
 <section class="bg-gradient-to-br from-[#E63636] to-gray-700 text-white py-16">
-  <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
-    <!-- Image Section -->
-    <div class="w-full lg:w-1/2 relative">
-      <img 
-        src="{{asset('assets/img/about.png')}}" 
-        alt="IT Solutions" 
-        class="w-full h-full object-cover rounded-xl shadow-lg"
-      />
-      <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 rounded-xl"></div>
-    </div>
-    
-    <!-- Content Section -->
-    <div class="w-full lg:w-1/2">
-      <h2 class="text-4xl font-bold mb-4">
-        About Us
-      </h2>
-      <p class="text-lg leading-relaxed mb-6">
-        Real Victory Groups provides comprehensive IT solutions and services including <span class="font-semibold">Web Designing & Development</span>, 
-        <span class="font-semibold">Website Maintenance</span>, <span class="font-semibold">Mobile Application Design & Development</span>, 
-        <span class="font-semibold">Search Engine Optimization</span>, <span class="font-semibold">E-commerce Solutions</span>, 
-        <span class="font-semibold">Google Adwords & PPC (Pay per click)</span>, 
-        <span class="font-semibold">Website Promotion</span>, <span class="font-semibold">ERP Software</span>, 
-        <span class="font-semibold">Domain & Hosting</span>, and <span class="font-semibold">Software Development</span>.
-      </p>
-      <p class="text-lg leading-relaxed">
-        We are happy to offer a wide range of business services to meet the immediate and future needs of organizations and institutions globally.
-      </p>
-      <button class="mt-6 px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-red-100 transition-all">
-        Learn More
-      </button>
-    </div>
-  </div>
+	<div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
+		<!-- Image Section -->
+		<div class="w-full lg:w-1/2 relative">
+			<img 
+				src="{{asset('assets/img/attendence.jpg')}}" 
+				alt="IT Solutions" 
+				class="w-full h-full object-cover rounded-xl shadow-lg"
+			/>
+			<div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 rounded-xl"></div>
+		</div>
+		<!-- Content Section -->
+		<div class="w-full lg:w-1/2">
+			<h2 class="text-4xl font-bold mb-4">About Us</h2>
+			<p class="text-lg leading-relaxed mb-6">
+				Real Victory Groups provides comprehensive IT solutions and services including 
+				<span class="font-semibold">Web Designing & Development</span>, 
+				<span class="font-semibold">Website Maintenance</span>, 
+				<span class="font-semibold">Mobile Application Design & Development</span>, 
+				<span class="font-semibold">Search Engine Optimization</span>, 
+				<span class="font-semibold">E-commerce Solutions</span>, 
+				<span class="font-semibold">Google Adwords & PPC (Pay per click)</span>, 
+				<span class="font-semibold">Website Promotion</span>, 
+				<span class="font-semibold">ERP Software</span>, 
+				<span class="font-semibold">Domain & Hosting</span>, and 
+				<span class="font-semibold">Software Development</span>.
+			</p>
+			<p class="text-lg leading-relaxed">
+				We are happy to offer a wide range of business services to meet the immediate and future needs of organizations and institutions globally.
+			</p>
+			<button class="mt-6 px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-red-100 transition-all">
+				Learn More
+			</button>
+		</div>
+	</div>
 </section>
+
+<style>
+	.flip-container {
+		perspective: 1000px;
+	}
+
+	.flip-inner {
+		transition: transform 0.6s;
+		transform-style: preserve-3d;
+		position: relative;
+	}
+
+	.flip-front,
+	.flip-back {
+		backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.flip-container:hover .flip-inner {
+		transform: rotateY(180deg);
+	}
+
+	.flip-back {
+		transform: rotateY(180deg);
+	}
+</style>
 
 
   <!-- Swiper -->
@@ -319,6 +380,7 @@
 
 
 
+
 {{-- OUR DEMO::::::::::::: --}}
 
  <!-- Include Tailwind CSS -->
@@ -428,6 +490,294 @@
 
 
 
+<div class="flex">
+
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        
+        <img src="istockphoto-1470016721-2048x2048.jpg" height="400" width="400">
+        <h2>Real Esate Expert</h2>
+        <h3>Name:empolyee</h3>
+        empolyee.real@eg.com
+      </div>
+      <div class="flip-box-back">
+        <img src="istockphoto-1470016721-2048x2048.jpg" height="400" width="400">
+        <h2>Bussiness Expert</h2>
+        john.doe@example.com
+      </div>
+    </div>
+  </div>
+  
+  
+  &nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;
+  &nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;
+  &nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;
+  
+  <div class="flip-box2">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        
+        <img src="istockphoto-1470016721-2048x2048.jpg" height="200" width="300">
+        <h2>IT Expert</h2>
+        <h3>Name:empolyee</h3>
+        empolyee.real@eg.com
+      </div>
+      <div class="flip-box-back">
+        <img src="istockphoto-1470016721-2048x2048.jpg" height="200" width="300">
+        <h2>Bussiness Expert</h2>
+        john.doe@example.com
+      </div>
+    </div>
+  </div>
+  &nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;
+  &nbsp;
+  <div class="flip-box3">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        
+        <img src="istockphoto-1470016721-2048x2048.jpg" height="200" width="300">
+        <h2>Sales Expert</h2>
+        <h3>Name:empolyee</h3>
+        empolyee.real@eg.com
+      </div>
+      <div class="flip-box-back">
+        <img src="istockphoto-1470016721-2048x2048.jpg" height="200" width="300">
+        <h2>Bussiness Expert</h2>
+        john.doe@example.com
+      </div>
+    </div>
+  </div>
+  
+  </div>
+
+<style>
+  
+
+.flex{
+    display:flex;
+    background-color: transparent;
+    margin-top: 40px;
+} 
+
+  .flip-box {
+    background-color:transparent;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #fcf8f8;
+    perspective: 1000px; 
+    
+  }
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-box-front {
+    background-color:rgb(198, 202, 204);
+    color: black;
+
+  }
+  .flip-box-front img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .flip-box-back {
+    background-color:rgb(86, 179, 148);
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-box-back img{
+    width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+  .flip-box:hover .flip-box-inner {
+    transform: rotateX(180deg);
+  }
+  
+  .flip-box-back {
+    transform: rotateX(180deg);
+  }
+
+
+
+ 
+
+  .flip-box2 {
+    background-color: transparent;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; 
+  }
+
+  .flip-box2-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-box2:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+ 
+  .flip-box2-front, .flip-box2-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-box2-front {
+    background-color: #bbb;
+    color: black;
+
+  }
+  .flip-box2-front img{
+    width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+
+  .flip-box2-back {
+    background-color:cadetblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-box2-back img{
+    width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+  .flip-box2:hover .flip-box-inner {
+    transform: rotateX(180deg);
+  }
+  
+  .flip-box2-back {
+    transform: rotateX(180deg);
+  }
+
+
+
+
+
+  .flip-box3 {
+    background-color: transparent;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; 
+  }
+  .flip-box3-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-box3:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  
+  .flip-box3-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-box3-front {
+    background-color: #bbb;
+    color: black;
+
+  }
+  .flip-box3-front img{
+    width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+
+  .flip-box3-back {
+    background-color:cadetblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-box3-back img{
+    width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit:cover;
+  }
+  .flip-box3:hover .flip-box-inner {
+    transform: rotateX(180deg);
+  }
+  
+  .flip-box3-back {
+    transform: rotateX(180deg);
+  }
+
+
+  @media screen and (max-width: 767px)and (min-width: 0px)  {
+    .flip-box{
+      width: 500px;
+    height: 300px;
+    }
+  }
+
+
+ 
+  
+</style>
 
 {{-- VIDEO------- --}}
 <div>
