@@ -2,6 +2,28 @@
 
 @section('content')
     <style>
+        /* Apply the page-title style to all h1 elements */
+        h1 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: gray;
+            animation: titlePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes titlePulse {
+
+            0%,
+            100% {
+                transform: scale(1) rotateX(0);
+                text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            }
+
+            50% {
+                transform: scale(1.05) rotateX(5deg);
+                text-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            }
+        }
+
         :root {
             --card-transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             --primary-color: #ff4444;
@@ -101,7 +123,7 @@
         <!-- Blog Detail Hero Section -->
         <div class="py-24">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-6xl font-bold text-gray-900 mb-6">Blog Post Title</h1>
+                <h1 class="text-6xl font-bold mb-6">Blog Post Title</h1>
                 <p class="text-xl text-gray-600 mt-4">A detailed look into the world of modern technology and innovation.</p>
             </div>
         </div>

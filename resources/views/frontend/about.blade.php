@@ -2,150 +2,231 @@
 
 @section('content')
     <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(2deg); }
-            50% { transform: translateY(-10px) rotate(-2deg); }
+        /* Global Styles */
+        h1 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+            font-size: 3rem;
+            font-weight: bold;
+            animation: titlePulse 3s ease-in-out infinite;
         }
-        
-        .card-3d {
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes titlePulse {
+            0%, 100% {
+                transform: scale(1) rotateX(0);
+                text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            }
+            50% {
+                transform: scale(1.05) rotateX(5deg);
+                text-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        /* Background and Container Styles */
+        .bg-gray-100 {
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            margin-bottom: 4rem;
+        }
+
+        /* Card Styles */
+        .mission-card, .team-card, .achievement-card {
             transform-style: preserve-3d;
-            perspective: 1000px;
-            backface-visibility: hidden;
+            transition: all 0.5s ease;
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-        
-        .team-card:hover {
+
+        .mission-card:hover, .team-card:hover, .achievement-card:hover {
             transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
-            box-shadow: 
-                20px 20px 60px #00000030,
-                -20px -20px 60px #ffffff50;
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
         }
-        
-        .mission-card {
-            transform-style: preserve-3d;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            background: linear-gradient(145deg, #ffffff, #f3f3f3);
+
+        /* Team Card Image */
+        .team-card img {
+            border-radius: 10px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
-        
-        .mission-card:hover {
-            transform: translateZ(20px) rotateX(10deg) rotateY(10deg);
-            box-shadow: 
-                20px 20px 60px #00000040,
-                -20px -20px 60px #ffffff60;
+
+        /* Team Info */
+        .team-card .team-info {
+            text-align: center;
+            margin-top: 1rem;
         }
-        
-        .hanging-card {
-            animation: float 4s ease-in-out infinite;
-            box-shadow: 
-                0 10px 20px rgba(0,0,0,0.3),
-                0 6px 6px rgba(0,0,0,0.2);
+
+        .team-card .team-info h3 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .team-card .team-info p {
+            color: #777;
+        }
+
+        /* Post Card Styling */
+        .post-card {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-card .post-content {
+            flex: 1;
+        }
+
+        .post-card .post-image {
+            flex: 1;
+        }
+
+        .slider img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .slider {
+            display: flex;
+            gap: 1rem;
+            overflow-x: scroll;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .mission-card, .team-card, .achievement-card {
+                padding: 1.5rem;
+            }
+
+            .team-card img {
+                height: 200px;
+            }
+
+            .post-card {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .slider {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 
-    <div class="bg-gray-100 py-16">
+    <div class="bg-gray-100 py-16 mt-10">
         <!-- Hero Section -->
         <div class="container mx-auto px-6 lg:px-16 text-center">
-            <h1 class="text-4xl font-bold text-black mb-4 transform transition-all hover:scale-105">About Us</h1>
-            <p class="text-lg text-gray-700">
-                Discover who we are, our mission, and what we strive to achieve every day.
-            </p>
+            <h1 class="section-title">About Us</h1>
+            <p class="text-lg text-gray-700">We are dedicated to making a difference. Learn more about our mission, vision, and values.</p>
         </div>
 
-        <!-- 3D Cards Section -->
+        <!-- Featured Post Section -->
+        <div class="posts-page">
+            <div class="container mx-auto px-6 lg:px-16">
+                <h2 class="text-2xl font-bold text-center mb-6 text-gray-600">Featured Post</h2>
+                <div class="post-card">
+                    <div class="post-content">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">The Future of Fashion</h3>
+                        <p class="text-gray-600 mb-4">Discover the latest trends for the season and how fashion is evolving with sustainability at its core.</p>
+                        <p class="text-gray-600 mb-4">Fashion is more than just clothes; it’s a reflection of the culture, technology, and environment we live in. Stay ahead with the most stylish and sustainable trends that are taking over the industry.</p>
+                       <a href="#" class="inline-block px-6 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors">Read More</a>
+
+                    </div>
+                    <div class="post-image">
+                        <div class="slider">
+                            <img src="{{ asset('assets/img/about.png') }}" alt="Post Image 1">
+                            <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Post Image 2">
+                            <img src="{{ asset('assets/img/calling.jpg') }}" alt="Post Image 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission, Vision, and Values Section -->
         <div class="container mx-auto px-6 lg:px-16 mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Mission Card -->
-            <div class="mission-card p-8 rounded-2xl">
-                <div class="text-center">
-                    <h2 class="text-2xl font-bold text-black mb-4">Our Mission</h2>
-                    <p class="text-gray-700">
-                        To provide exceptional services that improve the lives of our clients.
-                    </p>
-                </div>
+            <div class="mission-card">
+                <h2 class="text-2xl font-bold text-black mb-4">Our Mission</h2>
+                <p>We are committed to delivering innovative solutions that enhance the lives of our clients and contribute to the betterment of society.</p>
             </div>
 
             <!-- Vision Card -->
-            <div class="mission-card p-8 rounded-2xl">
-                <div class="text-center">
-                    <h2 class="text-2xl font-bold text-black mb-4">Our Vision</h2>
-                    <p class="text-gray-700">
-                        To lead the industry with innovation, integrity, and excellence.
-                    </p>
-                </div>
+            <div class="mission-card">
+                <h2 class="text-2xl font-bold text-black mb-4">Our Vision</h2>
+                <p>To be a global leader in providing groundbreaking solutions that challenge the status quo and drive positive change in the world.</p>
             </div>
 
             <!-- Values Card -->
-            <div class="mission-card p-8 rounded-2xl">
-                <div class="text-center">
-                    <h2 class="text-2xl font-bold text-black mb-4">Our Values</h2>
-                    <p class="text-gray-700">
-                        Commitment, teamwork, and respect guide everything we do.
-                    </p>
-                </div>
+            <div class="mission-card">
+                <h2 class="text-2xl font-bold text-black mb-4">Our Values</h2>
+                <p>We value integrity, collaboration, and excellence, ensuring we uphold the highest standards in all that we do.</p>
             </div>
         </div>
 
         <!-- Team Section -->
         <div class="container mx-auto px-6 lg:px-16 mt-16">
-            <h2 class="text-3xl font-bold text-center text-black mb-12">Meet Our Team</h2>
+            <h2 class="text-3xl font-bold text-center text-black mb-12">Meet Our Leadership Team</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Team Cards -->
-                <div class="team-card bg-white rounded-2xl shadow-xl transition-all duration-500">
-                    <img class="rounded-t-2xl w-full h-64 object-cover" src="{{ asset('assets/img/team-member-1.jpg') }}" alt="Team Member 1">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold text-black">John Doe</h3>
-                        <p class="text-gray-600">CEO</p>
+                <div class="team-card">
+                    <img src="{{ asset('assets/img/about.png') }}" alt="Team Member 1">
+                    <div class="team-info">
+                        <h3>John Doe</h3>
+                        <p>Chief Executive Officer</p>
                     </div>
                 </div>
 
-                <div class="team-card bg-white rounded-2xl shadow-xl transition-all duration-500">
-                    <img class="rounded-t-2xl w-full h-64 object-cover" src="{{ asset('assets/img/team-member-2.jpg') }}" alt="Team Member 2">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold text-black">Jane Smith</h3>
-                        <p class="text-gray-600">CTO</p>
+                <div class="team-card">
+                    <img src="{{ asset('assets/img/about.png') }}" alt="Team Member 2">
+                    <div class="team-info">
+                        <h3>Jane Smith</h3>
+                        <p>Chief Technology Officer</p>
                     </div>
                 </div>
 
-                <div class="team-card bg-white rounded-2xl shadow-xl transition-all duration-500">
-                    <img class="rounded-t-2xl w-full h-64 object-cover" src="{{ asset('assets/img/team-member-3.jpg') }}" alt="Team Member 3">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold text-black">Emily Johnson</h3>
-                        <p class="text-gray-600">CFO</p>
+                <div class="team-card">
+                    <img src="{{ asset('assets/img/about.png') }}" alt="Team Member 3">
+                    <div class="team-info">
+                        <h3>Emily Johnson</h3>
+                        <p>Chief Financial Officer</p>
                     </div>
                 </div>
 
-                <div class="team-card bg-white rounded-2xl shadow-xl transition-all duration-500">
-                    <img class="rounded-t-2xl w-full h-64 object-cover" src="{{ asset('assets/img/team-member-4.jpg') }}" alt="Team Member 4">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold text-black">Chris Evans</h3>
-                        <p class="text-gray-600">COO</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Hanging Cards Section -->
-        <div class="container mx-auto px-6 lg:px-16 mt-20 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <!-- Achievement Card 1 -->
-            <div class="relative flex flex-col items-center">
-                <div class="absolute -top-3 z-10">
-                    <div class="w-6 h-6 bg-red-600 rounded-full shadow-lg"></div>
-                </div>
-                <div class="hanging-card w-full bg-black text-white p-8 rounded-xl">
-                    <div class="text-center">
-                        <h2 class="text-2xl font-bold">6+ Years of Excellence</h2>
-                        <p class="mt-4 text-gray-300">Since 2018, we are serving all over India.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Achievement Card 2 -->
-            <div class="relative flex flex-col items-center">
-                <div class="absolute -top-3 z-10">
-                    <div class="w-6 h-6 bg-red-600 rounded-full shadow-lg"></div>
-                </div>
-                <div class="hanging-card w-full bg-black text-white p-8 rounded-xl">
-                    <div class="text-center">
-                        <h2 class="text-2xl font-bold">Industry Leader</h2>
-                        <p class="mt-4 text-gray-300">Serving most jewelers in India.</p>
+                <div class="team-card">
+                    <img src="{{ asset('assets/img/about.png') }}" alt="Team Member 4">
+                    <div class="team-info">
+                        <h3>Chris Evans</h3>
+                        <p>Chief Operating Officer</p>
                     </div>
                 </div>
             </div>

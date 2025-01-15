@@ -23,6 +23,8 @@
             class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Contact Us</a>
         <a href="{{ route('frontend.blog') }}"
             class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Blogs</a>
+        <a href="{{ route('frontend.career') }}"
+            class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Career</a>
         <a href="#"
             class="ml-4 px-8 py-3 bg-black text-white text-sm font-medium rounded-xl shadow hover:bg-gray-900 transition-colors duration-200">
             Sign Up
@@ -57,6 +59,8 @@
         Us</a>
     <a href="{{ route('frontend.blog') }}"
         class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Blogs</a>
+    <a href="{{ route('frontend.career') }}"
+        class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Career</a>
     <a href="#"
         class="block bg-black text-white text-sm font-medium rounded-xl shadow hover:bg-gray-900 text-center py-3 mt-4 transition-colors duration-200">
         Sign Up
