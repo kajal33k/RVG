@@ -237,7 +237,7 @@
         }
     </style>
 
-    <div class="pricing-container min-h-screen py-16 px-4">
+    <div class="pricing-container min-h-screen py-16 px-4 mt-10">
         <div class="background-shapes">
             <div class="shape"></div>
             <div class="shape"></div>
