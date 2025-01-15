@@ -21,7 +21,7 @@
 
         .blog-card:hover {
             transform: translateY(-15px) rotateX(10deg) rotateY(10deg);
-            box-shadow: 
+            box-shadow:
                 0 30px 60px rgba(0, 0, 0, 0.1),
                 0 15px 30px rgba(0, 0, 0, 0.07);
         }
@@ -30,12 +30,10 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(
-                45deg, 
-                rgba(255, 255, 255, 0),
-                rgba(255, 255, 255, 0.5),
-                rgba(255, 255, 255, 0)
-            );
+            background: linear-gradient(45deg,
+                    rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, 0.5),
+                    rgba(255, 255, 255, 0));
             transform: translateZ(calc(var(--card-depth) * -1));
             transition: var(--card-transition);
             pointer-events: none;
@@ -49,7 +47,7 @@
 
         .card-image {
             transform: translateZ(25px);
-            box-shadow: 
+            box-shadow:
                 0 20px 40px rgba(0, 0, 0, 0.2),
                 0 15px 20px rgba(0, 0, 0, 0.1);
             transition: var(--card-transition);
@@ -64,11 +62,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(
-                to bottom,
-                transparent 0%,
-                rgba(0, 0, 0, 0.2) 100%
-            );
+            background: linear-gradient(to bottom,
+                    transparent 0%,
+                    rgba(0, 0, 0, 0.2) 100%);
         }
 
         .card-image img {
@@ -117,53 +113,13 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .read-more-btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border-radius: 25px;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            transform: translateZ(35px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .read-more-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.2),
-                transparent
-            );
-            transition: 0.5s;
-        }
-
-        .read-more-btn:hover {
-            background: var(--hover-color);
-            transform: translateZ(35px) translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .read-more-btn:hover::before {
-            left: 100%;
-        }
-
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0) translateZ(30px);
             }
+
             50% {
                 transform: translateY(-15px) translateZ(50px);
             }
@@ -204,7 +160,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8) 0%, transparent 80%);
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 80%);
             pointer-events: none;
         }
     </style>
@@ -221,6 +177,7 @@
         <!-- Blog Grid -->
         <div class="container mx-auto px-6 py-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Blog Card 1 -->
                 <div class="blog-card rounded-xl overflow-hidden">
                     <div class="card-content">
                         <div class="relative">
@@ -236,7 +193,10 @@
                             <p class="card-description text-gray-600 mb-4">
                                 Discover the latest trends and innovations in technology that are shaping our future...
                             </p>
-                            <a href="#" class="read-more-btn">Read More</a>
+                            <a href="{{ route('frontend.blogdetails') }}"
+                                class="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white rounded-full py-2 px-6 text-lg font-semibold shadow-md hover:bg-red-700 transition duration-300 ease-in-out">
+                                Read More
+                            </a>
                             <div class="flex items-center justify-between mt-6">
                                 <span class="text-sm text-gray-500 font-medium">5 min read</span>
                             </div>
@@ -244,7 +204,7 @@
                     </div>
                 </div>
 
-                <!-- Repeat for other cards with their respective images -->
+                <!-- Blog Card 2 -->
                 <div class="blog-card rounded-xl overflow-hidden">
                     <div class="card-content">
                         <div class="relative">
@@ -260,7 +220,10 @@
                             <p class="card-description text-gray-600 mb-4">
                                 Explore the new frontiers of design and how it's transforming user experiences...
                             </p>
-                            <a href="#" class="read-more-btn">Read More</a>
+                            <a href="{{ route('frontend.blogdetails') }}"
+                                class="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white rounded-full py-2 px-6 text-lg font-semibold shadow-md hover:bg-red-700 transition duration-300 ease-in-out">
+                                Read More
+                            </a>
                             <div class="flex items-center justify-between mt-6">
                                 <span class="text-sm text-gray-500 font-medium">4 min read</span>
                             </div>
@@ -268,6 +231,7 @@
                     </div>
                 </div>
 
+                <!-- Blog Card 3 -->
                 <div class="blog-card rounded-xl overflow-hidden">
                     <div class="card-content">
                         <div class="relative">
@@ -283,7 +247,10 @@
                             <p class="card-description text-gray-600 mb-4">
                                 Stay ahead of the curve with insights into groundbreaking innovations...
                             </p>
-                            <a href="#" class="read-more-btn">Read More</a>
+                            <a href="{{ route('frontend.blogdetails') }}"
+                                class="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white rounded-full py-2 px-6 text-lg font-semibold shadow-md hover:bg-red-700 transition duration-300 ease-in-out">
+                                Read More
+                            </a>
                             <div class="flex items-center justify-between mt-6">
                                 <span class="text-sm text-gray-500 font-medium">6 min read</span>
                             </div>
