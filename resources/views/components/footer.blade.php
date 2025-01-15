@@ -65,9 +65,9 @@
                 <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Services</a>
                 <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Faqs</a>
                 <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Contact Us</a>
-                <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Cancellation & Refund Policy</a>
-                <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Terms & Conditions</a>
-                <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <a href="{{route('frontend.refund')}}" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Cancellation & Refund Policy</a>
+                <a href="{{route('frontend.condition')}}" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Terms & Conditions</a>
+                <a href="{{route('frontend.privacypolicy')}}" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Privacy Policy</a>
                 <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Our Clients</a>
             </div>
         </div>

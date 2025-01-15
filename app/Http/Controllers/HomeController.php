@@ -33,4 +33,16 @@ class HomeController extends Controller
     public function blog(){
         return view('frontend.blog');
     }
+
+    public function privacypolicy(){
+        return view('frontend.privacypolicy');
+    }
+
+    public function condition(){
+        return view('frontend.condition');
+    }
+
+    public function refund(){
+        return view('frontend.refund');
+    }
 }

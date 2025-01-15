@@ -22,7 +22,7 @@
       <div class="flex flex-col justify-center p-4 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
           <h1 class="text-4xl font-bold leading-none sm:text-4xl">
               We are growth partners who genuinely care about you and your success.
-              <span class="dark:text-red-600">365 days, <br> 365 posters</span>
+              <span class="dark:text-red-600 ">365 days, <br> 365 posters</span>
           </h1>
           <p class="mt-6 mb-8 text-lg sm:mb-12">
               Your brand, your story, 
@@ -43,13 +43,15 @@
 
       <!-- Hero Image Section -->
       <div class="flex items-center justify-center mt-8 lg:mt-0">
-          <img src="{{ asset('assets/img/hero.jpg') }}" 
-              alt="Hero design image" 
-              class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl">
-      </div>
+        <img 
+            src="{{ asset('assets/img/hero.jpg') }}" 
+            alt="Hero design image" 
+            class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl transition-transform duration-300 ease-out hover:scale-90 overflow-hidden"
+        >
+    </div>
+    
   </div>
 </section>
-
 
     <!-- Image and Content Section -->
     <section class="bg-gradient-to-br from-[#E63636] to-gray-700 text-white py-16">
@@ -122,17 +124,17 @@
     <!-- Swiper -->
     <div class="swiper mySwiper relative w-full h-full py-12">
         <div class="swiper-wrapper">
-            <div class="swiper-slide flex justify-center items-center bg-white ">
-                <img src="{{ asset('assets/img/jewellery post  banner.avif') }}" alt="" class="h-1/2 w-1/2 ">
+            <div class="swiper-slide flex justify-center items-center ">
+                <img src="{{ asset('assets/img/card1.avif') }}" alt="" class="h-1/3 w-1/2 ">
             </div>
-            <div class="swiper-slide flex justify-center items-center bg-white">
-                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="" class="h-1/2 w-1/2">
+            <div class="swiper-slide flex justify-center items-center ">
+                <img src="{{ asset('assets/img/card2.avif') }}" alt="" class="h-1/3 w-1/2">
             </div>
-            <div class="swiper-slide flex justify-center items-center bg-white">
-                <img src="{{ asset('assets/img/jewellery post  banner.avif') }}" alt="" class="h-1/2 w-1/2">
+            <div class="swiper-slide flex justify-center items-center ">
+                <img src="{{ asset('assets/img/card3.avif') }}" alt="" class="h-1/3 w-1/2">
             </div>
-            <div class="swiper-slide flex justify-center items-center bg-white">
-                <img src="{{ asset('assets/img/jewellery post  banner.avif') }}" alt="" class="h-1/2 w-1/2">
+            <div class="swiper-slide flex justify-center items-center">
+                <img src="{{ asset('assets/img/card4.avif') }}" alt="" class="h-1/3 w-1/2">
             </div>
 
         </div>
@@ -249,11 +251,11 @@
         <div class="overflow-hidden" data-glide-el="track">
             <ul
                 class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
-                <li><img src="https://Tailwindmix.b-cdn.net/image-01.jpg" class=" max-w-1/2 max-h-1/2 m-auto" /></li>
-                <li><img src="https://Tailwindmix.b-cdn.net/image-02.jpg" class="max-w-1/2 max-h-1/2 m-auto" /></li>
-                <li><img src="https://Tailwindmix.b-cdn.net/image-03.jpg" class="max-w-1/2 max-h-1/2 m-auto" /></li>
-                <li><img src="https://Tailwindmix.b-cdn.net/image-04.jpg" class="max-w-1/2 max-h-1/2 m-auto" /></li>
-                <li><img src="https://Tailwindmix.b-cdn.net/image-05.jpg" class="max-w-1/2 max-h-1/2 m-auto" /></li>
+                <li><img src="{{asset('assets/img/slide3.jpg')}}" class=" max-w-1/2 max-h-1/2 m-auto" /></li>
+                <li><img src="{{asset('assets/img/slide4.jpg')}}" class="max-w-1/2 max-h-1/2 m-auto" /></li>
+                <li><img src="{{asset('assets/img/slide5.jpg')}}" class="max-w-1/2 max-h-1/2 m-auto" /></li>
+                <li><img src="{{asset('assets/img/slide3.jpg')}}" class="max-w-1/2 max-h-1/2 m-auto" /></li>
+                <li><img src="{{asset('assets/img/slide7.jpg')}}" class="max-w-1/2 max-h-1/2 m-auto" /></li>
             </ul>
         </div>
         <!-- Controls -->
@@ -761,12 +763,15 @@
 
     {{-- VIDEO------- --}}
     <div>
-        <iframe width="100%" height="315"
-            src="https://www.youtube.com/embed/D6446Z5z7p8?autoplay=1&modestbranding=1&rel=0&showinfo=0" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen>
+        <iframe 
+            width="100%" 
+            height="315" 
+            src="https://www.youtube.com/embed/D6446Z5z7p8?modestbranding=1&rel=0&showinfo=0" 
+            frameborder="0" 
+            allow="encrypted-media">
         </iframe>
-
     </div>
+    
 
     {{--  REVIEW SECTION  --}}
     <!--
