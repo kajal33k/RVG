@@ -34,6 +34,10 @@ class HomeController extends Controller
         return view('frontend.blog');
     }
 
+    public function blogdetails(){
+        return view('frontend.blog-details');
+    }
+
     public function privacypolicy(){
         return view('frontend.privacypolicy');
     }

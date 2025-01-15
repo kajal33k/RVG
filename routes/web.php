@@ -13,6 +13,7 @@ Route::get('/', function () {
 Route::get('/about', [HomeController::class, 'about'])->name('frontend.about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('frontend.contact');
 Route::get('/blog', [HomeController::class, 'blog'])->name('frontend.blog');
+Route::get('/blog-details', [HomeController::class, 'blogdetails'])->name('frontend.blogdetails');
 Route::get('/product', [HomeController::class, 'product'])->name('frontend.product');
 Route::get('/career', [HomeController::class, 'career'])->name('frontend.career');
 Route::get('/pricing', [HomeController::class, 'pricing'])->name('frontend.pricing');
