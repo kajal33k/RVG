@@ -21,3 +21,4 @@ Route::get('/features', [HomeController::class, 'features'])->name('frontend.fea
 Route::get('/privacypolicy', [HomeController::class, 'privacypolicy'])->name('frontend.privacypolicy');
 Route::get('/condition', [HomeController::class, 'condition'])->name('frontend.condition');
 Route::get('/refund', [HomeController::class, 'refund'])->name('frontend.refund');
+Route::get('/detail', [HomeController::class, 'detail'])->name('frontend.detail');

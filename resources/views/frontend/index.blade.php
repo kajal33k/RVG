@@ -338,7 +338,7 @@
 
 
     <!-- Component: Slider with controls inside -->
-    <div class="relative w-full glide-01 py-12 px-12">
+    <div class="relative w-full glide-01 md:py-12 md:px-12 ">
         <!-- Slides -->
         <div class="overflow-hidden" data-glide-el="track">
             <ul
@@ -803,6 +803,7 @@
         keenSliderNext.addEventListener('click', () => keenSlider.next())
     </script>
 
+{{-- CUSTOMER REVIEW SECTION --}}
     <section class="bg-white">
         <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
             <h2 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -819,7 +820,7 @@
                                     class="size-14 rounded-full object-cover" />
 
                                 <div>
-                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                    <div class="flex justify-center gap-0.5 text-yellow-500">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20"
                                             fill="currentColor">
                                             <path
@@ -867,7 +868,7 @@
                                     class="size-14 rounded-full object-cover" />
 
                                 <div>
-                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                    <div class="flex justify-center gap-0.5 text-yellow-500">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20"
                                             fill="currentColor">
                                             <path
@@ -915,7 +916,7 @@
                                     class="size-14 rounded-full object-cover" />
 
                                 <div>
-                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                    <div class="flex justify-center gap-0.5 text-yellow-500">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20"
                                             fill="currentColor">
                                             <path
@@ -963,7 +964,7 @@
                                     class="size-14 rounded-full object-cover" />
 
                                 <div>
-                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                    <div class="flex justify-center gap-0.5 text-yellow-500">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20"
                                             fill="currentColor">
                                             <path
@@ -1031,7 +1032,7 @@
         </div>
     </section>
 
-
+{{-- faq section --}}
     <div class="bg-[#fff2f4] min-h-screen">
         <section class="max-w-full mx-auto py-10 sm:py-20 px-4">
             <div class="flex items-center justify-center flex-col gap-y-2 py-5">
@@ -1106,7 +1107,7 @@
     </div>
 
 
-
+{{-- CONTACT SECTION --}}
     <section class="min-h-screen bg-cover "
         style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')">
         <div class="flex flex-col min-h-screen bg-red/60">
