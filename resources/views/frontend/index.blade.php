@@ -125,7 +125,7 @@
 
                 <!-- Card Content -->
                 <div
-                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mx-44">
+                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 lg:mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none ">
                 </div>
                 <div class="relative p-6 h-full flex flex-col justify-between">
                     <!-- Product Image -->
@@ -153,7 +153,7 @@
             <div class="swiper-slide flex justify-center items-center ">
                 <!-- Card Content -->
                 <div
-                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 lg:mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                 </div>
                 <div class="relative p-6 h-full flex flex-col justify-between">
                     <!-- Product Image -->
@@ -179,7 +179,7 @@
             <div class="swiper-slide flex justify-center items-center ">
                 <!-- Card Content -->
                 <div
-                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 lg:mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                 </div>
                 <div class="relative p-6 h-full flex flex-col justify-between">
                     <!-- Product Image -->
@@ -205,7 +205,7 @@
             <div class="swiper-slide flex justify-center items-center">
                 <!-- Card Content -->
                 <div
-                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 lg:mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                 </div>
                 <div class="relative p-6 h-full flex flex-col justify-between">
                     <!-- Product Image -->
@@ -338,7 +338,7 @@
 
 
     <!-- Component: Slider with controls inside -->
-    <div class="relative w-full glide-01 py-12">
+    <div class="relative w-full glide-01 py-12 px-12">
         <!-- Slides -->
         <div class="overflow-hidden" data-glide-el="track">
             <ul
@@ -369,7 +369,7 @@
                             <!-- Action Button -->
                             <div class="p-6 pt-0">
                                 <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
                                     View More
                                 </button>
                             </div>
@@ -403,7 +403,7 @@
                             <!-- Action Button -->
                             <div class="p-6 pt-0">
                                 <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
                                     View More
                                 </button>
                             </div>
@@ -436,7 +436,7 @@
                             <!-- Action Button -->
                             <div class="p-6 pt-0">
                                 <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
                                     View More
                                 </button>
                             </div>
@@ -469,7 +469,7 @@
                             <!-- Action Button -->
                             <div class="p-6 pt-0">
                                 <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
                                     View More
                                 </button>
                             </div>
@@ -502,7 +502,7 @@
                             <!-- Action Button -->
                             <div class="p-6 pt-0">
                                 <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
                                     View More
                                 </button>
                             </div>
@@ -688,7 +688,7 @@
 
             <!-- Slide 2 -->
             <div class="relative">
-                <img src="{{ asset('assets/img/jewellery post banner.avif') }}" alt="Second Slide"
+                <img src="{{ asset('assets/img/img.avif') }}" alt="Second Slide"
                     class="w-full h-72 md:h-96 object-cover rounded-lg">
                 <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">Second Slide</h2>
@@ -725,295 +725,6 @@
 
 
 
-
-    {{-- 
-    <div class="flex">
-
-        <div class="flip-box">
-            <div class="flip-box-inner">
-                <div class="flip-box-front">
-
-                    <img src="istockphoto-1470016721-2048x2048.jpg" height="400" width="400">
-                    <h2>Real Esate Expert</h2>
-                    <h3>Name:empolyee</h3>
-                    empolyee.real@eg.com
-                </div>
-                <div class="flip-box-back">
-                    <img src="istockphoto-1470016721-2048x2048.jpg" height="400" width="400">
-                    <h2>Bussiness Expert</h2>
-                    john.doe@example.com
-                </div>
-            </div>
-        </div>
-
-
-        
-
-        <div class="flip-box2">
-            <div class="flip-box-inner">
-                <div class="flip-box-front">
-
-                    <img src="istockphoto-1470016721-2048x2048.jpg" height="200" width="300">
-                    <h2>IT Expert</h2>
-                    <h3>Name:empolyee</h3>
-                    empolyee.real@eg.com
-                </div>
-                <div class="flip-box-back">
-                    <img src="istockphoto-1470016721-2048x2048.jpg" height="200" width="300">
-                    <h2>Bussiness Expert</h2>
-                    john.doe@example.com
-                </div>
-            </div>
-        </div>
-        
-        <div class="flip-box3">
-            <div class="flip-box-inner">
-                <div class="flip-box-front">
-
-                    <img src="istockphoto-1470016721-2048x2048.jpg" height="200" width="300">
-                    <h2>Sales Expert</h2>
-                    <h3>Name:empolyee</h3>
-                    empolyee.real@eg.com
-                </div>
-                <div class="flip-box-back">
-                    <img src="istockphoto-1470016721-2048x2048.jpg" height="200" width="300">
-                    <h2>Bussiness Expert</h2>
-                    john.doe@example.com
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <style>
-        .flex {
-            display: flex;
-            background-color: transparent;
-            margin-top: 40px;
-        }
-
-        .flip-box {
-            background-color: transparent;
-            width: 500px;
-            height: 300px;
-            border: 1px solid #fcf8f8;
-            perspective: 1000px;
-
-        }
-
-        .flip-box-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-
-        .flip-box:hover .flip-box-inner {
-            transform: rotateY(180deg);
-        }
-
-
-        .flip-box-front,
-        .flip-box-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-
-
-        .flip-box-front {
-            background-color: rgb(198, 202, 204);
-            color: black;
-
-        }
-
-        .flip-box-front img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .flip-box-back {
-            background-color: rgb(86, 179, 148);
-            color: white;
-            transform: rotateY(180deg);
-        }
-
-        .flip-box-back img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .flip-box:hover .flip-box-inner {
-            transform: rotateX(180deg);
-        }
-
-        .flip-box-back {
-            transform: rotateX(180deg);
-        }
-
-
-
-
-
-        .flip-box2 {
-            background-color: transparent;
-            width: 500px;
-            height: 300px;
-            border: 1px solid #f1f1f1;
-            perspective: 1000px;
-        }
-
-        .flip-box2-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-
-        .flip-box2:hover .flip-box-inner {
-            transform: rotateY(180deg);
-        }
-
-
-        .flip-box2-front,
-        .flip-box2-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-
-
-        .flip-box2-front {
-            background-color: #bbb;
-            color: black;
-
-        }
-
-        .flip-box2-front img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .flip-box2-back {
-            background-color: cadetred;
-            color: white;
-            transform: rotateY(180deg);
-        }
-
-        .flip-box2-back img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .flip-box2:hover .flip-box-inner {
-            transform: rotateX(180deg);
-        }
-
-        .flip-box2-back {
-            transform: rotateX(180deg);
-        }
-
-
-
-
-
-        .flip-box3 {
-            background-color: transparent;
-            width: 500px;
-            height: 300px;
-            border: 1px solid #f1f1f1;
-            perspective: 1000px;
-        }
-
-        .flip-box3-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-
-        .flip-box3:hover .flip-box-inner {
-            transform: rotateY(180deg);
-        }
-
-
-        .flip-box3-front,
-        .flip-box-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-
-
-        .flip-box3-front {
-            background-color: #bbb;
-            color: black;
-
-        }
-
-        .flip-box3-front img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .flip-box3-back {
-            background-color: cadetblue;
-            color: white;
-            transform: rotateY(180deg);
-        }
-
-        .flip-box3-back img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .flip-box3:hover .flip-box-inner {
-            transform: rotateX(180deg);
-        }
-
-        .flip-box3-back {
-            transform: rotateX(180deg);
-        }
-
-
-        @media screen and (max-width: 767px)and (min-width: 0px) {
-            .flip-box {
-                width: 500px;
-                height: 300px;
-            }
-        }
-    </style> --}}
-
-
-
-
-
-
-
     {{-- VIDEO------- --}}
     <div>
         <iframe width="100%" height="315"
@@ -1024,11 +735,7 @@
 
 
     {{--  REVIEW SECTION  --}}
-    <!--
-              Heads up! 👋
-
-              This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-            -->
+   
 
     <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
 
@@ -1557,19 +1264,57 @@
     </script> --}}
 
     <script>
-        var glide01 = new Glide('.glide-01', {
-            type: 'carousel', // Enables infinite looping
-            focusAt: 'center',
-            perView: 3,
-            autoplay: 3000,
-            animationDuration: 700, // Corrected property name (removed space)
-            gap: 30,
-            classes: {
-                activeNav: '[&>*]:bg-slate-700',
-            },
-        });
+        // Function to determine responsive settings
+        function getResponsiveSettings() {
+            const width = window.innerWidth;
     
-        glide01.mount();
+            if (width >= 1024) {
+                // Desktop: 3 items per view
+                return {
+                    perView: 3,
+                    gap: 30,
+                };
+            } else if (width >= 768) {
+                // Tablet: 2 items per view
+                return {
+                    perView: 2,
+                    gap: 20,
+                };
+            } else {
+                // Mobile: 1 item per view
+                return {
+                    perView: 1,
+                    gap: 10,
+                };
+            }
+        }
+    
+        // Initialize Glide carousel with responsive settings
+        function initializeGlide() {
+            const settings = getResponsiveSettings();
+    
+            const glide01 = new Glide('.glide-01', {
+                type: 'carousel',
+                focusAt: 'center',
+                autoplay: 3000,
+                animationDuration: 700,
+                gap: settings.gap,
+                perView: settings.perView,
+                classes: {
+                    activeNav: '[&>*]:bg-slate-700',
+                },
+            });
+    
+            glide01.mount();
+    
+            // Handle window resize to update carousel settings dynamically
+            window.addEventListener('resize', () => {
+                glide01.update(getResponsiveSettings());
+            });
+        }
+    
+        // Initialize the carousel on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', initializeGlide);
     </script>
     
     <!-- End Slider with controls inside -->

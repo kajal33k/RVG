@@ -1,30 +1,19 @@
 @extends('components.main')
 @section('content')
 
-  <style>
-    body {
-      perspective: 1000px;
-    }
-    .card {
-      transform-style: preserve-3d;
-      transition: transform 0.5s;
-    }
-    .card:hover {
-      transform: rotateY(10deg) rotateX(5deg) scale(1.02);
-    }
-  </style>
+ 
 
-  <div class="min-h-screen flex flex-col justify-center items-center">
+  <div class="min-h- w-full flex flex-col justify-center items-center">
     <!-- Header -->
     <header class="text-center m-10">
-      <h1 class="text-4xl font-bold text-red-900 drop-shadow-lg">Terms & Conditions</h1>
+      <h1 class="text-4xl font-bold text-red-700 drop-shadow-lg">Terms & Conditions</h1>
 
     </header>
 
     <!-- Terms and Conditions Card -->
-    <div class="card bg-white shadow-2xl rounded-lg p-8 max-w-3xl">
+    <div class="card bg-white shadow-2xl rounded-lg p-8 max-w-7xl">
       <div>
-        <p class="text-lg font-semibold text-red-800">Welcome to www.realvictorygroups.com</p>
+        <p class="text-lg font-semibold text-red-600">Welcome to www.realvictorygroups.com</p>
         <p class="mt-4 text-black">
           These Terms and Conditions, along with the Privacy Policy or other terms ("Terms"), constitute a binding
           agreement between Real Victory Groups ("Website Owner," "we," "us," or "our") and you ("you" or "your").
@@ -77,15 +66,15 @@
 
       <!-- Contact Information -->
       <section class="mt-6">
-        <h2 class="text-2xl font-bold text-red-800">Contact Us</h2>
+        <h2 class="text-2xl font-bold text-red-600">Contact Us</h2>
         <p class="mt-4">
           All concerns or communications must be directed to us using the contact information provided below:
         </p>
         <p class="mt-4">
           Real Victory Groups<br>
           Phone: +917753800444<br>
-          Email: <a href="mailto:realvictorygroups@gmail.com" class="text-red-800 underline">realvictorygroups@gmail.com</a><br>
-          Website: <a href="https://www.realvictorygroups.com" class="text-red-800 underline">www.realvictorygroups.com</a>
+          Email: <a href="mailto:realvictorygroups@gmail.com" class="text-red-600 underline">realvictorygroups@gmail.com</a><br>
+          Website: <a href="https://www.realvictorygroups.com" class="text-red-600 underline">www.realvictorygroups.com</a>
         </p>
       </section>
     </div>
