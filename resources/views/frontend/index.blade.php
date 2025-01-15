@@ -16,42 +16,39 @@
         Our Design
     </p>
 </div> --}}
-<section class="dark:bg-gray-100 dark:text-gray-800">
-  <div class="container mx-auto flex flex-col justify-center p-4 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-      <!-- Text Section -->
-      <div class="flex flex-col justify-center p-4 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-          <h1 class="text-4xl font-bold leading-none sm:text-4xl">
-              We are growth partners who genuinely care about you and your success.
-              <span class="dark:text-red-600 ">365 days, <br> 365 posters</span>
-          </h1>
-          <p class="mt-6 mb-8 text-lg sm:mb-12">
-              Your brand, your story, 
-              <br class="hidden md:inline lg:hidden">our design.
-          </p>
-          <div
-              class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-              <a href="#"
-                  class="px-8 py-3 text-lg font-semibold rounded dark:bg-red-600 text-white hover:bg-red-700 transition">
-                  Get Started
-              </a>
-              <a href="#"
-                  class="px-8 py-3 text-lg font-semibold border rounded border-gray-800 hover:bg-red-500 hover:text-white transition">
-                  Learn More
-              </a>
-          </div>
-      </div>
+    <section class="dark:bg-gray-100 dark:text-gray-800">
+        <div class="container mx-auto flex flex-col justify-center p-4 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+            <!-- Text Section -->
+            <div class="flex flex-col justify-center p-4 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                <h1 class="text-4xl font-bold leading-none sm:text-4xl">
+                    We are growth partners who genuinely care about you and your success.
+                    <span class="dark:text-red-600 ">365 days, <br> 365 posters</span>
+                </h1>
+                <p class="mt-6 mb-8 text-lg sm:mb-12">
+                    Your brand, your story,
+                    <br class="hidden md:inline lg:hidden">our design.
+                </p>
+                <div
+                    class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                    <a href="#"
+                        class="px-8 py-3 text-lg font-semibold rounded dark:bg-red-600 text-white hover:bg-red-700 transition">
+                        Get Started
+                    </a>
+                    <a href="#"
+                        class="px-8 py-3 text-lg font-semibold border rounded border-gray-800 hover:bg-red-500 hover:text-white transition">
+                        Learn More
+                    </a>
+                </div>
+            </div>
 
-      <!-- Hero Image Section -->
-      <div class="flex items-center justify-center mt-8 lg:mt-0">
-        <img 
-            src="{{ asset('assets/img/hero.jpg') }}" 
-            alt="Hero design image" 
-            class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl transition-transform duration-300 ease-out hover:scale-90 overflow-hidden"
-        >
-    </div>
-    
-  </div>
-</section>
+            <!-- Hero Image Section -->
+            <div class="flex items-center justify-center mt-8 lg:mt-0">
+                <img src="{{ asset('assets/img/hero.jpg') }}" alt="Hero design image"
+                    class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl transition-transform duration-300 ease-out hover:scale-90 overflow-hidden">
+            </div>
+
+        </div>
+    </section>
 
     <!-- Image and Content Section -->
     <section class="bg-gradient-to-br from-[#E63636] to-gray-700 text-white py-16">
@@ -125,16 +122,111 @@
     <div class="swiper mySwiper relative w-full h-full py-12">
         <div class="swiper-wrapper">
             <div class="swiper-slide flex justify-center items-center ">
-                <img src="{{ asset('assets/img/card1.avif') }}" alt="" class="h-1/3 w-1/2 ">
+
+                <!-- Card Content -->
+                <div
+                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mx-44">
+                </div>
+                <div class="relative p-6 h-full flex flex-col justify-between">
+                    <!-- Product Image -->
+                    <div class="flex justify-center ">
+                        <img src="{{ asset('assets/img/card3.avif') }}" alt="Software Product"
+                            class="w-32 h-32 object-contain rounded-lg shadow-md">
+                    </div>
+                    <!-- Product Details -->
+                    <div class="text-center mt-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Software Product</h3>
+                        <p class="text-sm text-gray-600 mt-2">An amazing software solution designed to simplify your work
+                            and increase productivity.</p>
+                    </div>
+                    <!-- Action Button -->
+                    <div class="mt-6">
+                        <button
+                            class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+
             </div>
             <div class="swiper-slide flex justify-center items-center ">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="" class="h-1/3 w-1/2">
+                <!-- Card Content -->
+                <div
+                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                </div>
+                <div class="relative p-6 h-full flex flex-col justify-between">
+                    <!-- Product Image -->
+                    <div class="flex justify-center">
+                        <img src="{{ asset('assets/img/card3.avif') }}" alt="Software Product"
+                            class="w-32 h-32 object-contain rounded-lg shadow-md">
+                    </div>
+                    <!-- Product Details -->
+                    <div class="text-center mt-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Software Product</h3>
+                        <p class="text-sm text-gray-600 mt-2">An amazing software solution designed to simplify your work
+                            and increase productivity.</p>
+                    </div>
+                    <!-- Action Button -->
+                    <div class="mt-6">
+                        <button
+                            class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="swiper-slide flex justify-center items-center ">
-                <img src="{{ asset('assets/img/card3.avif') }}" alt="" class="h-1/3 w-1/2">
+                <!-- Card Content -->
+                <div
+                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                </div>
+                <div class="relative p-6 h-full flex flex-col justify-between">
+                    <!-- Product Image -->
+                    <div class="flex justify-center">
+                        <img src="{{ asset('assets/img/card2.avif') }}" alt="Software Product"
+                            class="w-32 h-32 object-contain rounded-lg shadow-md">
+                    </div>
+                    <!-- Product Details -->
+                    <div class="text-center mt-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Software Product</h3>
+                        <p class="text-sm text-gray-600 mt-2">An amazing software solution designed to simplify your work
+                            and increase productivity.</p>
+                    </div>
+                    <!-- Action Button -->
+                    <div class="mt-6">
+                        <button
+                            class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="swiper-slide flex justify-center items-center">
-                <img src="{{ asset('assets/img/card4.avif') }}" alt="" class="h-1/3 w-1/2">
+                <!-- Card Content -->
+                <div
+                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 to-gray-600 opacity-20 mx-44 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                </div>
+                <div class="relative p-6 h-full flex flex-col justify-between">
+                    <!-- Product Image -->
+                    <div class="flex justify-center">
+                        <img src="{{ asset('assets/img/card1.avif') }}" alt="Software Product"
+                            class="w-32 h-32 object-contain rounded-lg shadow-md">
+                    </div>
+                    <!-- Product Details -->
+                    <div class="text-center mt-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Software Product</h3>
+                        <p class="text-sm text-gray-600 mt-2">An amazing software solution designed to simplify your work
+                            and increase productivity.</p>
+                    </div>
+                    <!-- Action Button -->
+                    <div class="mt-6">
+                        <button
+                            class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -251,11 +343,172 @@
         <div class="overflow-hidden" data-glide-el="track">
             <ul
                 class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
-                <li><img src="{{asset('assets/img/slide3.jpg')}}" class=" max-w-1/2 max-h-1/2 m-auto" /></li>
-                <li><img src="{{asset('assets/img/slide4.jpg')}}" class="max-w-1/2 max-h-1/2 m-auto" /></li>
-                <li><img src="{{asset('assets/img/slide5.jpg')}}" class="max-w-1/2 max-h-1/2 m-auto" /></li>
-                <li><img src="{{asset('assets/img/slide3.jpg')}}" class="max-w-1/2 max-h-1/2 m-auto" /></li>
-                <li><img src="{{asset('assets/img/slide7.jpg')}}" class="max-w-1/2 max-h-1/2 m-auto" /></li>
+                <li>
+                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
+                        <div
+                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                            <!-- Image Section -->
+                            <div class="relative">
+                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                    class="w-full h-56 object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
+                                    Posters</h2>
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                                <p class="text-sm text-gray-600 mt-2">
+                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
+                                    are visually appealing and highly functional.
+                                </p>
+
+                            </div>
+
+                            <!-- Action Button -->
+                            <div class="p-6 pt-0">
+                                <button
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    View More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
+                        <div
+                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                            <!-- Image Section -->
+                            <div class="relative">
+                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                    class="w-full h-56 object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
+                                    Posters</h2>
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                                <p class="text-sm text-gray-600 mt-2">
+                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
+                                    are visually appealing and highly functional.
+                                </p>
+
+                            </div>
+
+                            <!-- Action Button -->
+                            <div class="p-6 pt-0">
+                                <button
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    View More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
+                        <div
+                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                            <!-- Image Section -->
+                            <div class="relative">
+                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                    class="w-full h-56 object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
+                                    Posters</h2>
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                                <p class="text-sm text-gray-600 mt-2">
+                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
+                                    are visually appealing and highly functional.
+                                </p>
+
+                            </div>
+
+                            <!-- Action Button -->
+                            <div class="p-6 pt-0">
+                                <button
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    View More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
+                        <div
+                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                            <!-- Image Section -->
+                            <div class="relative">
+                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                    class="w-full h-56 object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
+                                    Posters</h2>
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                                <p class="text-sm text-gray-600 mt-2">
+                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
+                                    are visually appealing and highly functional.
+                                </p>
+
+                            </div>
+
+                            <!-- Action Button -->
+                            <div class="p-6 pt-0">
+                                <button
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    View More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
+                        <div
+                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                            <!-- Image Section -->
+                            <div class="relative">
+                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                    class="w-full h-56 object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
+                                    Posters</h2>
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                                <p class="text-sm text-gray-600 mt-2">
+                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
+                                    are visually appealing and highly functional.
+                                </p>
+
+                            </div>
+
+                            <!-- Action Button -->
+                            <div class="p-6 pt-0">
+                                <button
+                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-purple-600 hover:to-blue-500 transform transition-transform duration-300 hover:scale-105">
+                                    View More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
         <!-- Controls -->
@@ -340,7 +593,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Friendly Admin -->
                 <div class="bg-white shadow-lg rounded-lg p-6 text-center feature-card fade-in">
-                    <div class="text-blue-500 text-4xl mb-4">👤</div>
+                    <div class="text-red-500 text-4xl mb-4">👤</div>
                     <h3 class="text-xl font-semibold mb-2">Friendly Admin</h3>
                     <p class="text-gray-600">Welcome to <strong>Friendly Admin</strong> – your ultimate partner in
                         efficient management. Simplify your tasks with intuitive tools and dedicated support.</p>
@@ -356,7 +609,7 @@
 
                 <!-- Infinite Customization -->
                 <div class="bg-white shadow-lg rounded-lg p-6 text-center feature-card fade-in">
-                    <div class="text-purple-500 text-4xl mb-4">🎨</div>
+                    <div class="text-gray-500 text-4xl mb-4">🎨</div>
                     <h3 class="text-xl font-semibold mb-2">Infinite Customization</h3>
                     <p class="text-gray-600">Transform our solutions to suit your vision. With endless customization, align
                         every feature seamlessly with your needs.</p>
@@ -408,72 +661,72 @@
     <!-- Include Slick Carousel Script -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <style>
-      /* Ensures consistent image rendering */
-      .slick-slide img {
-          border-radius: 8px;
-          object-fit: cover;
-      }
-  
-      /* Hide default slick dots */
-      .slick-dots {
-          display: none !important;
-      }
-  </style>
-  
-  <!-- Slider Section -->
-  <section class="w-full flex justify-center py-10 bg-red-900">
-      <div class="slider w-full max-w-5xl">
-          <!-- Slide 1 -->
-          <div class="relative">
-              <img src="{{ asset('assets/img/imgg.avif') }}" alt="First Slide"
-                  class="w-full h-72 md:h-96 object-cover rounded-lg">
-              <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                  <h2 class="text-3xl md:text-4xl font-bold mb-2">First Slide</h2>
-                  <p class="text-sm md:text-lg">Explore the amazing features of our demo.</p>
-              </div>
-          </div>
-  
-          <!-- Slide 2 -->
-          <div class="relative">
-              <img src="{{ asset('assets/img/jewellery post banner.avif') }}" alt="Second Slide"
-                  class="w-full h-72 md:h-96 object-cover rounded-lg">
-              <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                  <h2 class="text-3xl md:text-4xl font-bold mb-2">Second Slide</h2>
-                  <p class="text-sm md:text-lg">Learn more about what we offer in this section.</p>
-              </div>
-          </div>
-  
-          <!-- Slide 3 -->
-          <div class="relative">
-              <img src="{{ asset('assets/img/imgg.avif') }}" alt="Third Slide"
-                  class="w-full h-72 md:h-96 object-cover rounded-lg">
-              <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                  <h2 class="text-3xl md:text-4xl font-bold mb-2">Third Slide</h2>
-                  <p class="text-sm md:text-lg">Check out our stunning features in action.</p>
-              </div>
-          </div>
-      </div>
-  </section>
-  
-  <!-- Slick Slider Initialization Script -->
-  <script>
-      $(document).ready(function() {
-          // Initialize the slick slider
-          $('.slider').slick({
-              infinite: true, // Infinite loop
-              speed: 500, // Transition speed
-              fade: true, // Fade effect between slides
-              autoplay: true, // Enable autoplay
-              autoplaySpeed: 3000, // Set autoplay speed (3 seconds)
-              arrows: false, // Disable navigation arrows
-          });
-      });
-  </script>
-  
+        /* Ensures consistent image rendering */
+        .slick-slide img {
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Hide default slick dots */
+        .slick-dots {
+            display: none !important;
+        }
+    </style>
+
+    <!-- Slider Section -->
+    <section class="w-full flex justify-center py-10 bg-red-900">
+        <div class="slider w-full max-w-5xl">
+            <!-- Slide 1 -->
+            <div class="relative">
+                <img src="{{ asset('assets/img/imgg.avif') }}" alt="First Slide"
+                    class="w-full h-72 md:h-96 object-cover rounded-lg">
+                <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">First Slide</h2>
+                    <p class="text-sm md:text-lg">Explore the amazing features of our demo.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="relative">
+                <img src="{{ asset('assets/img/jewellery post banner.avif') }}" alt="Second Slide"
+                    class="w-full h-72 md:h-96 object-cover rounded-lg">
+                <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Second Slide</h2>
+                    <p class="text-sm md:text-lg">Learn more about what we offer in this section.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="relative">
+                <img src="{{ asset('assets/img/imgg.avif') }}" alt="Third Slide"
+                    class="w-full h-72 md:h-96 object-cover rounded-lg">
+                <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Third Slide</h2>
+                    <p class="text-sm md:text-lg">Check out our stunning features in action.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slick Slider Initialization Script -->
+    <script>
+        $(document).ready(function() {
+            // Initialize the slick slider
+            $('.slider').slick({
+                infinite: true, // Infinite loop
+                speed: 500, // Transition speed
+                fade: true, // Fade effect between slides
+                autoplay: true, // Enable autoplay
+                autoplaySpeed: 3000, // Set autoplay speed (3 seconds)
+                arrows: false, // Disable navigation arrows
+            });
+        });
+    </script>
 
 
 
-{{-- 
+
+    {{-- 
     <div class="flex">
 
         <div class="flip-box">
@@ -656,7 +909,7 @@
         }
 
         .flip-box2-back {
-            background-color: cadetblue;
+            background-color: cadetred;
             color: white;
             transform: rotateY(180deg);
         }
@@ -754,31 +1007,28 @@
             }
         }
     </style> --}}
-  
-    
 
 
 
-    
+
+
+
 
     {{-- VIDEO------- --}}
     <div>
-        <iframe 
-            width="100%" 
-            height="315" 
-            src="https://www.youtube.com/embed/D6446Z5z7p8?modestbranding=1&rel=0&showinfo=0" 
-            frameborder="0" 
+        <iframe width="100%" height="315"
+            src="https://www.youtube.com/embed/D6446Z5z7p8?modestbranding=1&rel=0&showinfo=0" frameborder="0"
             allow="encrypted-media">
         </iframe>
     </div>
-    
+
 
     {{--  REVIEW SECTION  --}}
     <!--
-      Heads up! 👋
+              Heads up! 👋
 
-      This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-    -->
+              This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+            -->
 
     <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
 
@@ -1076,76 +1326,78 @@
 
 
     <div class="bg-[#fff2f4] min-h-screen">
-      <section class="max-w-full mx-auto py-10 sm:py-20 px-4">
-          <div class="flex items-center justify-center flex-col gap-y-2 py-5">
-              <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Frequently asked questions</h2>
-              <p class="text-lg font-medium text-slate-700/70 text-center">Questions related to web hosting</p>
-          </div>
-          <div class="w-full py-4">
-              <div class="mx-auto w-full max-w-7xl border border-slate-400/20 rounded-lg bg-white">
-                  <div class="border-b border-[#0A071B]/10">
-                      <button
-                          class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
-                          data-toggle="answer-1">
-                          <span>What types of hosting plans do you offer?</span>
-                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                              class="mt-1.5 md:mt-0 flex-shrink-0 rotate-180 transform h-5 w-5 text-[#5B5675]" height="1em"
-                              width="1em" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                          </svg>
-                      </button>
-                      <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-1"
-                          style="display: none;">We offer shared hosting, VPS hosting, dedicated server hosting, and cloud hosting
-                          plans.</div>
-                  </div>
-                  <div class="border-b border-[#0A071B]/10">
-                      <button
-                          class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
-                          data-toggle="answer-2">
-                          <span>What is the uptime guarantee for your hosting services?</span>
-                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                              class="mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675]" height="1em" width="1em"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                          </svg>
-                      </button>
-                      <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-2"
-                          style="display: none;">We guarantee an uptime of 99.9% for all our hosting services.</div>
-                  </div>
-                  <div class="border-b border-[#0A071B]/10">
-                      <button
-                          class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
-                          data-toggle="answer-3">
-                          <span>Do you provide website migration assistance?</span>
-                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                              class="mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675]" height="1em" width="1em"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                          </svg>
-                      </button>
-                      <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-3"
-                          style="display: none;">Yes, we offer free website migration assistance for new customers.</div>
-                  </div>
-                  <div>
-                      <button
-                          class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
-                          data-toggle="answer-4">
-                          <span>What security measures do you have in place?</span>
-                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                              class="mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675]" height="1em" width="1em"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                          </svg>
-                      </button>
-                      <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-4"
-                          style="display: none;">We employ advanced security measures including firewalls, DDoS protection, and
-                          regular security audits.</div>
-                  </div>
-              </div>
-          </div>
-      </section>
-  </div>
-  
+        <section class="max-w-full mx-auto py-10 sm:py-20 px-4">
+            <div class="flex items-center justify-center flex-col gap-y-2 py-5">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Frequently asked questions</h2>
+                <p class="text-lg font-medium text-slate-700/70 text-center">Questions related to web hosting</p>
+            </div>
+            <div class="w-full py-4">
+                <div class="mx-auto w-full max-w-7xl border border-slate-400/20 rounded-lg bg-white">
+                    <div class="border-b border-[#0A071B]/10">
+                        <button
+                            class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                            data-toggle="answer-1">
+                            <span>What types of hosting plans do you offer?</span>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                class="mt-1.5 md:mt-0 flex-shrink-0 rotate-180 transform h-5 w-5 text-[#5B5675]"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                            </svg>
+                        </button>
+                        <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-1"
+                            style="display: none;">We offer shared hosting, VPS hosting, dedicated server hosting, and
+                            cloud hosting
+                            plans.</div>
+                    </div>
+                    <div class="border-b border-[#0A071B]/10">
+                        <button
+                            class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                            data-toggle="answer-2">
+                            <span>What is the uptime guarantee for your hosting services?</span>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                class="mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675]" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                            </svg>
+                        </button>
+                        <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-2"
+                            style="display: none;">We guarantee an uptime of 99.9% for all our hosting services.</div>
+                    </div>
+                    <div class="border-b border-[#0A071B]/10">
+                        <button
+                            class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                            data-toggle="answer-3">
+                            <span>Do you provide website migration assistance?</span>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                class="mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675]" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                            </svg>
+                        </button>
+                        <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-3"
+                            style="display: none;">Yes, we offer free website migration assistance for new customers.</div>
+                    </div>
+                    <div>
+                        <button
+                            class="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                            data-toggle="answer-4">
+                            <span>What security measures do you have in place?</span>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                class="mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675]" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                            </svg>
+                        </button>
+                        <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium" id="answer-4"
+                            style="display: none;">We employ advanced security measures including firewalls, DDoS
+                            protection, and
+                            regular security audits.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
 
 
     <section class="min-h-screen bg-cover "
@@ -1153,7 +1405,7 @@
         <div class="flex flex-col min-h-screen bg-red/60">
             <div class="container flex flex-col flex-1 px-6 py-12 mx-auto">
                 <div class="flex-1 lg:flex lg:items-center lg:-mx-6">
-                    <div class="text-white lg:w-1/2 lg:mx-6 bg-black py-8 px-8 z-30 rounded-lg" >
+                    <div class="text-white lg:w-1/2 lg:mx-6 bg-black py-8 px-8 z-30 rounded-lg">
                         <h1 class="text-2xl font-semibold capitalize lg:text-3xl">Ultimate design solution</h1>
 
                         <p class="max-w-xl mt-6">
@@ -1259,7 +1511,7 @@
         </div>
     </section>
 
-   
+
 
 
     <script>
@@ -1286,15 +1538,15 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
-
+{{-- 
     <script>
         var glide01 = new Glide('.glide-01', {
             type: 'slider',
             focusAt: 'center',
-            perView: 1,
+            perView: 3,
             autoplay: 3000,
             animationDuration: 700,
-            gap: 0,
+            gap: 30,
             classes: {
                 activeNav: '[&>*]:bg-slate-700',
             },
@@ -1302,7 +1554,24 @@
         });
 
         glide01.mount();
+    </script> --}}
+
+    <script>
+        var glide01 = new Glide('.glide-01', {
+            type: 'carousel', // Enables infinite looping
+            focusAt: 'center',
+            perView: 3,
+            autoplay: 3000,
+            animationDuration: 700, // Corrected property name (removed space)
+            gap: 30,
+            classes: {
+                activeNav: '[&>*]:bg-slate-700',
+            },
+        });
+    
+        glide01.mount();
     </script>
+    
     <!-- End Slider with controls inside -->
 
     <!-- Swiper JS -->
