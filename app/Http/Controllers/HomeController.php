@@ -49,4 +49,8 @@ class HomeController extends Controller
     public function refund(){
         return view('frontend.refund');
     }
+
+    public function detail(){
+        return view('frontend.detail');
+    }
 }
