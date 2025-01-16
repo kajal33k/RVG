@@ -2,41 +2,6 @@
 
 @section('content')
     <style>
-        /* Enhanced 3D Backgrounds */
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -2;
-        }
-
-        .background-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .background-layer:nth-child(1) {
-            background-image: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3)), url('/api/placeholder/1920/1080');
-            opacity: 1;
-        }
-
-        .background-layer:nth-child(2) {
-            background-image: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3)), url('/api/placeholder/1920/1080');
-        }
-
-        .background-layer:nth-child(3) {
-            background-image: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3)), url('/api/placeholder/1920/1080');
-        }
 
         /* Enhanced Main Container */
         .posts-page {
