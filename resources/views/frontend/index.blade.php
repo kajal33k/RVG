@@ -338,196 +338,153 @@
 
 
     <!-- Component: Slider with controls inside -->
-    <div class="relative w-full glide-01 md:py-12 md:px-12 ">
+    <div class="relative w-full glide-01 md:py-12 md:px-12">
+        <div class="flex justify-center mb-6">
+            <h1 class="text-red-600 text-3xl font-bold">Our Products </h1>
+        </div>
+    
         <!-- Slides -->
         <div class="overflow-hidden" data-glide-el="track">
-            <ul
-                class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
-                <li>
-                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
-                        <div
-                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
-                            <!-- Image Section -->
-                            <div class="relative">
-                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
-                                    class="w-full h-56 object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
-                                    Posters</h2>
-                            </div>
-
-                            <!-- Content Section -->
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
-                                <p class="text-sm text-gray-600 mt-2">
-                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
-                                    are visually appealing and highly functional.
-                                </p>
-
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="p-6 pt-0">
-                                <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                    View More
-                                </button>
-                            </div>
+            <ul class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+                <!-- Item 1 -->
+                <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
+                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                        <!-- Image Section -->
+                        <div class="relative">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
                         </div>
-                    </div>
-
-                </li>
-                <li>
-                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
-                        <div
-                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
-                            <!-- Image Section -->
-                            <div class="relative">
-                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
-                                    class="w-full h-56 object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
-                                    Posters</h2>
-                            </div>
-
-                            <!-- Content Section -->
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
-                                <p class="text-sm text-gray-600 mt-2">
-                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
-                                    are visually appealing and highly functional.
-                                </p>
-
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="p-6 pt-0">
-                                <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                    View More
-                                </button>
-                            </div>
+                        <!-- Content Section -->
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                            <p class="text-xs sm:text-sm text-gray-600 mt-2">
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                            </p>
+                        </div>
+                        <!-- Action Button -->
+                        <div class="p-4 pt-0">
+                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                View More
+                            </button>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
-                        <div
-                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
-                            <!-- Image Section -->
-                            <div class="relative">
-                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
-                                    class="w-full h-56 object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
-                                    Posters</h2>
-                            </div>
-
-                            <!-- Content Section -->
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
-                                <p class="text-sm text-gray-600 mt-2">
-                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
-                                    are visually appealing and highly functional.
-                                </p>
-
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="p-6 pt-0">
-                                <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                    View More
-                                </button>
-                            </div>
+                <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
+                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                        <!-- Image Section -->
+                        <div class="relative">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                            <p class="text-xs sm:text-sm text-gray-600 mt-2">
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                            </p>
+                        </div>
+                        <!-- Action Button -->
+                        <div class="p-4 pt-0">
+                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                View More
+                            </button>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
-                        <div
-                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
-                            <!-- Image Section -->
-                            <div class="relative">
-                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
-                                    class="w-full h-56 object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
-                                    Posters</h2>
-                            </div>
-
-                            <!-- Content Section -->
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
-                                <p class="text-sm text-gray-600 mt-2">
-                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
-                                    are visually appealing and highly functional.
-                                </p>
-
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="p-6 pt-0">
-                                <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                    View More
-                                </button>
-                            </div>
+                <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
+                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                        <!-- Image Section -->
+                        <div class="relative">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                            <p class="text-xs sm:text-sm text-gray-600 mt-2">
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                            </p>
+                        </div>
+                        <!-- Action Button -->
+                        <div class="p-4 pt-0">
+                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                View More
+                            </button>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
-                        <div
-                            class="w-96 bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
-                            <!-- Image Section -->
-                            <div class="relative">
-                                <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
-                                    class="w-full h-56 object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                                <h2 class="absolute bottom-4 left-4 text-white text-xl font-bold">Dynamic Websites &
-                                    Posters</h2>
-                            </div>
-
-                            <!-- Content Section -->
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
-                                <p class="text-sm text-gray-600 mt-2">
-                                    Showcase your creativity with stunning poster designs and dynamic website layouts that
-                                    are visually appealing and highly functional.
-                                </p>
-
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="p-6 pt-0">
-                                <button
-                                    class="w-full py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                    View More
-                                </button>
-                            </div>
+                <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
+                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                        <!-- Image Section -->
+                        <div class="relative">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                            <p class="text-xs sm:text-sm text-gray-600 mt-2">
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                            </p>
+                        </div>
+                        <!-- Action Button -->
+                        <div class="p-4 pt-0">
+                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                View More
+                            </button>
                         </div>
                     </div>
                 </li>
+                <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
+                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                        <!-- Image Section -->
+                        <div class="relative">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
+                            <p class="text-xs sm:text-sm text-gray-600 mt-2">
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                            </p>
+                        </div>
+                        <!-- Action Button -->
+                        <div class="p-4 pt-0">
+                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <!-- Repeat above block for other slides (items 2-6) -->
+                <!-- Item 2, 3, 4, 5, and 6 -->
+                <!-- For brevity, I'm leaving them out. You can duplicate the same structure as the first item for other slides. -->
             </ul>
         </div>
-        <!-- Controls -->
-        {{-- <div class="absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2 " data-glide-el="controls">
-      <button class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20" data-glide-dir="<" aria-label="prev slide">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-              <title>prev slide</title>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
-          </svg>
-      </button>
-      <button class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20" data-glide-dir=">" aria-label="next slide">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-              <title>next slide</title>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-          </svg>
-      </button>
-  </div> --}}
+    
+        <!-- Controls (Optional, for future use) -->
+        {{-- <div class="absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2" data-glide-el="controls">
+            <button class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20" data-glide-dir="<" aria-label="prev slide">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                    <title>prev slide</title>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                </svg>
+            </button>
+            <button class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20" data-glide-dir=">" aria-label="next slide">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                    <title>next slide</title>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </button>
+        </div> --}}
     </div>
-
+    
 
 
     <style>
@@ -584,7 +541,7 @@
             animation-delay: 1.2s;
         }
     </style>
-
+{{-- features --}}
     <section class="py-12">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Features</h2>
@@ -647,87 +604,388 @@
 
 
     {{-- OUR DEMO::::::::::::: --}}
-
-    <!-- Include Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Include Slick Carousel Styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-
-    <!-- Include jQuery (required for Slick) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Include Slick Carousel Script -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <style>
-        /* Ensures consistent image rendering */
-        .slick-slide img {
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        /* Hide default slick dots */
-        .slick-dots {
-            display: none !important;
-        }
-    </style>
-
-    <!-- Slider Section -->
-    <section class="w-full flex justify-center py-10 bg-red-900">
-        <div class="slider w-full max-w-5xl">
-            <!-- Slide 1 -->
-            <div class="relative">
-                <img src="{{ asset('assets/img/imgg.avif') }}" alt="First Slide"
-                    class="w-full h-72 md:h-96 object-cover rounded-lg">
-                <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">First Slide</h2>
-                    <p class="text-sm md:text-lg">Explore the amazing features of our demo.</p>
+    <!-- component -->
+    <div class="mb-16">
+        <!-- Code block starts -->
+        <dh-component>
+            <div class="container flex justify-center mx-auto pt-16">
+                <div>
+                    <p class="text-gray-500 text-lg text-center font-normal pb-3">BUILDING TEAM</p>
+                    <h1 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
+                        The Talented People Behind the Scenes of the Organization</h1>
                 </div>
             </div>
-
-            <!-- Slide 2 -->
-            <div class="relative">
-                <img src="{{ asset('assets/img/img.avif') }}" alt="Second Slide"
-                    class="w-full h-72 md:h-96 object-cover rounded-lg">
-                <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Second Slide</h2>
-                    <p class="text-sm md:text-lg">Learn more about what we offer in this section.</p>
+            <div class="w-full bg-gray-100 px-10 pt-10">
+                <div class="container mx-auto">
+                    <div role="list" aria-label="Behind the scenes People "
+                        class="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
+                        <div role="listitem"
+                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                            <div class="rounded overflow-hidden shadow-md bg-white">
+                                <div class="absolute -mt-20 w-full flex justify-center">
+                                    <div class="h-32 w-32">
+                                        <img src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif"
+                                            alt="Display Picture of Andres Berlin" role="img"
+                                            class="rounded-full object-cover h-full w-full shadow-md" />
+                                    </div>
+                                </div>
+                                <div class="px-6 mt-16">
+                                    <h1 class="font-bold text-3xl text-center mb-1">Andres Berlin</h1>
+                                    <p class="text-gray-800 text-sm text-center">Chief Executive Officer</p>
+                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">The CEO's role in
+                                        raising a company's corporate IQ is to establish an atmosphere that promotes
+                                        knowledge sharing and collaboration.</p>
+                                    <div class="w-full flex justify-center pt-5 pb-5">
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Github" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-github">
+                                                    <path
+                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Twitter" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-twitter">
+                                                    <path
+                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Instagram" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-instagram">
+                                                    <rect x="2" y="2" width="20" height="20" rx="5"
+                                                        ry="5"></rect>
+                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                    </line>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="listitem"
+                            class="xl:w-1/3 lg:mx-3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                            <div class="rounded overflow-hidden shadow-md bg-white">
+                                <div class="absolute -mt-20 w-full flex justify-center">
+                                    <div class="h-32 w-32">
+                                        <img src="https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif"
+                                            alt="Display Picture of Silene Tokyo" role="img"
+                                            class="rounded-full object-cover h-full w-full shadow-md" />
+                                    </div>
+                                </div>
+                                <div class="px-6 mt-16">
+                                    <h1 class="font-bold text-3xl text-center mb-1">Silene Tokyo</h1>
+                                    <p class="text-gray-800 text-sm text-center">Product Design Head</p>
+                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">The emphasis on
+                                        innovation and technology in our companies has resulted in a few of them
+                                        establishing global benchmarks in product design and development.</p>
+                                    <div class="w-full flex justify-center pt-5 pb-5">
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Github" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-github">
+                                                    <path
+                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Twitter" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-twitter">
+                                                    <path
+                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Instagram" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-instagram">
+                                                    <rect x="2" y="2" width="20" height="20" rx="5"
+                                                        ry="5"></rect>
+                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                    </line>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="listitem"
+                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                            <div class="rounded overflow-hidden shadow-md bg-white">
+                                <div class="absolute -mt-20 w-full flex justify-center">
+                                    <div class="h-32 w-32">
+                                        <img src="https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif"
+                                            alt="Display Picture of Johnson Stone" role="img"
+                                            class="rounded-full object-cover h-full w-full shadow-md" />
+                                    </div>
+                                </div>
+                                <div class="px-6 mt-16">
+                                    <h1 class="font-bold text-3xl text-center mb-1">Johnson Stone</h1>
+                                    <p class="text-gray-800 text-sm text-center">Manager Development</p>
+                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">Our services encompass
+                                        the assessment and repair of property damage caused by water, fire, smoke, or mold.
+                                        We can also be a part of the restoration.</p>
+                                    <div class="w-full flex justify-center pt-5 pb-5">
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Github" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-github">
+                                                    <path
+                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Twitter" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-twitter">
+                                                    <path
+                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Instagram" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-instagram">
+                                                    <rect x="2" y="2" width="20" height="20" rx="5"
+                                                        ry="5"></rect>
+                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                    </line>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="listitem"
+                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                            <div class="rounded overflow-hidden shadow-md bg-white">
+                                <div class="absolute -mt-20 w-full flex justify-center">
+                                    <div class="h-32 w-32">
+                                        <img src="https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg"
+                                            alt="Display Picture of Dean Jones" role="img"
+                                            class="rounded-full object-cover h-full w-full shadow-md" />
+                                    </div>
+                                </div>
+                                <div class="px-6 mt-16">
+                                    <h1 class="font-bold text-3xl text-center mb-1">Dean Jones</h1>
+                                    <p class="text-gray-800 text-sm text-center">Principal Software Engineer</p>
+                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">An avid open-source
+                                        developer who loves to be creative and inventive. I have 20 years of experience in
+                                        the field.</p>
+                                    <div class="w-full flex justify-center pt-5 pb-5">
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Github" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-github">
+                                                    <path
+                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Twitter" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-twitter">
+                                                    <path
+                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Instagram" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-instagram">
+                                                    <rect x="2" y="2" width="20" height="20" rx="5"
+                                                        ry="5"></rect>
+                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                    </line>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="listitem"
+                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                            <div class="rounded overflow-hidden shadow-md bg-white">
+                                <div class="absolute -mt-20 w-full flex justify-center">
+                                    <div class="h-32 w-32">
+                                        <img src="https://cdn.tuk.dev/assets/blond-man-happy-expression_1194-2873.jpg"
+                                            alt="Display Picture of Rachel Adams" role="img"
+                                            class="rounded-full object-cover h-full w-full shadow-md" />
+                                    </div>
+                                </div>
+                                <div class="px-6 mt-16">
+                                    <h1 class="font-bold text-3xl text-center mb-1">Rachel Adams</h1>
+                                    <p class="text-gray-800 text-sm text-center">Product Design Head</p>
+                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">Product designer with
+                                        interests in immersive computing and XR, political ventures, and emerging
+                                        technologies. Able to take ideas and give them a life.</p>
+                                    <div class="w-full flex justify-center pt-5 pb-5">
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Github" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-github">
+                                                    <path
+                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Twitter" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-twitter">
+                                                    <path
+                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Instagram" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-instagram">
+                                                    <rect x="2" y="2" width="20" height="20" rx="5"
+                                                        ry="5"></rect>
+                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                    </line>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="listitem"
+                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                            <div class="rounded overflow-hidden shadow-md bg-white">
+                                <div class="absolute -mt-20 w-full flex justify-center">
+                                    <div class="h-32 w-32">
+                                        <img src="https://cdn.tuk.dev/assets/photo-1570211776045-af3a51026f4a.jfif"
+                                            alt="Display Picture of Charles Keith" role="img"
+                                            class="rounded-full object-cover h-full w-full shadow-md" />
+                                    </div>
+                                </div>
+                                <div class="px-6 mt-16">
+                                    <h1 class="font-bold text-3xl text-center mb-1">Charles Keith</h1>
+                                    <p class="text-gray-800 text-sm text-center">UX Designer</p>
+                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">A UX designer is the
+                                        voice of the customer. Our job is to look beyond the business goals. We don't just
+                                        experience user interface but also questions it.</p>
+                                    <div class="w-full flex justify-center pt-5 pb-5">
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Github" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-github">
+                                                    <path
+                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Twitter" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-twitter">
+                                                    <path
+                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mx-5">
+                                            <div aria-label="Instagram" role="img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-instagram">
+                                                    <rect x="2" y="2" width="20" height="20" rx="5"
+                                                        ry="5"></rect>
+                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                    </line>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </dh-component>
 
-            <!-- Slide 3 -->
-            <div class="relative">
-                <img src="{{ asset('assets/img/imgg.avif') }}" alt="Third Slide"
-                    class="w-full h-72 md:h-96 object-cover rounded-lg">
-                <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Third Slide</h2>
-                    <p class="text-sm md:text-lg">Check out our stunning features in action.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- Slick Slider Initialization Script -->
-    <script>
-        $(document).ready(function() {
-            // Initialize the slick slider
-            $('.slider').slick({
-                infinite: true, // Infinite loop
-                speed: 500, // Transition speed
-                fade: true, // Fade effect between slides
-                autoplay: true, // Enable autoplay
-                autoplaySpeed: 3000, // Set autoplay speed (3 seconds)
-                arrows: false, // Disable navigation arrows
-            });
-        });
-    </script>
 
 
 
     {{-- VIDEO------- --}}
     <div>
-        <iframe width="100%" height="315"
+        <iframe width="100%" height="515"
             src="https://www.youtube.com/embed/D6446Z5z7p8?modestbranding=1&rel=0&showinfo=0" frameborder="0"
             allow="encrypted-media">
         </iframe>
@@ -735,7 +993,7 @@
 
 
     {{--  REVIEW SECTION  --}}
-   
+
 
     <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
 
@@ -782,15 +1040,15 @@
                 created(slider) {
                     slider.slides[slider.track.details.rel].classList.remove('opacity-40')
 
-                    keenSliderActive.innerText = slider.track.details.rel + 1
-                    keenSliderCount.innerText = slider.slides.length
+                    keenSliderActive.innerHTML = generateDots(slider.track.details.rel + 1)
+                    keenSliderCount.innerHTML = generateDots(slider.slides.length)
                 },
                 slideChanged(slider) {
                     slider.slides.forEach((slide) => slide.classList.add('opacity-40'))
 
                     slider.slides[slider.track.details.rel].classList.remove('opacity-40')
 
-                    keenSliderActive.innerText = slider.track.details.rel + 1
+                    keenSliderActive.innerHTML = generateDots(slider.track.details.rel + 1)
                 },
             },
             []
@@ -801,9 +1059,15 @@
 
         keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
         keenSliderNext.addEventListener('click', () => keenSlider.next())
+
+        // Function to generate dots for the active slide and total count
+        function generateDots(number) {
+            return '•'.repeat(number);
+        }
     </script>
 
-{{-- CUSTOMER REVIEW SECTION --}}
+
+    {{-- CUSTOMER REVIEW SECTION --}}
     <section class="bg-white">
         <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
             <h2 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -1015,10 +1279,12 @@
                     </button>
 
                     <p class="w-16 text-center text-sm text-gray-700">
-                        <span id="keen-slider-active"></span>
-                        /
-                        <span id="keen-slider-count"></span>
+                        <span id="keen-slider-active">•</span> <!-- Active slide dots here -->
+                        <!-- Divider between active and total dots -->
+                        <span id="keen-slider-count">•</span> <!-- Total slide dots here -->
                     </p>
+
+
 
                     <button aria-label="Next slide" id="keen-slider-next"
                         class="text-gray-600 transition-colors hover:text-gray-900">
@@ -1032,8 +1298,8 @@
         </div>
     </section>
 
-{{-- faq section --}}
-    <div class="bg-[#fff2f4] min-h-screen">
+    {{-- faq section --}}
+    <div class="bg-gray-100 min-h-screen">
         <section class="max-w-full mx-auto py-10 sm:py-20 px-4">
             <div class="flex items-center justify-center flex-col gap-y-2 py-5">
                 <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Frequently asked questions</h2>
@@ -1107,7 +1373,7 @@
     </div>
 
 
-{{-- CONTACT SECTION --}}
+    {{-- CONTACT SECTION --}}
     <section class="min-h-screen bg-cover "
         style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')">
         <div class="flex flex-col min-h-screen bg-red/60">
@@ -1179,7 +1445,7 @@
 
                     <div class="mt-8 lg:w-1/2 lg:-mx-2 ">
                         <div
-                            class="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-red-900 lg:max-w-xl">
+                            class="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-600 lg:max-w-xl">
                             <h1 class="text-xl font-medium text-red-700 dark:text-gray-200">Contact form</h1>
 
                             <p class="mt-2 text-red-500 dark:text-red-400">
@@ -1246,7 +1512,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
-{{-- 
+    {{-- 
     <script>
         var glide01 = new Glide('.glide-01', {
             type: 'slider',
@@ -1268,7 +1534,7 @@
         // Function to determine responsive settings
         function getResponsiveSettings() {
             const width = window.innerWidth;
-    
+
             if (width >= 1024) {
                 // Desktop: 3 items per view
                 return {
@@ -1289,11 +1555,11 @@
                 };
             }
         }
-    
+
         // Initialize Glide carousel with responsive settings
         function initializeGlide() {
             const settings = getResponsiveSettings();
-    
+
             const glide01 = new Glide('.glide-01', {
                 type: 'carousel',
                 focusAt: 'center',
@@ -1305,19 +1571,19 @@
                     activeNav: '[&>*]:bg-slate-700',
                 },
             });
-    
+
             glide01.mount();
-    
+
             // Handle window resize to update carousel settings dynamically
             window.addEventListener('resize', () => {
                 glide01.update(getResponsiveSettings());
             });
         }
-    
+
         // Initialize the carousel on DOMContentLoaded
         document.addEventListener('DOMContentLoaded', initializeGlide);
     </script>
-    
+
     <!-- End Slider with controls inside -->
 
     <!-- Swiper JS -->
