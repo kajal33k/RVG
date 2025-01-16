@@ -134,6 +134,69 @@
             flex-shrink: 0;
         }
 
+        /* Services Section */
+        .services-section {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .services-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: gray;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 300px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            font-size: 1rem;
+            color: gray;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #f0f0f0;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .service-link:hover {
+            background-color: gray;
+            color: white;
+        }
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             .page-title {
@@ -162,19 +225,9 @@
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
-        }
 
-        @media (max-width: 480px) {
-            .post-card {
-                padding: 1rem;
-            }
-
-            .page-title {
-                font-size: 1.5rem; /* Even smaller title font on very small screens */
-            }
-
-            .post-content {
-                font-size: 1rem;
+            .services-list {
+                flex-direction: column;
             }
         }
     </style>
@@ -204,6 +257,38 @@
                         <img src="{{ asset('assets/img/about.png') }}" alt="Post Image 1">
                         <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Post Image 2">
                         <img src="{{ asset('assets/img/calling.jpg') }}" alt="Post Image 3">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <div class="services-section">
+                <h2 class="services-title">Services</h2>
+                <div class="services-list">
+                    <div class="service-card">
+                        <h3 class="service-title">Poster Designing</h3>
+                        <p class="service-description">Explore our range of advertising and marketing packages tailored to boost your brand's visibility and engagement.</p>
+                        <a href="#" class="service-link">Know More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-title">Website Designing</h3>
+                        <p class="service-description">From social media campaigns to influencer partnerships, we have the perfect solutions to elevate your business.</p>
+                        <a href="#" class="service-link">Know More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-title">Online Business</h3>
+                        <p class="service-description">Boost your online presence and achieve your goals with our strategic planning and execution.</p>
+                        <a href="#" class="service-link">Know More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-title">Social Media Marketing</h3>
+                        <p class="service-description">Drive engagement and reach your audience effectively with our social media marketing services.</p>
+                        <a href="#" class="service-link">Know More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-title">Logo Design</h3>
+                        <p class="service-description">Create a unique identity for your brand with our professional logo designing services.</p>
+                        <a href="#" class="service-link">Know More</a>
                     </div>
                 </div>
             </div>
