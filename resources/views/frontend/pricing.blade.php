@@ -70,32 +70,6 @@
             }
         }
 
-        /* Enhanced Title */
-        .page-title {
-            font-size: 4rem;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: gray;
-            animation: titlePulse 3s ease-in-out infinite;
-        }
-
-        .title-underline {
-            position: relative;
-            display: inline-block;
-        }
-
-        .title-underline::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #ff4c60 0%, #ff8f70 100%);
-            border-radius: 2px;
-        }
-
         /* Enhanced Pricing Cards */
         .pricing-card {
             position: relative;
@@ -245,9 +219,10 @@
         </div>
 
         <div class="container mx-auto max-w-7xl relative z-10">
-            <!-- Enhanced Title -->
-            <h1 class="page-title mb-16">
-                <span class="title-underline">Pricing Plans</span>
+            <!-- Page Title with animation -->
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-12 text-gray-900 animate-pulse">
+                Pricing Plans
+                <div class="w-24 h-1 bg-red-500 mx-auto mt-6 rounded"></div>
             </h1>
 
             <!-- Pricing Grid -->
