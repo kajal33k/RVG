@@ -11,7 +11,7 @@
 
     <!-- Navigation Links (Desktop) -->
     <div class="hidden md:flex items-center space-x-6">
-        <a href="#"
+        <a href="/"
             class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Home</a>
         <a href="{{ route('frontend.about') }}"
             class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">About Us</a>
@@ -45,7 +45,7 @@
 <!-- Mobile Menu -->
 <div id="mobile-menu"
     class="fixed inset-x-0 top-0 bg-white/50 backdrop-blur-lg shadow-lg shadow-black/50 rounded-lg p-4 mt-20 mx-4 hidden transform transition-all duration-500 ease-in-out max-h-screen overflow-y-auto z-40">
-    <a href="#"
+    <a href="/"
         class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Home</a>
     <a href="{{ route('frontend.about') }}"
         class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">About
