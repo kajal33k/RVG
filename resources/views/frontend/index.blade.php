@@ -108,19 +108,19 @@
 
     {{-- Hero section --}}
     <section class="dark:bg-gray-100 dark:text-gray-800">
-        <div class="container mx-auto flex flex-col justify-center p-4 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+        <div class="container mx-auto flex flex-col justify-center p-4 sm:py-12 lg:py-24 lg:flex-row lg:justify-between " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
             <!-- Text Section -->
             <div class="flex flex-col justify-center p-4 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                <h1 class="text-4xl font-bold leading-none sm:text-4xl">
+                <h1 class="text-4xl font-bold leading-none sm:text-4xl" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     We are growth partners who genuinely care about you and your success.
                     <span class="dark:text-red-600 ">365 days, <br> 365 posters</span>
                 </h1>
-                <p class="mt-6 mb-8 text-lg sm:mb-12">
+                <p class="mt-6 mb-8 text-lg sm:mb-12" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     Your brand, your story,
                     <br class="hidden md:inline lg:hidden">our design.
                 </p>
                 <div
-                    class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                    class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     <a href="{{ route('frontend.details') }}"
                         class="px-8 py-3 text-lg font-semibold rounded dark:bg-red-600 text-white hover:bg-red-700 transition">
                         Get Started
@@ -133,7 +133,7 @@
             </div>
 
             <!-- Hero Image Section -->
-            <div class="flex items-center justify-center mt-8 lg:mt-0">
+            <div class="flex items-center justify-center mt-8 lg:mt-0" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                 <img src="{{ asset('assets/img/hero.jpg') }}" alt="Hero design image"
                     class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl transition-transform duration-300 ease-out hover:scale-90 overflow-hidden">
             </div>
@@ -142,18 +142,18 @@
     </section>
 
     <!-- Image and Content Section -->
-    <section class="bg-gradient-to-br from-[#E63636] to-gray-700 text-white py-16">
+    <section class="bg-gradient-to-br from-[#E63636] to-gray-700 text-white py-16" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
             <!-- Image Section -->
             <div class="w-full lg:w-1/2 relative">
                 <img src="{{ asset('assets/img/attendence.jpg') }}" alt="IT Solutions"
-                    class="w-full h-full object-cover rounded-xl shadow-lg" />
+                    class="w-full h-full object-cover rounded-xl shadow-lg"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200"/>
                 <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 rounded-xl"></div>
             </div>
             <!-- Content Section -->
             <div class="w-full lg:w-1/2">
-                <h2 class="text-4xl font-bold mb-4">About Us</h2>
-                <p class="text-lg leading-relaxed mb-6">
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">About Us</h2>
+                <p class="text-lg leading-relaxed mb-6" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     Real Victory Groups provides comprehensive IT solutions and services including
                     <span class="font-semibold">Web Designing & Development</span>,
                     <span class="font-semibold">Website Maintenance</span>,
@@ -166,12 +166,12 @@
                     <span class="font-semibold">Domain & Hosting</span>, and
                     <span class="font-semibold">Software Development</span>.
                 </p>
-                <p class="text-lg leading-relaxed">
+                <p class="text-lg leading-relaxed" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     We are happy to offer a wide range of business services to meet the immediate and future needs of
                     organizations and institutions globally.
                 </p>
                 <button
-                    class="mt-6 px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-red-100 transition-all">
+                    class="mt-6 px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-red-100 transition-all" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                 </button>
             </div>
@@ -180,7 +180,7 @@
 
 
     <!-- Swiper -->
-    <div class="swiper mySwiper relative w-full h-full py-12">
+    <div class="swiper mySwiper relative w-full h-full py-12" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <div class="swiper-wrapper">
             <div class="swiper-slide flex justify-center items-center ">
 
@@ -295,7 +295,7 @@
 
     </div>
     {{-- OUR SECTION --}}
-    <section class="py-20 text-white backdrop-blur-sm relative z-10 overflow-hidden">
+    <section class="py-20 text-white backdrop-blur-sm relative z-10 overflow-hidden" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-black animate-gradient-x"></div>
         <div class="container mx-auto px-6 text-center relative z-10">
             <h2 class="text-4xl font-extrabold mb-12">Our Digital Marketing Services</h2>
@@ -377,7 +377,7 @@
 
 
     <!-- Component: Slider with controls inside -->
-    <div class="relative w-full glide-01 md:py-12 md:px-12">
+    <div class="relative w-full glide-01 md:py-12 md:px-12" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <div class="flex justify-center mb-6">
             <h1 class="text-red-600 text-3xl font-bold">Our Products </h1>
         </div>
@@ -553,7 +553,7 @@
 
 
     {{-- features --}}
-    <section class="py-12">
+    <section class="py-12" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Features</h2>
             <p class="text-center text-lg text-gray-600 mb-12">Experience the Best Features Ever</p>
@@ -616,9 +616,9 @@
 
     {{-- OUR DEMO::::::::::::: --}}
     <!-- component -->
-    <div class="mb-16">
-        <!-- Code block starts -->
-        <dh-component>
+    <div class="mb-16" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+      
+      
             <div class="container flex justify-center mx-auto pt-16">
                 <div>
                     <p class="text-gray-500 text-lg text-center font-normal pb-3">BUILDING TEAM</p>
@@ -647,7 +647,7 @@
                                         raising a company's corporate IQ is to establish an atmosphere that promotes
                                         knowledge sharing and collaboration.</p>
                                     <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Github" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -659,7 +659,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Twitter" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -671,7 +671,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Instagram" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -706,7 +706,7 @@
                                         innovation and technology in our companies has resulted in a few of them
                                         establishing global benchmarks in product design and development.</p>
                                     <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Github" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -718,7 +718,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Twitter" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -730,7 +730,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Instagram" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -765,7 +765,7 @@
                                         the assessment and repair of property damage caused by water, fire, smoke, or mold.
                                         We can also be a part of the restoration.</p>
                                     <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Github" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -777,7 +777,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Twitter" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -789,7 +789,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Instagram" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -824,7 +824,7 @@
                                         developer who loves to be creative and inventive. I have 20 years of experience in
                                         the field.</p>
                                     <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Github" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -836,7 +836,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Twitter" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -848,7 +848,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Instagram" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -883,7 +883,7 @@
                                         interests in immersive computing and XR, political ventures, and emerging
                                         technologies. Able to take ideas and give them a life.</p>
                                     <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Github" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -895,7 +895,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Twitter" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -907,7 +907,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Instagram" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -942,7 +942,7 @@
                                         voice of the customer. Our job is to look beyond the business goals. We don't just
                                         experience user interface but also questions it.</p>
                                     <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Github" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -954,7 +954,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Twitter" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -966,7 +966,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="mx-5">
+                                        <a href="#" class="mx-5">
                                             <div aria-label="Instagram" role="img">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="#718096"
@@ -987,7 +987,7 @@
                     </div>
                 </div>
             </div>
-        </dh-component>
+        
 
     </div>
 
@@ -998,7 +998,7 @@
     <div>
         <iframe width="100%" height="515"
             src="https://www.youtube.com/embed/D6446Z5z7p8?modestbranding=1&rel=0&showinfo=0" frameborder="0"
-            allow="encrypted-media">
+            allow="encrypted-media" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         </iframe>
     </div>
 
@@ -1009,7 +1009,7 @@
 
 
     {{-- CUSTOMER REVIEW SECTION --}}
-    <section class="bg-white">
+    <section class="bg-white" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
             <h2 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                 Read trusted reviews from our customers
@@ -1240,7 +1240,7 @@
     </section>
 
     {{-- faq section --}}
-    <div class="bg-gray-100 min-h-screen">
+    <div class="bg-gray-100 min-h-screen" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <section class="max-w-full mx-auto py-10 sm:py-20 px-4">
             <div class="flex items-center justify-center flex-col gap-y-2 py-5">
                 <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Frequently asked questions</h2>
@@ -1315,7 +1315,7 @@
 
 
     {{-- CONTACT SECTION --}}
-    <section class="min-h-screen bg-cover "
+    <section class="min-h-screen bg-cover " data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200"
         style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')">
         <div class="flex flex-col min-h-screen bg-red/60">
             <div class="container flex flex-col flex-1 px-6 py-12 mx-auto">
