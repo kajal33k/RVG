@@ -148,7 +148,7 @@
 
     <div class="bg-section mt-10">
         <!-- Hero Section -->
-        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16" data-aos="fade-up">
             <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-12 text-gray-900 animate-pulse">
                 Contact <span class="text-red-600">Us</span>
                 <div class="w-24 h-1 bg-red-500 mx-auto mt-4 rounded"></div>
@@ -159,7 +159,7 @@
         <!-- Contact Details and Form -->
         <div class="max-w-7xl mx-auto px-6 grid-cols-responsive">
             <!-- Contact Details -->
-            <div class="p-8 bg-white rounded-3xl shadow-lg">
+            <div class="p-8 bg-white rounded-3xl shadow-lg" data-aos="fade-right">
                 <h2 class="section-header">Get in Touch</h2>
                 <div class="section-divider"></div>
                 <div class="contact-item">
@@ -189,7 +189,7 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="p-8 bg-white rounded-3xl shadow-lg">
+            <div class="p-8 bg-white rounded-3xl shadow-lg" data-aos="fade-left">
                 <h2 class="section-header">Send Us a Message</h2>
                 <div class="section-divider"></div>
                 <form action="/contact" method="POST" class="space-y-6">
@@ -222,7 +222,7 @@
         </div>
 
         <!-- Google Map -->
-        <div class="max-w-7xl mx-auto px-6 mt-16">
+        <div class="max-w-7xl mx-auto px-6 mt-16" data-aos="zoom-in">
             <h2 class="section-header text-center">Find Us</h2>
             <div class="section-divider"></div>
             <div class="map-container">

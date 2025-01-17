@@ -212,7 +212,7 @@
     </style>
 
     <div class="pricing-container min-h-screen py-16 px-4 mt-10">
-        <div class="background-shapes">
+        <div class="background-shapes" data-aos="fade-in" data-aos-duration="1500">
             <div class="shape"></div>
             <div class="shape"></div>
             <div class="shape"></div>
@@ -220,7 +220,7 @@
 
         <div class="container mx-auto max-w-7xl relative z-10">
             <!-- Page Title with animation -->
-            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-12 text-gray-900 animate-pulse">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-12 text-gray-900 animate-pulse" data-aos="fade-up">
                 Pricing Plans
                 <div class="w-24 h-1 bg-red-500 mx-auto mt-6 rounded"></div>
             </h1>
@@ -228,7 +228,7 @@
             <!-- Pricing Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Basic Plan -->
-                <div class="pricing-card p-8">
+                <div class="pricing-card p-8" data-aos="zoom-in" data-aos-delay="100">
                     <h3 class="text-2xl font-bold text-gray-800">Basic Plan</h3>
                     <div class="price-tag">
                         <span class="price-currency">₹</span>1,499
@@ -269,7 +269,7 @@
                 </div>
 
                 <!-- Standard Plan (Popular) -->
-                <div class="pricing-card p-8 card-popular">
+                <div class="pricing-card p-8 card-popular" data-aos="zoom-in" data-aos-delay="200">
                     <h3 class="text-2xl font-bold text-gray-800">Standard Plan</h3>
                     <div class="price-tag">
                         <span class="price-currency">₹</span>3,499
@@ -310,7 +310,7 @@
                 </div>
 
                 <!-- Premium Plan -->
-                <div class="pricing-card p-8">
+                <div class="pricing-card p-8" data-aos="zoom-in" data-aos-delay="300">
                     <h3 class="text-2xl font-bold text-gray-800">Premium Plan</h3>
                     <div class="price-tag">
                         <span class="price-currency">₹</span>7,499
@@ -351,6 +351,6 @@
                 </div>
             </div>
         </div>
-        <!-- End of Container -->
     </div>
+
 @endsection
