@@ -15,8 +15,8 @@
             class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Home</a>
         <a href="{{ route('frontend.about') }}"
             class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">About Us</a>
-        <a href="{{ route('frontend.features') }}"
-            class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Features</a>
+        <a href="{{ route('frontend.services') }}"
+            class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Services</a>
         <a href="{{ route('frontend.pricing') }}"
             class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Pricing</a>
         <a href="{{ route('frontend.contact') }}"
@@ -50,8 +50,8 @@
     <a href="{{ route('frontend.about') }}"
         class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">About
         Us</a>
-    <a href="{{ route('frontend.features') }}"
-        class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Features</a>
+    <a href="{{ route('frontend.services') }}"
+        class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Services</a>
     <a href="{{ route('frontend.pricing') }}"
         class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Pricing</a>
     <a href="{{ route('frontend.contact') }}"

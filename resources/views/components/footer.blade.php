@@ -9,7 +9,8 @@
                 <p class="mb-4 text-gray-600 leading-relaxed">
                     73 Basement, Ekta Enclave Society, Lakhanpur, Khyora,
                 </p>
-                <a href="#" class="text-red-500 hover:text-red-700 font-medium transition-colors duration-300">
+                <a href="{{ route('frontend.contact') }}"
+                    class="text-red-500 hover:text-red-700 font-medium transition-colors duration-300">
                     <span class="flex items-center space-x-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
@@ -48,24 +49,31 @@
                 class="bg-white rounded-3xl transform translate-z-0 shadow-xl shadow-black/20 p-6 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 border border-red-100">
                 <h3 class="text-2xl font-semibold mb-4 font-serif text-red-600">Follow Us</h3>
                 <div class="flex flex-wrap gap-4 justify-center">
-                    <a href="#" aria-label="Facebook"
+                    <a href="https://www.facebook.com/realvictorygroups/" aria-label="Facebook"
                         class="bg-gray-50 p-3 rounded-full hover:bg-red-50 hover:scale-110 transition-transform duration-300">
                         <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" alt="Facebook"
                             class="h-6 w-auto filter invert" />
                     </a>
-                    <a href="#" aria-label="Twitter"
+                    <a href="https://x.com/realvictorygrou?t=FWRrykczWXrh9dFfRGdN6A&s=08" aria-label="Twitter"
                         class="bg-gray-50 p-3 rounded-full hover:bg-red-50 hover:scale-110 transition-transform duration-300">
                         <img src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg" alt="Twitter"
                             class="h-6 w-auto filter invert" />
                     </a>
-                    <a href="#" aria-label="Instagram"
+                    <a href="https://www.instagram.com/realvictorygroups/" aria-label="Instagram"
                         class="bg-gray-50 p-3 rounded-full hover:bg-red-50 hover:scale-110 transition-transform duration-300">
                         <img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" alt="Instagram"
                             class="h-6 w-auto filter invert" />
                     </a>
-                    <a href="#" aria-label="LinkedIn"
+                    <a href="https://www.linkedin.com/company/realvictorygroups/?originalSubdomain=in"
+                        aria-label="LinkedIn"
                         class="bg-gray-50 p-3 rounded-full hover:bg-red-50 hover:scale-110 transition-transform duration-300">
                         <img src="https://www.svgrepo.com/show/28145/linkedin.svg" alt="LinkedIn"
+                            class="h-6 w-auto filter invert" />
+                    </a>
+                    <!-- WhatsApp Icon -->
+                    <a href="https://wa.me/+918299012292" aria-label="WhatsApp"
+                        class="bg-gray-50 p-3 rounded-full hover:bg-red-50 hover:scale-110 transition-transform duration-300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
                             class="h-6 w-auto filter invert" />
                     </a>
                 </div>
@@ -78,7 +86,7 @@
                 <a href="/" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Home</a>
                 <a href="{{ route('frontend.about') }}"
                     class="text-sm text-gray-200 hover:text-white transition-colors duration-300">About Us</a>
-                <a href="{{ route('frontend.features') }}"
+                <a href="{{ route('frontend.services') }}"
                     class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Services</a>
                 <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Faqs</a>
                 <a href="{{ route('frontend.contact') }}"

@@ -47,11 +47,11 @@ class HomeController extends Controller
     }
 
     /**
-     * Display the features page.
+     * Display the services page.
      */
-    public function features()
+    public function services()
     {
-        return view('frontend.features');
+        return view('frontend.services');
     }
 
     /**
