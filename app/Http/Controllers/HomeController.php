@@ -6,60 +6,115 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    /**
+     * Display the frontend index page.
+     */
     public function index()
     {
         return view('frontend.index');
     }
 
+    /**
+     * Display the about us page.
+     */
     public function about()
     {
         return view('frontend.about');
     }
 
-    public function product(){
+    /**
+     * Display the products page.
+     */
+    public function product()
+    {
         return view('frontend.product');
     }
-    public function career(){
+
+    /**
+     * Display the careers page.
+     */
+    public function career()
+    {
         return view('frontend.career');
     }
 
-    public function pricing(){
+    /**
+     * Display the pricing page.
+     */
+    public function pricing()
+    {
         return view('frontend.pricing');
     }
 
-    public function features(){
+    /**
+     * Display the features page.
+     */
+    public function features()
+    {
         return view('frontend.features');
     }
 
-    public function contact(){
+    /**
+     * Display the contact us page.
+     */
+    public function contact()
+    {
         return view('frontend.contact');
     }
 
-    public function blog(){
+    /**
+     * Display the blog listing page.
+     */
+    public function blog()
+    {
         return view('frontend.blog');
     }
 
-    public function blogdetails(){
+    /**
+     * Display the blog details page.
+     */
+    public function blogdetails()
+    {
         return view('frontend.blog-details');
     }
 
-    public function privacypolicy(){
-        return view('frontend.privacypolicy');
+    /**
+     * Display the privacy policy page.
+     */
+    public function privacypolicy()
+    {
+        return view('frontend.privacy-policy');
     }
 
-    public function condition(){
-        return view('frontend.condition');
+    /**
+     * Display the terms and conditions page.
+     */
+    public function condition()
+    {
+        return view('frontend.terms-and-conditions');
     }
 
-    public function refund(){
-        return view('frontend.refund');
+    /**
+     * Display the refund policy page.
+     */
+    public function refund()
+    {
+        return view('frontend.refund-policy');
     }
 
-    public function detail(){
-        return view('frontend.detail');
+    /**
+     * Display the details page.
+     */
+    public function detail()
+    {
+        return view('frontend.details');
     }
 
-    public function learnmore(){
-        return view('frontend.learnmore');
+    /**
+     * Display the learn more page.
+     */
+    public function learnmore()
+    {
+        return view('frontend.learn-more');
     }
 }
