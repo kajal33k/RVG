@@ -3,8 +3,11 @@
 @section('content')
     <div class="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-12 mt-10">
         <div class="container mx-auto max-w-7xl px-6">
-            <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">Career Opportunities at Real Victory Groups
-            </h2>
+
+            <h1 class="text-2xl md:text-4xl font-extrabold text-center mb-12 text-gray-800 animate-pulse">
+                Career Opportunities at Real Victory Groups
+                <div class="w-24 h-1 bg-red-500 mx-auto mt-4 rounded"></div>
+            </h1>
 
             <!-- Top Bar Section -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12">

@@ -1,259 +1,100 @@
 @extends('components.main')
 
 @section('content')
-    <style>
+    <div class="min-h-screen py-16 bg-gray-100 text-gray-600 mt-10">
+        <div class="container mx-auto px-4 lg:px-16">
+            <!-- Page Title with animation -->
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-12 text-gray-800 animate-pulse"
+                data-aos="fade-down" data-aos-duration="1200">
+                Featured Post
+                <div class="w-24 h-1 bg-red-500 mx-auto mt-4 rounded"></div>
+            </h1>
 
-        /* Enhanced Main Container */
-        .posts-page {
-            position: relative;
-            min-height: 100vh;
-            padding: 4rem 0;
-            color: gray;
-            perspective: 1000px;
-            background-color: white;
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Enhanced Post Card with Left Text and Right Image */
-        .post-card {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            transition: all 0.5s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .post-card:hover {
-            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .post-content {
-            flex: 1;
-            padding: 2rem;
-            background: white;
-            order: 1;
-        }
-
-        .post-image {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-            order: 2;
-        }
-
-        .post-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        /* Enhanced Title Animation */
-        .page-title {
-            font-size: 4rem;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: gray;
-            animation: titlePulse 3s ease-in-out infinite;
-        }
-
-        @keyframes titlePulse {
-            0%, 100% {
-                transform: scale(1) rotateX(0);
-                text-shadow: 0 0 20px rgba(0,0,0,0.5);
-            }
-            50% {
-                transform: scale(1.05) rotateX(5deg);
-                text-shadow: 0 0 40px rgba(0,0,0,0.8);
-            }
-        }
-
-        /* Additional Styles for Image Slider */
-        .post-image {
-            position: relative;
-            height: 100%;
-        }
-
-        .post-image .slider {
-            display: flex;
-            transition: transform 1s ease-in-out;
-        }
-
-        .post-image .slider img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .post-image .slider > img {
-            flex-shrink: 0;
-        }
-
-        /* Services Section */
-        .services-section {
-            margin-top: 4rem;
-            text-align: center;
-        }
-
-        .services-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 2rem;
-            color: gray;
-        }
-
-        .services-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 300px;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .service-description {
-            font-size: 1rem;
-            color: gray;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-link {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #f0f0f0;
-            color: black;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .service-link:hover {
-            background-color: gray;
-            color: white;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .page-title {
-                font-size: 2rem; /* Smaller title font */
-            }
-
-            .post-card {
-                flex-direction: column;
-                align-items: center; /* Stack content and image vertically */
-            }
-
-            .post-content {
-                padding: 1rem; /* Reduce padding on smaller screens */
-            }
-
-            .post-image {
-                width: 100%;
-                order: 1; /* Make image come first on small screens */
-            }
-
-            .post-image img {
-                height: auto; /* Allow images to be responsive */
-            }
-
-            .container {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-            .services-list {
-                flex-direction: column;
-            }
-        }
-    </style>
-
-    <!-- Enhanced Background Layers -->
-    <div class="background-container">
-        <div class="background-layer"></div>
-        <div class="background-layer"></div>
-        <div class="background-layer"></div>
-    </div>
-
-    <div class="posts-page">
-        <div class="container mx-auto px-6 lg:px-16">
-            <h1 class="page-title">Featured Post</h1>
-
-            <!-- Single Post Card -->
-            <div class="post-card">
-                <div class="post-content">
-                    <h2 class="text-2xl font-bold mb-4 text-gray-600">Latest Fashion Trends</h2>
-                    <p class="text-gray-600 mb-4">Discover the hottest fashion trends for the upcoming season. From street style to haute couture.</p>
-                    <p class="text-gray-600 mb-4">Fashion is ever-evolving, with new trends emerging every season. From the streets to the runway, styles are influenced by culture, technology, and even the environment. Stay updated and stay ahead of the trends to create your own unique look.</p>
-                    <p class="text-gray-600 mb-4">In this post, we dive into the latest trends that are set to dominate the fashion industry. Whether you're looking to refresh your wardrobe or keep up with the trends, there's something for everyone.</p>
-                    <a href="#" class="inline-block px-6 py-2 bg-gray-200 text-black rounded-full hover:bg-gray-300 transition-colors">Read More</a>
-                </div>
-                <div class="post-image">
-                    <div class="slider">
-                        <img src="{{ asset('assets/img/about.png') }}" alt="Post Image 1">
-                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Post Image 2">
-                        <img src="{{ asset('assets/img/calling.jpg') }}" alt="Post Image 3">
+            <!-- Post Card -->
+            <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+                data-aos="flip-left" data-aos-duration="1000">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Post Content -->
+                    <div class="flex-1 p-8 order-2 md:order-1" data-aos="fade-right" data-aos-duration="1200">
+                        <h2 class="text-2xl font-bold mb-4 text-gray-800">Latest Fashion Trends</h2>
+                        <p class="text-gray-600 mb-4">Discover the hottest fashion trends for the upcoming season. From street style to haute couture.</p>
+                        <p class="text-gray-600 mb-4">Fashion is ever-evolving, with new trends emerging every season. From the streets to the runway, styles are influenced by culture, technology, and even the environment.</p>
+                        <p class="text-gray-600 mb-6">In this post, we dive into the latest trends that are set to dominate the fashion industry.</p>
+                        <a href="#" class="inline-block px-6 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors">Read
+                            More</a>
+                    </div>
+                    <!-- Post Image Slider -->
+                    <div class="flex-1 relative overflow-hidden order-1 md:order-2" data-aos="fade-left" data-aos-duration="1200">
+                        <div class="flex transition-transform duration-1000" id="imageSlider">
+                            <img src="{{ asset('assets/img/about.png') }}" alt="Post Image 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Post Image 2" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('assets/img/calling.jpg') }}" alt="Post Image 3" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Services Section -->
-            <div class="services-section">
-                <h2 class="services-title">Services</h2>
-                <div class="services-list">
-                    <div class="service-card">
-                        <h3 class="service-title">Poster Designing</h3>
-                        <p class="service-description">Explore our range of advertising and marketing packages tailored to boost your brand's visibility and engagement.</p>
-                        <a href="#" class="service-link">Know More</a>
+            <div class="mt-16 text-center">
+                <div class="mb-12" data-aos="fade-up" data-aos-duration="1500">
+                    <h2 class="text-4xl font-bold text-gray-800">Our Services</h2>
+                    <div class="w-24 h-1 bg-red-500 mx-auto mt-2 rounded"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Cards with Icons -->
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                        data-aos="zoom-in-up" data-aos-duration="1000">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-paint-brush text-3xl text-red-500 mr-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Poster Designing</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Explore our range of advertising and marketing packages tailored to boost your brand's visibility.</p>
+                        <a href="#" class="inline-block px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors font-semibold">Learn
+                            More</a>
                     </div>
-                    <div class="service-card">
-                        <h3 class="service-title">Website Designing</h3>
-                        <p class="service-description">From social media campaigns to influencer partnerships, we have the perfect solutions to elevate your business.</p>
-                        <a href="#" class="service-link">Know More</a>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                        data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-desktop text-3xl text-red-500 mr-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Website Designing</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">From social media campaigns to influencer partnerships, we have the perfect solutions for you.</p>
+                        <a href="#" class="inline-block px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors font-semibold">Learn
+                            More</a>
                     </div>
-                    <div class="service-card">
-                        <h3 class="service-title">Online Business</h3>
-                        <p class="service-description">Boost your online presence and achieve your goals with our strategic planning and execution.</p>
-                        <a href="#" class="service-link">Know More</a>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                        data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-briefcase text-3xl text-red-500 mr-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Online Business</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Boost your online presence and achieve your goals with our strategic planning services.</p>
+                        <a href="#" class="inline-block px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors font-semibold">Learn
+                            More</a>
                     </div>
-                    <div class="service-card">
-                        <h3 class="service-title">Social Media Marketing</h3>
-                        <p class="service-description">Drive engagement and reach your audience effectively with our social media marketing services.</p>
-                        <a href="#" class="service-link">Know More</a>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                        data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="600">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-share-alt text-3xl text-red-500 mr-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Social Media Marketing</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Drive engagement and reach your audience effectively with our marketing services.</p>
+                        <a href="#" class="inline-block px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors font-semibold">Learn
+                            More</a>
                     </div>
-                    <div class="service-card">
-                        <h3 class="service-title">Logo Design</h3>
-                        <p class="service-description">Create a unique identity for your brand with our professional logo designing services.</p>
-                        <a href="#" class="service-link">Know More</a>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                        data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="800">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-pencil-alt text-3xl text-red-500 mr-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Logo Design</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Create a unique identity for your brand with our professional logo designing services.</p>
+                        <a href="#" class="inline-block px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors font-semibold">Learn
+                            More</a>
                     </div>
                 </div>
             </div>
@@ -261,27 +102,13 @@
     </div>
 
     <script>
-        // Enhanced Background Animation
-        const backgrounds = document.querySelectorAll('.background-layer');
-        let currentBg = 0;
-
-        function changeBackground() {
-            backgrounds[currentBg].style.opacity = '0';
-            currentBg = (currentBg + 1) % backgrounds.length;
-            backgrounds[currentBg].style.opacity = '1';
-        }
-
-        setInterval(changeBackground, 5000);
-
         // Image Slider
+        const slider = document.getElementById('imageSlider');
         let currentSlide = 0;
-        const slider = document.querySelector('.post-image .slider');
-        const images = document.querySelectorAll('.post-image .slider img');
 
         function slideImages() {
-            currentSlide = (currentSlide + 1) % images.length;
-            const offset = -currentSlide * 100; // Moving the slider
-            slider.style.transform = `translateX(${offset}%)`;
+            currentSlide = (currentSlide + 1) % 3;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
 
         setInterval(slideImages, 3000);
