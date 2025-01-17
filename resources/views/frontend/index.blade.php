@@ -1,21 +1,95 @@
 @extends('components.main')
 @section('content')
-    {{-- <div class="relative h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-gray-50 text-white p-0 rounded-lg shadow-lg">
-  <!-- Overlay Text -->
-  <div class="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+
+{{-- styles --}}
+
+<style>
+    .flip-container {
+        perspective: 1000px;
+    }
+
+    .flip-inner {
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flip-front,
+    .flip-back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .flip-container:hover .flip-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-back {
+        transform: rotateY(180deg);
+    }
+
+    
+    
+        /* 3D Hover Effect */
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+        }
+
+        .feature-card:hover {
+            transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Smooth entry animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* Delay for each card */
+        .fade-in:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .fade-in:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .fade-in:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .fade-in:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .fade-in:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .fade-in:nth-child(6) {
+            animation-delay: 1.2s;
+        }
   
-  <!-- Content Section -->
-  <div class="z-10 text-center space-y-4">
-    <h1 class=" text-4xl font-extrabold text-black leading-tight transform transition duration-500 ease-out opacity-90 hover:opacity-100 hover:translate-y-4">
-        365 Days, 365 Posters
-    </h1>
-    <p class="text-xl font-semibold text-black transform transition duration-500 ease-out opacity-90 hover:opacity-100 hover:translate-y-4">
-        Your Brand, Your Story,
-    </p>
-    <p class="text-2xl font-semibold text-black transform transition duration-500 ease-out opacity-90 hover:opacity-100 hover:translate-y-4">
-        Our Design
-    </p>
-</div> --}}
+</style>
+
+{{-- Hero section --}}
     <section class="dark:bg-gray-100 dark:text-gray-800">
         <div class="container mx-auto flex flex-col justify-center p-4 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <!-- Text Section -->
@@ -86,36 +160,6 @@
             </div>
         </div>
     </section>
-
-    <style>
-        .flip-container {
-            perspective: 1000px;
-        }
-
-        .flip-inner {
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-            position: relative;
-        }
-
-        .flip-front,
-        .flip-back {
-            backface-visibility: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-
-        .flip-container:hover .flip-inner {
-            transform: rotateY(180deg);
-        }
-
-        .flip-back {
-            transform: rotateY(180deg);
-        }
-    </style>
 
 
     <!-- Swiper -->
@@ -231,10 +275,7 @@
 
         </div>
 
-        <!-- Navigation buttons -->
-        {{-- <div class="swiper-button-next absolute top-1/2 right-0 transform -translate-y-1/2 text-white text-3xl p-2 bg-black bg-opacity-50 rounded-full"></div>
-    <div class="swiper-button-prev absolute top-1/2 left-0 transform -translate-y-1/2 text-white text-3xl p-2 bg-black bg-opacity-50 rounded-full"></div>
-   --}}
+       
     </div>
     {{-- OUR SECTION --}}
     <section class="py-20 text-white backdrop-blur-sm relative z-10 overflow-hidden">
@@ -514,60 +555,6 @@
 
 
 
-    <style>
-        /* 3D Hover Effect */
-        .feature-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-        }
-
-        .feature-card:hover {
-            transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Smooth entry animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        /* Delay for each card */
-        .fade-in:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-
-        .fade-in:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-
-        .fade-in:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-
-        .fade-in:nth-child(4) {
-            animation-delay: 0.8s;
-        }
-
-        .fade-in:nth-child(5) {
-            animation-delay: 1s;
-        }
-
-        .fade-in:nth-child(6) {
-            animation-delay: 1.2s;
-        }
-    </style>
     {{-- features --}}
     <section class="py-12">
         <div class="max-w-6xl mx-auto px-6">
@@ -1022,76 +1009,6 @@
     {{--  REVIEW SECTION  --}}
 
 
-    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
-
-    <script type="module">
-        import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
-
-        const keenSliderActive = document.getElementById('keen-slider-active')
-        const keenSliderCount = document.getElementById('keen-slider-count')
-
-        const keenSlider = new KeenSlider(
-            '#keen-slider', {
-                loop: true,
-                defaultAnimation: {
-                    duration: 750,
-                },
-                slides: {
-                    origin: 'center',
-                    perView: 1,
-                    spacing: 16,
-                },
-                breakpoints: {
-                    '(min-width: 640px)': {
-                        slides: {
-                            origin: 'center',
-                            perView: 1.5,
-                            spacing: 16,
-                        },
-                    },
-                    '(min-width: 768px)': {
-                        slides: {
-                            origin: 'center',
-                            perView: 1.75,
-                            spacing: 16,
-                        },
-                    },
-                    '(min-width: 1024px)': {
-                        slides: {
-                            origin: 'center',
-                            perView: 3,
-                            spacing: 16,
-                        },
-                    },
-                },
-                created(slider) {
-                    slider.slides[slider.track.details.rel].classList.remove('opacity-40')
-
-                    keenSliderActive.innerHTML = generateDots(slider.track.details.rel + 1)
-                    keenSliderCount.innerHTML = generateDots(slider.slides.length)
-                },
-                slideChanged(slider) {
-                    slider.slides.forEach((slide) => slide.classList.add('opacity-40'))
-
-                    slider.slides[slider.track.details.rel].classList.remove('opacity-40')
-
-                    keenSliderActive.innerHTML = generateDots(slider.track.details.rel + 1)
-                },
-            },
-            []
-        )
-
-        const keenSliderPrevious = document.getElementById('keen-slider-previous')
-        const keenSliderNext = document.getElementById('keen-slider-next')
-
-        keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
-        keenSliderNext.addEventListener('click', () => keenSlider.next())
-
-        // Function to generate dots for the active slide and total count
-        function generateDots(number) {
-            return '•'.repeat(number);
-        }
-    </script>
 
 
     {{-- CUSTOMER REVIEW SECTION --}}
@@ -1514,6 +1431,76 @@
 
 
 
+    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+
+    <script type="module">
+        import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+
+        const keenSliderActive = document.getElementById('keen-slider-active')
+        const keenSliderCount = document.getElementById('keen-slider-count')
+
+        const keenSlider = new KeenSlider(
+            '#keen-slider', {
+                loop: true,
+                defaultAnimation: {
+                    duration: 750,
+                },
+                slides: {
+                    origin: 'center',
+                    perView: 1,
+                    spacing: 16,
+                },
+                breakpoints: {
+                    '(min-width: 640px)': {
+                        slides: {
+                            origin: 'center',
+                            perView: 1.5,
+                            spacing: 16,
+                        },
+                    },
+                    '(min-width: 768px)': {
+                        slides: {
+                            origin: 'center',
+                            perView: 1.75,
+                            spacing: 16,
+                        },
+                    },
+                    '(min-width: 1024px)': {
+                        slides: {
+                            origin: 'center',
+                            perView: 3,
+                            spacing: 16,
+                        },
+                    },
+                },
+                created(slider) {
+                    slider.slides[slider.track.details.rel].classList.remove('opacity-40')
+
+                    keenSliderActive.innerHTML = generateDots(slider.track.details.rel + 1)
+                    keenSliderCount.innerHTML = generateDots(slider.slides.length)
+                },
+                slideChanged(slider) {
+                    slider.slides.forEach((slide) => slide.classList.add('opacity-40'))
+
+                    slider.slides[slider.track.details.rel].classList.remove('opacity-40')
+
+                    keenSliderActive.innerHTML = generateDots(slider.track.details.rel + 1)
+                },
+            },
+            []
+        )
+
+        const keenSliderPrevious = document.getElementById('keen-slider-previous')
+        const keenSliderNext = document.getElementById('keen-slider-next')
+
+        keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+        keenSliderNext.addEventListener('click', () => keenSlider.next())
+
+        // Function to generate dots for the active slide and total count
+        function generateDots(number) {
+            return '•'.repeat(number);
+        }
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -1539,23 +1526,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
-    {{-- 
-    <script>
-        var glide01 = new Glide('.glide-01', {
-            type: 'slider',
-            focusAt: 'center',
-            perView: 3,
-            autoplay: 3000,
-            animationDuration: 700,
-            gap: 30,
-            classes: {
-                activeNav: '[&>*]:bg-slate-700',
-            },
-
-        });
-
-        glide01.mount();
-    </script> --}}
+    
 
     <script>
         // Function to determine responsive settings

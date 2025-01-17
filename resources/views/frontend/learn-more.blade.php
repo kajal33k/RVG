@@ -351,6 +351,8 @@
         </div>
     </div>
 </div>
+
+
 <script>
   document.querySelectorAll('.faq-toggle').forEach(button => {
       button.addEventListener('click', () => {
