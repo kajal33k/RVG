@@ -53,4 +53,8 @@ class HomeController extends Controller
     public function detail(){
         return view('frontend.detail');
     }
+
+    public function learnmore(){
+        return view('frontend.learnmore');
+    }
 }

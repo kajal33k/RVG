@@ -30,11 +30,11 @@
                 </p>
                 <div
                     class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                    <a href="#"
+                    <a href="{{route('frontend.detail')}}"
                         class="px-8 py-3 text-lg font-semibold rounded dark:bg-red-600 text-white hover:bg-red-700 transition">
                         Get Started
                     </a>
-                    <a href="#"
+                    <a href="{{route('frontend.learnmore')}}"
                         class="px-8 py-3 text-lg font-semibold border rounded border-gray-800 hover:bg-red-500 hover:text-white transition">
                         Learn More
                     </a>
@@ -81,7 +81,7 @@
                 </p>
                 <button
                     class="mt-6 px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-red-100 transition-all">
-                    Learn More
+                   <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                 </button>
             </div>
         </div>
@@ -143,7 +143,7 @@
                     <div class="mt-6">
                         <button
                             class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                            Learn More
+                            <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                     <div class="mt-6">
                         <button
                             class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                            Learn More
+                            <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -197,7 +197,7 @@
                     <div class="mt-6">
                         <button
                             class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                            Learn More
+                            <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -223,7 +223,7 @@
                     <div class="mt-6">
                         <button
                             class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                            Learn More
+                            <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -365,7 +365,7 @@
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
                             <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                View More
+                                <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                             </button>
                         </div>
                     </div>
@@ -388,7 +388,7 @@
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
                             <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                View More
+                                <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                             </button>
                         </div>
                     </div>
@@ -411,7 +411,7 @@
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
                             <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                View More
+                                <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                             </button>
                         </div>
                     </div>
@@ -434,7 +434,7 @@
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
                             <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                View More
+                                <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                             </button>
                         </div>
                     </div>
@@ -457,7 +457,7 @@
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
                             <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                View More
+                                <a href="{{route('frontend.learnmore')}}"> Learn More</a>
                             </button>
                         </div>
                     </div>
