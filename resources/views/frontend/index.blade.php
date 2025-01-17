@@ -1,39 +1,38 @@
 @extends('components.main')
 @section('content')
+    {{-- styles --}}
 
-{{-- styles --}}
+    <style>
+        .flip-container {
+            perspective: 1000px;
+        }
 
-<style>
-    .flip-container {
-        perspective: 1000px;
-    }
+        .flip-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
 
-    .flip-inner {
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        position: relative;
-    }
+        .flip-front,
+        .flip-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
 
-    .flip-front,
-    .flip-back {
-        backface-visibility: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
+        .flip-container:hover .flip-inner {
+            transform: rotateY(180deg);
+        }
 
-    .flip-container:hover .flip-inner {
-        transform: rotateY(180deg);
-    }
+        .flip-back {
+            transform: rotateY(180deg);
+        }
 
-    .flip-back {
-        transform: rotateY(180deg);
-    }
 
-    
-    
+
         /* 3D Hover Effect */
         .feature-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -86,10 +85,28 @@
         .fade-in:nth-child(6) {
             animation-delay: 1.2s;
         }
-  
-</style>
 
-{{-- Hero section --}}
+        @keyframes gradient-x {
+            0% {
+                background-position: -200% 0;
+            }
+
+            50% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        .animate-gradient-x {
+            background-size: 400% 400%;
+            animation: gradient-x 10s ease infinite;
+        }
+    </style>
+
+    {{-- Hero section --}}
     <section class="dark:bg-gray-100 dark:text-gray-800">
         <div class="container mx-auto flex flex-col justify-center p-4 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <!-- Text Section -->
@@ -275,7 +292,7 @@
 
         </div>
 
-       
+
     </div>
     {{-- OUR SECTION --}}
     <section class="py-20 text-white backdrop-blur-sm relative z-10 overflow-hidden">
@@ -355,27 +372,7 @@
             </div>
         </div>
 
-        <!-- Animation Styles -->
-        <style>
-            @keyframes gradient-x {
-                0% {
-                    background-position: -200% 0;
-                }
 
-                50% {
-                    background-position: 200% 0;
-                }
-
-                100% {
-                    background-position: -200% 0;
-                }
-            }
-
-            .animate-gradient-x {
-                background-size: 400% 400%;
-                animation: gradient-x 10s ease infinite;
-            }
-        </style>
     </section>
 
 
@@ -1526,7 +1523,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
-    
+
 
     <script>
         // Function to determine responsive settings
