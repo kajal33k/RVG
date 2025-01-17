@@ -17,3 +17,4 @@ Route::get('/privacypolicy', [HomeController::class, 'privacypolicy'])->name('fr
 Route::get('/condition', [HomeController::class, 'condition'])->name('frontend.condition');
 Route::get('/refund', [HomeController::class, 'refund'])->name('frontend.refund');
 Route::get('/detail', [HomeController::class, 'detail'])->name('frontend.detail');
+Route::get('/learnmore', [HomeController::class, 'learnmore'])->name('frontend.learnmore');
