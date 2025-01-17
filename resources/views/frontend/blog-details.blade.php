@@ -41,7 +41,7 @@
         }
 
         .blog-detail-card:hover {
-            transform: translateY(-15px) rotateX(10deg) rotateY(10deg);
+            transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1), 0 15px 30px rgba(0, 0, 0, 0.07);
         }
 
