@@ -108,10 +108,12 @@
 
     {{-- Hero section --}}
     <section class="dark:bg-gray-100 dark:text-gray-800">
-        <div class="container mx-auto flex flex-col justify-center p-4 sm:py-12 lg:py-24 lg:flex-row lg:justify-between " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
+        <div class="container mx-auto flex flex-col justify-center p-4 sm:py-12 lg:py-24 lg:flex-row lg:justify-between "
+            data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
             <!-- Text Section -->
             <div class="flex flex-col justify-center p-4 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                <h1 class="text-4xl font-bold leading-none sm:text-4xl" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                <h1 class="text-4xl font-bold leading-none sm:text-4xl" data-aos="fade-down" data-aos-duration="1200"
+                    data-aos-delay="200">
                     We are growth partners who genuinely care about you and your success.
                     <span class="dark:text-red-600 ">365 days, <br> 365 posters</span>
                 </h1>
@@ -119,8 +121,8 @@
                     Your brand, your story,
                     <br class="hidden md:inline lg:hidden">our design.
                 </p>
-                <div
-                    class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                <div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start"
+                    data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     <a href="{{ route('frontend.details') }}"
                         class="px-8 py-3 text-lg font-semibold rounded dark:bg-red-600 text-white hover:bg-red-700 transition">
                         Get Started
@@ -133,7 +135,8 @@
             </div>
 
             <!-- Hero Image Section -->
-            <div class="flex items-center justify-center mt-8 lg:mt-0" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+            <div class="flex items-center justify-center mt-8 lg:mt-0" data-aos="fade-down" data-aos-duration="1200"
+                data-aos-delay="200">
                 <img src="{{ asset('assets/img/hero.jpg') }}" alt="Hero design image"
                     class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl shadow-xl transition-transform duration-300 ease-out hover:scale-90 overflow-hidden">
             </div>
@@ -142,17 +145,20 @@
     </section>
 
     <!-- Image and Content Section -->
-    <section class="bg-gradient-to-br from-[#E63636] to-gray-700 text-white py-16" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+    <section class="bg-gradient-to-br from-[#E63636] to-gray-700 text-white py-16" data-aos="fade-down"
+        data-aos-duration="1200" data-aos-delay="200">
         <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
             <!-- Image Section -->
             <div class="w-full lg:w-1/2 relative">
                 <img src="{{ asset('assets/img/attendence.jpg') }}" alt="IT Solutions"
-                    class="w-full h-full object-cover rounded-xl shadow-lg"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200"/>
+                    class="w-full h-full object-cover rounded-xl shadow-lg" data-aos="fade-down" data-aos-duration="1200"
+                    data-aos-delay="200" />
                 <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 rounded-xl"></div>
             </div>
             <!-- Content Section -->
             <div class="w-full lg:w-1/2">
-                <h2 class="text-4xl font-bold mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">About Us</h2>
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">About
+                    Us</h2>
                 <p class="text-lg leading-relaxed mb-6" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     Real Victory Groups provides comprehensive IT solutions and services including
                     <span class="font-semibold">Web Designing & Development</span>,
@@ -171,7 +177,8 @@
                     organizations and institutions globally.
                 </p>
                 <button
-                    class="mt-6 px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-red-100 transition-all" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                    class="mt-6 px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-red-100 transition-all"
+                    data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                 </button>
             </div>
@@ -180,7 +187,8 @@
 
 
     <!-- Swiper -->
-    <div class="swiper mySwiper relative w-full h-full py-12" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+    <div class="swiper mySwiper relative w-full h-full py-12" data-aos="fade-down" data-aos-duration="1200"
+        data-aos-delay="200">
         <div class="swiper-wrapper">
             <div class="swiper-slide flex justify-center items-center ">
 
@@ -295,11 +303,13 @@
 
     </div>
     {{-- OUR SECTION --}}
-    <section class="py-20 text-white backdrop-blur-sm relative z-10 overflow-hidden" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+    <section class="py-20 text-white backdrop-blur-sm relative z-10 overflow-hidden" data-aos="fade-down"
+        data-aos-duration="1200" data-aos-delay="200">
         <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-black animate-gradient-x"></div>
         <div class="container mx-auto px-6 text-center relative z-10">
             <h2 class="text-4xl font-extrabold mb-12">Our Digital Marketing Services</h2>
-            <p class="text-xl mb-12 opacity-80">Real Victory Groups specializes in crafting funnel-based strategies tailored
+            <p class="text-xl mb-12 opacity-80">Real Victory Groups specializes in crafting funnel-based strategies
+                tailored
                 to your business needs. Leveraging various marketing platforms including Facebook, Instagram, Google,
                 YouTube, LinkedIn, and more, we deliver optimal strategies designed to drive success.</p>
 
@@ -377,7 +387,8 @@
 
 
     <!-- Component: Slider with controls inside -->
-    <div class="relative w-full glide-01 md:py-12 md:px-12" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+    <div class="relative w-full glide-01 md:py-12 md:px-12" data-aos="fade-down" data-aos-duration="1200"
+        data-aos-delay="200">
         <div class="flex justify-center mb-6">
             <h1 class="text-red-600 text-3xl font-bold">Our Products </h1>
         </div>
@@ -617,377 +628,377 @@
     {{-- OUR DEMO::::::::::::: --}}
     <!-- component -->
     <div class="mb-16" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
-      
-      
-            <div class="container flex justify-center mx-auto pt-16">
-                <div>
-                    <p class="text-gray-500 text-lg text-center font-normal pb-3">BUILDING TEAM</p>
-                    <h1 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
-                        The Talented People Behind the Scenes of the Organization</h1>
-                </div>
+
+
+        <div class="container flex justify-center mx-auto pt-16">
+            <div>
+                <p class="text-gray-500 text-lg text-center font-normal pb-3">BUILDING TEAM</p>
+                <h1 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
+                    The Talented People Behind the Scenes of the Organization</h1>
             </div>
-            <div class="w-full bg-gray-100 px-10 pt-10">
-                <div class="container mx-auto">
-                    <div role="list" aria-label="Behind the scenes People "
-                        class="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
-                        <div role="listitem"
-                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                            <div class="rounded overflow-hidden shadow-md bg-white">
-                                <div class="absolute -mt-20 w-full flex justify-center">
-                                    <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif"
-                                            alt="Display Picture of Andres Berlin" role="img"
-                                            class="rounded-full object-cover h-full w-full shadow-md" />
-                                    </div>
+        </div>
+        <div class="w-full bg-gray-100 px-10 pt-10">
+            <div class="container mx-auto">
+                <div role="list" aria-label="Behind the scenes People "
+                    class="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
+                    <div role="listitem"
+                        class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                        <div class="rounded overflow-hidden shadow-md bg-white">
+                            <div class="absolute -mt-20 w-full flex justify-center">
+                                <div class="h-32 w-32">
+                                    <img src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif"
+                                        alt="Display Picture of Andres Berlin" role="img"
+                                        class="rounded-full object-cover h-full w-full shadow-md" />
                                 </div>
-                                <div class="px-6 mt-16">
-                                    <h1 class="font-bold text-3xl text-center mb-1">Andres Berlin</h1>
-                                    <p class="text-gray-800 text-sm text-center">Chief Executive Officer</p>
-                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">The CEO's role in
-                                        raising a company's corporate IQ is to establish an atmosphere that promotes
-                                        knowledge sharing and collaboration.</p>
-                                    <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Github" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-github">
-                                                    <path
-                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Twitter" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-twitter">
-                                                    <path
-                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Instagram" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-instagram">
-                                                    <rect x="2" y="2" width="20" height="20" rx="5"
-                                                        ry="5"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
-                                                    </line>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
+                            </div>
+                            <div class="px-6 mt-16">
+                                <h1 class="font-bold text-3xl text-center mb-1">Andres Berlin</h1>
+                                <p class="text-gray-800 text-sm text-center">Chief Executive Officer</p>
+                                <p class="text-center text-gray-600 text-base pt-3 font-normal">The CEO's role in
+                                    raising a company's corporate IQ is to establish an atmosphere that promotes
+                                    knowledge sharing and collaboration.</p>
+                                <div class="w-full flex justify-center pt-5 pb-5">
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Github" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-github">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Twitter" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-twitter">
+                                                <path
+                                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Instagram" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-instagram">
+                                                <rect x="2" y="2" width="20" height="20" rx="5"
+                                                    ry="5"></rect>
+                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                </line>
+                                            </svg>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div role="listitem"
-                            class="xl:w-1/3 lg:mx-3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                            <div class="rounded overflow-hidden shadow-md bg-white">
-                                <div class="absolute -mt-20 w-full flex justify-center">
-                                    <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif"
-                                            alt="Display Picture of Silene Tokyo" role="img"
-                                            class="rounded-full object-cover h-full w-full shadow-md" />
-                                    </div>
+                    </div>
+                    <div role="listitem"
+                        class="xl:w-1/3 lg:mx-3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                        <div class="rounded overflow-hidden shadow-md bg-white">
+                            <div class="absolute -mt-20 w-full flex justify-center">
+                                <div class="h-32 w-32">
+                                    <img src="https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif"
+                                        alt="Display Picture of Silene Tokyo" role="img"
+                                        class="rounded-full object-cover h-full w-full shadow-md" />
                                 </div>
-                                <div class="px-6 mt-16">
-                                    <h1 class="font-bold text-3xl text-center mb-1">Silene Tokyo</h1>
-                                    <p class="text-gray-800 text-sm text-center">Product Design Head</p>
-                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">The emphasis on
-                                        innovation and technology in our companies has resulted in a few of them
-                                        establishing global benchmarks in product design and development.</p>
-                                    <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Github" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-github">
-                                                    <path
-                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Twitter" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-twitter">
-                                                    <path
-                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Instagram" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-instagram">
-                                                    <rect x="2" y="2" width="20" height="20" rx="5"
-                                                        ry="5"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
-                                                    </line>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
+                            </div>
+                            <div class="px-6 mt-16">
+                                <h1 class="font-bold text-3xl text-center mb-1">Silene Tokyo</h1>
+                                <p class="text-gray-800 text-sm text-center">Product Design Head</p>
+                                <p class="text-center text-gray-600 text-base pt-3 font-normal">The emphasis on
+                                    innovation and technology in our companies has resulted in a few of them
+                                    establishing global benchmarks in product design and development.</p>
+                                <div class="w-full flex justify-center pt-5 pb-5">
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Github" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-github">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Twitter" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-twitter">
+                                                <path
+                                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Instagram" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-instagram">
+                                                <rect x="2" y="2" width="20" height="20" rx="5"
+                                                    ry="5"></rect>
+                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                </line>
+                                            </svg>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div role="listitem"
-                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                            <div class="rounded overflow-hidden shadow-md bg-white">
-                                <div class="absolute -mt-20 w-full flex justify-center">
-                                    <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif"
-                                            alt="Display Picture of Johnson Stone" role="img"
-                                            class="rounded-full object-cover h-full w-full shadow-md" />
-                                    </div>
+                    </div>
+                    <div role="listitem"
+                        class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                        <div class="rounded overflow-hidden shadow-md bg-white">
+                            <div class="absolute -mt-20 w-full flex justify-center">
+                                <div class="h-32 w-32">
+                                    <img src="https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif"
+                                        alt="Display Picture of Johnson Stone" role="img"
+                                        class="rounded-full object-cover h-full w-full shadow-md" />
                                 </div>
-                                <div class="px-6 mt-16">
-                                    <h1 class="font-bold text-3xl text-center mb-1">Johnson Stone</h1>
-                                    <p class="text-gray-800 text-sm text-center">Manager Development</p>
-                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">Our services encompass
-                                        the assessment and repair of property damage caused by water, fire, smoke, or mold.
-                                        We can also be a part of the restoration.</p>
-                                    <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Github" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-github">
-                                                    <path
-                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Twitter" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-twitter">
-                                                    <path
-                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Instagram" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-instagram">
-                                                    <rect x="2" y="2" width="20" height="20" rx="5"
-                                                        ry="5"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
-                                                    </line>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
+                            </div>
+                            <div class="px-6 mt-16">
+                                <h1 class="font-bold text-3xl text-center mb-1">Johnson Stone</h1>
+                                <p class="text-gray-800 text-sm text-center">Manager Development</p>
+                                <p class="text-center text-gray-600 text-base pt-3 font-normal">Our services encompass
+                                    the assessment and repair of property damage caused by water, fire, smoke, or mold.
+                                    We can also be a part of the restoration.</p>
+                                <div class="w-full flex justify-center pt-5 pb-5">
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Github" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-github">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Twitter" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-twitter">
+                                                <path
+                                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Instagram" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-instagram">
+                                                <rect x="2" y="2" width="20" height="20" rx="5"
+                                                    ry="5"></rect>
+                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                </line>
+                                            </svg>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div role="listitem"
-                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                            <div class="rounded overflow-hidden shadow-md bg-white">
-                                <div class="absolute -mt-20 w-full flex justify-center">
-                                    <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg"
-                                            alt="Display Picture of Dean Jones" role="img"
-                                            class="rounded-full object-cover h-full w-full shadow-md" />
-                                    </div>
+                    </div>
+                    <div role="listitem"
+                        class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                        <div class="rounded overflow-hidden shadow-md bg-white">
+                            <div class="absolute -mt-20 w-full flex justify-center">
+                                <div class="h-32 w-32">
+                                    <img src="https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg"
+                                        alt="Display Picture of Dean Jones" role="img"
+                                        class="rounded-full object-cover h-full w-full shadow-md" />
                                 </div>
-                                <div class="px-6 mt-16">
-                                    <h1 class="font-bold text-3xl text-center mb-1">Dean Jones</h1>
-                                    <p class="text-gray-800 text-sm text-center">Principal Software Engineer</p>
-                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">An avid open-source
-                                        developer who loves to be creative and inventive. I have 20 years of experience in
-                                        the field.</p>
-                                    <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Github" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-github">
-                                                    <path
-                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Twitter" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-twitter">
-                                                    <path
-                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Instagram" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-instagram">
-                                                    <rect x="2" y="2" width="20" height="20" rx="5"
-                                                        ry="5"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
-                                                    </line>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
+                            </div>
+                            <div class="px-6 mt-16">
+                                <h1 class="font-bold text-3xl text-center mb-1">Dean Jones</h1>
+                                <p class="text-gray-800 text-sm text-center">Principal Software Engineer</p>
+                                <p class="text-center text-gray-600 text-base pt-3 font-normal">An avid open-source
+                                    developer who loves to be creative and inventive. I have 20 years of experience in
+                                    the field.</p>
+                                <div class="w-full flex justify-center pt-5 pb-5">
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Github" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-github">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Twitter" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-twitter">
+                                                <path
+                                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Instagram" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-instagram">
+                                                <rect x="2" y="2" width="20" height="20" rx="5"
+                                                    ry="5"></rect>
+                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                </line>
+                                            </svg>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div role="listitem"
-                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                            <div class="rounded overflow-hidden shadow-md bg-white">
-                                <div class="absolute -mt-20 w-full flex justify-center">
-                                    <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/blond-man-happy-expression_1194-2873.jpg"
-                                            alt="Display Picture of Rachel Adams" role="img"
-                                            class="rounded-full object-cover h-full w-full shadow-md" />
-                                    </div>
+                    </div>
+                    <div role="listitem"
+                        class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                        <div class="rounded overflow-hidden shadow-md bg-white">
+                            <div class="absolute -mt-20 w-full flex justify-center">
+                                <div class="h-32 w-32">
+                                    <img src="https://cdn.tuk.dev/assets/blond-man-happy-expression_1194-2873.jpg"
+                                        alt="Display Picture of Rachel Adams" role="img"
+                                        class="rounded-full object-cover h-full w-full shadow-md" />
                                 </div>
-                                <div class="px-6 mt-16">
-                                    <h1 class="font-bold text-3xl text-center mb-1">Rachel Adams</h1>
-                                    <p class="text-gray-800 text-sm text-center">Product Design Head</p>
-                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">Product designer with
-                                        interests in immersive computing and XR, political ventures, and emerging
-                                        technologies. Able to take ideas and give them a life.</p>
-                                    <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Github" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-github">
-                                                    <path
-                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Twitter" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-twitter">
-                                                    <path
-                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Instagram" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-instagram">
-                                                    <rect x="2" y="2" width="20" height="20" rx="5"
-                                                        ry="5"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
-                                                    </line>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
+                            </div>
+                            <div class="px-6 mt-16">
+                                <h1 class="font-bold text-3xl text-center mb-1">Rachel Adams</h1>
+                                <p class="text-gray-800 text-sm text-center">Product Design Head</p>
+                                <p class="text-center text-gray-600 text-base pt-3 font-normal">Product designer with
+                                    interests in immersive computing and XR, political ventures, and emerging
+                                    technologies. Able to take ideas and give them a life.</p>
+                                <div class="w-full flex justify-center pt-5 pb-5">
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Github" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-github">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Twitter" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-twitter">
+                                                <path
+                                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Instagram" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-instagram">
+                                                <rect x="2" y="2" width="20" height="20" rx="5"
+                                                    ry="5"></rect>
+                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                </line>
+                                            </svg>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div role="listitem"
-                            class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                            <div class="rounded overflow-hidden shadow-md bg-white">
-                                <div class="absolute -mt-20 w-full flex justify-center">
-                                    <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/photo-1570211776045-af3a51026f4a.jfif"
-                                            alt="Display Picture of Charles Keith" role="img"
-                                            class="rounded-full object-cover h-full w-full shadow-md" />
-                                    </div>
+                    </div>
+                    <div role="listitem"
+                        class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                        <div class="rounded overflow-hidden shadow-md bg-white">
+                            <div class="absolute -mt-20 w-full flex justify-center">
+                                <div class="h-32 w-32">
+                                    <img src="https://cdn.tuk.dev/assets/photo-1570211776045-af3a51026f4a.jfif"
+                                        alt="Display Picture of Charles Keith" role="img"
+                                        class="rounded-full object-cover h-full w-full shadow-md" />
                                 </div>
-                                <div class="px-6 mt-16">
-                                    <h1 class="font-bold text-3xl text-center mb-1">Charles Keith</h1>
-                                    <p class="text-gray-800 text-sm text-center">UX Designer</p>
-                                    <p class="text-center text-gray-600 text-base pt-3 font-normal">A UX designer is the
-                                        voice of the customer. Our job is to look beyond the business goals. We don't just
-                                        experience user interface but also questions it.</p>
-                                    <div class="w-full flex justify-center pt-5 pb-5">
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Github" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-github">
-                                                    <path
-                                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Twitter" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-twitter">
-                                                    <path
-                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="mx-5">
-                                            <div aria-label="Instagram" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="#718096"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-instagram">
-                                                    <rect x="2" y="2" width="20" height="20" rx="5"
-                                                        ry="5"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
-                                                    </line>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
+                            </div>
+                            <div class="px-6 mt-16">
+                                <h1 class="font-bold text-3xl text-center mb-1">Charles Keith</h1>
+                                <p class="text-gray-800 text-sm text-center">UX Designer</p>
+                                <p class="text-center text-gray-600 text-base pt-3 font-normal">A UX designer is the
+                                    voice of the customer. Our job is to look beyond the business goals. We don't just
+                                    experience user interface but also questions it.</p>
+                                <div class="w-full flex justify-center pt-5 pb-5">
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Github" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-github">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Twitter" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-twitter">
+                                                <path
+                                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mx-5">
+                                        <div aria-label="Instagram" role="img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-instagram">
+                                                <rect x="2" y="2" width="20" height="20" rx="5"
+                                                    ry="5"></rect>
+                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5">
+                                                </line>
+                                            </svg>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        
+        </div>
+
 
     </div>
 
@@ -1337,50 +1348,32 @@
                         <div class="mt-6 md:mt-8">
                             <h3 class="text-gray-300 ">Follow us</h3>
 
-                            <div class="flex mt-4 -mx-1.5 ">
-                                <a class="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500"
-                                    href="#">
-                                    <svg class="w-10 h-10 fill-current" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M18.6668 6.67334C18.0002 7.00001 17.3468 7.13268 16.6668 7.33334C15.9195 6.49001 14.8115 6.44334 13.7468 6.84201C12.6822 7.24068 11.9848 8.21534 12.0002 9.33334V10C9.83683 10.0553 7.91016 9.07001 6.66683 7.33334C6.66683 7.33334 3.87883 12.2887 9.3335 14.6667C8.0855 15.498 6.84083 16.0587 5.3335 16C7.53883 17.202 9.94216 17.6153 12.0228 17.0113C14.4095 16.318 16.3708 14.5293 17.1235 11.85C17.348 11.0351 17.4595 10.1932 17.4548 9.34801C17.4535 9.18201 18.4615 7.50001 18.6668 6.67268V6.67334Z" />
-                                    </svg>
+                            <div class="flex mt-4 -mx-1.5">
+                                <!-- Twitter Icon -->
+                                <a class="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-400"
+                                    href="https://twitter.com" target="_blank">
+                                    <i class="fab fa-twitter text-2xl md:text-2xl"></i>
                                 </a>
 
-                                <a class="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500"
-                                    href="#">
-                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M15.2 8.80005C16.4731 8.80005 17.694 9.30576 18.5941 10.2059C19.4943 11.1061 20 12.327 20 13.6V19.2H16.8V13.6C16.8 13.1757 16.6315 12.7687 16.3314 12.4687C16.0313 12.1686 15.6244 12 15.2 12C14.7757 12 14.3687 12.1686 14.0687 12.4687C13.7686 12.7687 13.6 13.1757 13.6 13.6V19.2H10.4V13.6C10.4 12.327 10.9057 11.1061 11.8059 10.2059C12.7061 9.30576 13.927 8.80005 15.2 8.80005Z"
-                                            fill="currentColor" />
-                                        <path d="M7.2 9.6001H4V19.2001H7.2V9.6001Z" fill="currentColor" />
-                                        <path
-                                            d="M5.6 7.2C6.48366 7.2 7.2 6.48366 7.2 5.6C7.2 4.71634 6.48366 4 5.6 4C4.71634 4 4 4.71634 4 5.6C4 6.48366 4.71634 7.2 5.6 7.2Z"
-                                            fill="currentColor" />
-                                    </svg>
+                                <!-- LinkedIn Icon -->
+                                <a class="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-700"
+                                    href="https://linkedin.com" target="_blank">
+                                    <i class="fab fa-linkedin text-2xl md:text-2xl"></i>
                                 </a>
 
-                                <a class="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500"
-                                    href="#">
-                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7 10.2222V13.7778H9.66667V20H13.2222V13.7778H15.8889L16.7778 10.2222H13.2222V8.44444C13.2222 8.2087 13.3159 7.9826 13.4826 7.81591C13.6493 7.64921 13.8754 7.55556 14.1111 7.55556H16.7778V4H14.1111C12.9324 4 11.8019 4.46825 10.9684 5.30175C10.1349 6.13524 9.66667 7.2657 9.66667 8.44444V10.2222H7Z"
-                                            fill="currentColor" />
-                                    </svg>
+                                <!-- Facebook Icon -->
+                                <a class="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-600"
+                                    href="https://facebook.com" target="_blank">
+                                    <i class="fab fa-facebook text-2xl md:text-2xl"></i>
                                 </a>
 
-                                <a class="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500"
-                                    href="#">
-                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.9294 7.72275C9.65868 7.72275 7.82715 9.55428 7.82715 11.825C7.82715 14.0956 9.65868 15.9271 11.9294 15.9271C14.2 15.9271 16.0316 14.0956 16.0316 11.825C16.0316 9.55428 14.2 7.72275 11.9294 7.72275ZM11.9294 14.4919C10.462 14.4919 9.26239 13.2959 9.26239 11.825C9.26239 10.354 10.4584 9.15799 11.9294 9.15799C13.4003 9.15799 14.5963 10.354 14.5963 11.825C14.5963 13.2959 13.3967 14.4919 11.9294 14.4919ZM17.1562 7.55495C17.1562 8.08692 16.7277 8.51178 16.1994 8.51178C15.6674 8.51178 15.2425 8.08335 15.2425 7.55495C15.2425 7.02656 15.671 6.59813 16.1994 6.59813C16.7277 6.59813 17.1562 7.02656 17.1562 7.55495ZM19.8731 8.52606C19.8124 7.24434 19.5197 6.10901 18.5807 5.17361C17.6453 4.23821 16.51 3.94545 15.2282 3.88118C13.9073 3.80621 9.94787 3.80621 8.62689 3.88118C7.34874 3.94188 6.21341 4.23464 5.27444 5.17004C4.33547 6.10544 4.04628 7.24077 3.98201 8.52249C3.90704 9.84347 3.90704 13.8029 3.98201 15.1238C4.04271 16.4056 4.33547 17.5409 5.27444 18.4763C6.21341 19.4117 7.34517 19.7045 8.62689 19.7687C9.94787 19.8437 13.9073 19.8437 15.2282 19.7687C16.51 19.708 17.6453 19.4153 18.5807 18.4763C19.5161 17.5409 19.8089 16.4056 19.8731 15.1238C19.9481 13.8029 19.9481 9.84704 19.8731 8.52606ZM18.1665 16.5412C17.8881 17.241 17.349 17.7801 16.6456 18.0621C15.5924 18.4799 13.0932 18.3835 11.9294 18.3835C10.7655 18.3835 8.26272 18.4763 7.21307 18.0621C6.51331 17.7837 5.9742 17.2446 5.69215 16.5412C5.27444 15.488 5.37083 12.9888 5.37083 11.825C5.37083 10.6611 5.27801 8.15832 5.69215 7.10867C5.97063 6.40891 6.50974 5.8698 7.21307 5.58775C8.26629 5.17004 10.7655 5.26643 11.9294 5.26643C13.0932 5.26643 15.596 5.17361 16.6456 5.58775C17.3454 5.86623 17.8845 6.40534 18.1665 7.10867C18.5843 8.16189 18.4879 10.6611 18.4879 11.825C18.4879 12.9888 18.5843 15.4916 18.1665 16.5412Z"
-                                            fill="currentColor" />
-                                    </svg>
+                                <!-- Instagram Icon -->
+                                <a class="mx-1.5 text-white transition-colors duration-300 transform hover:text-pink-500"
+                                    href="https://instagram.com" target="_blank">
+                                    <i class="fab fa-instagram text-2xl md:text-2xl"></i>
                                 </a>
                             </div>
+
                         </div>
                     </div>
 
