@@ -193,7 +193,7 @@
                             <p class="card-description text-gray-600 mb-4">
                                 Discover the latest trends and innovations in technology that are shaping our future...
                             </p>
-                            <a href="{{ route('frontend.blogdetails') }}"
+                            <a href="{{ route('frontend.blog.details') }}"
                                 class="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white rounded-full py-2 px-6 text-lg font-semibold shadow-md hover:bg-red-700 transition duration-300 ease-in-out">
                                 Read More
                             </a>
@@ -220,7 +220,7 @@
                             <p class="card-description text-gray-600 mb-4">
                                 Explore the new frontiers of design and how it's transforming user experiences...
                             </p>
-                            <a href="{{ route('frontend.blogdetails') }}"
+                            <a href="{{ route('frontend.blog.details') }}"
                                 class="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white rounded-full py-2 px-6 text-lg font-semibold shadow-md hover:bg-red-700 transition duration-300 ease-in-out">
                                 Read More
                             </a>
@@ -247,7 +247,7 @@
                             <p class="card-description text-gray-600 mb-4">
                                 Stay ahead of the curve with insights into groundbreaking innovations...
                             </p>
-                            <a href="{{ route('frontend.blogdetails') }}"
+                            <a href="{{ route('frontend.blog.details') }}"
                                 class="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white rounded-full py-2 px-6 text-lg font-semibold shadow-md hover:bg-red-700 transition duration-300 ease-in-out">
                                 Read More
                             </a>

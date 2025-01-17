@@ -11,7 +11,7 @@ Route::get('/blog-details', [HomeController::class, 'blogdetails'])->name('front
 Route::get('/products', [HomeController::class, 'product'])->name('frontend.products');
 Route::get('/careers', [HomeController::class, 'career'])->name('frontend.careers');
 Route::get('/pricing', [HomeController::class, 'pricing'])->name('frontend.pricing');
-Route::get('/features', [HomeController::class, 'features'])->name('frontend.features');
+Route::get('/services', [HomeController::class, 'services'])->name('frontend.services');
 Route::get('/privacy-policy', [HomeController::class, 'privacypolicy'])->name('frontend.privacy.policy');
 Route::get('/terms-and-conditions', [HomeController::class, 'condition'])->name('frontend.terms.conditions');
 Route::get('/refund-policy', [HomeController::class, 'refund'])->name('frontend.refund.policy');

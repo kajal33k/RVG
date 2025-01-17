@@ -39,7 +39,7 @@
 
     <!-- Main content section -->
 
-    <main class="flex-grow min-h-screen py-16">
+    <main class="flex-grow min-h-screen pt-16">
 
         @yield('content')
     </main>
