@@ -30,11 +30,11 @@
                 </p>
                 <div
                     class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                    <a href="{{route('frontend.details')}}"
+                    <a href="{{ route('frontend.details') }}"
                         class="px-8 py-3 text-lg font-semibold rounded dark:bg-red-600 text-white hover:bg-red-700 transition">
                         Get Started
                     </a>
-                    <a href="{{route('frontend.learn.more')}}"
+                    <a href="{{ route('frontend.learn.more') }}"
                         class="px-8 py-3 text-lg font-semibold border rounded border-gray-800 hover:bg-red-500 hover:text-white transition">
                         Learn More
                     </a>
@@ -81,7 +81,7 @@
                 </p>
                 <button
                     class="mt-6 px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-red-100 transition-all">
-                   <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                    <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                 </button>
             </div>
         </div>
@@ -143,7 +143,7 @@
                     <div class="mt-6">
                         <button
                             class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                            <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                            <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                     <div class="mt-6">
                         <button
                             class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                            <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                            <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -197,7 +197,7 @@
                     <div class="mt-6">
                         <button
                             class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                            <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                            <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -223,7 +223,7 @@
                     <div class="mt-6">
                         <button
                             class="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-lg hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                            <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                            <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -251,7 +251,8 @@
                 <div
                     class="service-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
                     <h3 class="text-2xl font-semibold mb-4 text-gray-800">Facebook/Insta Ads</h3>
-                    <p class="text-gray-600">Leverage the power of social media advertising to reach your ideal audience and
+                    <p class="text-gray-600">Leverage the power of social media advertising to reach your ideal audience
+                        and
                         drive conversions.</p>
                 </div>
 
@@ -342,122 +343,148 @@
         <div class="flex justify-center mb-6">
             <h1 class="text-red-600 text-3xl font-bold">Our Products </h1>
         </div>
-    
+
         <!-- Slides -->
         <div class="overflow-hidden" data-glide-el="track">
-            <ul class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+            <ul
+                class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
                 <!-- Item 1 -->
                 <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
-                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                    <div
+                        class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
                         <!-- Image Section -->
                         <div class="relative">
-                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                class="w-full h-48 object-cover sm:h-56">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites &
+                                Posters</h2>
                         </div>
                         <!-- Content Section -->
                         <div class="p-4 sm:p-6">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
                             <p class="text-xs sm:text-sm text-gray-600 mt-2">
-                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are
+                                visually appealing and highly functional.
                             </p>
                         </div>
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
-                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                            <button
+                                class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                             </button>
                         </div>
                     </div>
                 </li>
                 <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
-                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                    <div
+                        class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
                         <!-- Image Section -->
                         <div class="relative">
-                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                class="w-full h-48 object-cover sm:h-56">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites &
+                                Posters</h2>
                         </div>
                         <!-- Content Section -->
                         <div class="p-4 sm:p-6">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
                             <p class="text-xs sm:text-sm text-gray-600 mt-2">
-                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are
+                                visually appealing and highly functional.
                             </p>
                         </div>
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
-                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                            <button
+                                class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                             </button>
                         </div>
                     </div>
                 </li>
                 <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
-                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                    <div
+                        class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
                         <!-- Image Section -->
                         <div class="relative">
-                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                class="w-full h-48 object-cover sm:h-56">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites &
+                                Posters</h2>
                         </div>
                         <!-- Content Section -->
                         <div class="p-4 sm:p-6">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
                             <p class="text-xs sm:text-sm text-gray-600 mt-2">
-                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are
+                                visually appealing and highly functional.
                             </p>
                         </div>
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
-                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                            <button
+                                class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                             </button>
                         </div>
                     </div>
                 </li>
                 <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
-                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                    <div
+                        class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
                         <!-- Image Section -->
                         <div class="relative">
-                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                class="w-full h-48 object-cover sm:h-56">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites &
+                                Posters</h2>
                         </div>
                         <!-- Content Section -->
                         <div class="p-4 sm:p-6">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
                             <p class="text-xs sm:text-sm text-gray-600 mt-2">
-                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are
+                                visually appealing and highly functional.
                             </p>
                         </div>
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
-                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                            <button
+                                class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                             </button>
                         </div>
                     </div>
                 </li>
                 <li class="flex-shrink-0 w-72 sm:w-80 md:w-96 lg:w-[300px] xl:w-[450px]">
-                    <div class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                    <div
+                        class="w-full bg-white rounded-3xl shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
                         <!-- Image Section -->
                         <div class="relative">
-                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview" class="w-full h-48 object-cover sm:h-56">
+                            <img src="{{ asset('assets/img/slide1.jpg') }}" alt="Poster and Website Preview"
+                                class="w-full h-48 object-cover sm:h-56">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-70"></div>
-                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites & Posters</h2>
+                            <h2 class="absolute bottom-4 left-4 text-white text-lg sm:text-xl font-bold">Dynamic Websites &
+                                Posters</h2>
                         </div>
                         <!-- Content Section -->
                         <div class="p-4 sm:p-6">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">Poster Graphic Design</h3>
                             <p class="text-xs sm:text-sm text-gray-600 mt-2">
-                                Showcase your creativity with stunning poster designs and dynamic website layouts that are visually appealing and highly functional.
+                                Showcase your creativity with stunning poster designs and dynamic website layouts that are
+                                visually appealing and highly functional.
                             </p>
                         </div>
                         <!-- Action Button -->
                         <div class="p-4 pt-0">
-                            <button class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
-                                <a href="{{route('frontend.learn.more')}}"> Learn More</a>
+                            <button
+                                class="w-full py-2 sm:py-3 bg-gradient-to-r from-red-500 to-gray-600 text-white font-medium rounded-lg shadow-md hover:from-gray-600 hover:to-red-500 transform transition-transform duration-300 hover:scale-105">
+                                <a href="{{ route('frontend.learn.more') }}"> Learn More</a>
                             </button>
                         </div>
                     </div>
@@ -467,7 +494,7 @@
                 <!-- For brevity, I'm leaving them out. You can duplicate the same structure as the first item for other slides. -->
             </ul>
         </div>
-    
+
         <!-- Controls (Optional, for future use) -->
         {{-- <div class="absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2" data-glide-el="controls">
             <button class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20" data-glide-dir="<" aria-label="prev slide">
@@ -484,7 +511,7 @@
             </button>
         </div> --}}
     </div>
-    
+
 
 
     <style>
@@ -541,7 +568,7 @@
             animation-delay: 1.2s;
         }
     </style>
-{{-- features --}}
+    {{-- features --}}
     <section class="py-12">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Features</h2>
