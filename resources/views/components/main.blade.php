@@ -8,7 +8,6 @@
     <title>RealVictoryGroups</title>
 
     {{-- fonts --}}
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,29 +18,90 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <!-- Tailwind CSS via CDN (can be replaced with Vite if you're using a build process) -->
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Vite directive to include compiled CSS, replace if necessary with your build system -->
+    <!-- Vite directive to include compiled CSS -->
     @vite('resources/css/app.css')
+
+    <!-- Custom styles for background and colors -->
+    <style>
+        /* Container for the background iframe */
+        .background-container {
+            position: fixed;  /* Fixed position for background */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Keep behind content */
+        }
+
+        .background-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Main content styling */
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            /* Slight white background for better readability */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Color theme */
+        .text-primary {
+            color: #EF4444; /* Red */
+        }
+
+        .bg-primary {
+            background-color: #EF4444; /* Red */
+        }
+
+        .bg-secondary {
+            background-color: #F3F4F6; /* Light Gray */
+        }
+
+        .btn-primary {
+            background-color: #EF4444; /* Red */
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #DC2626; /* Darker Red on hover */
+        }
+    </style>
 </head>
 
-<body class="flex flex-col bg-gray-100 text-gray-900">
+<body class="flex flex-col bg-transparent text-gray-900">
 
     <!-- Include the header component -->
-
     @include('components.header')
 
     <!-- Main content section -->
-
     <main class="flex-grow min-h-screen pt-16">
 
-        @yield('content')
+        <!-- Background iframe (fixed at the bottom) -->
+        {{-- <div class="background-container">
+            <iframe src="https://gifer.com/embed/75B1" frameborder="0" allowfullscreen></iframe>
+        </div> --}}
+
+        <div class="background-container">
+           <img src="{{asset('assets/img/hd_image.png')}}" alt="" class="h-full w-full">
+        </div>
+
+
+        <!-- Main content -->
+        <div class="content mx-auto ">
+            @yield('content')
+        </div>
     </main>
 
     <!-- Include the footer component -->
