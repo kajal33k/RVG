@@ -25,9 +25,9 @@
             class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Blogs</a>
         <a href="{{ route('frontend.careers') }}"
             class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Career</a>
-        <a href="#"
-            class="ml-4 px-8 py-3 bg-black text-white text-sm font-medium rounded-xl shadow hover:bg-gray-900 transition-colors duration-200">
-            Sign Up
+        <a href="#" id="enquiry-btn"
+            class="ml-4 px-8 py-3 bg-red-600 text-white text-sm font-medium rounded-xl shadow hover:bg-red-700 transition-colors duration-200">
+            Enquiry
         </a>
     </div>
 
@@ -62,30 +62,86 @@
     <a href="{{ route('frontend.careers') }}"
         class="block text-sm font-medium text-gray-700 hover:text-gray-900 py-2 transition-colors duration-200">Career</a>
     <a href="#"
-        class="block bg-black text-white text-sm font-medium rounded-xl shadow hover:bg-gray-900 text-center py-3 mt-4 transition-colors duration-200">
-        Sign Up
+        class="block bg-red-600 text-white text-sm font-medium rounded-xl shadow hover:bg-red-700 text-center py-3 mt-4 transition-colors duration-200"
+        id="enquiry-mobile-btn">
+        Enquiry
     </a>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact-modal" class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center hidden z-50">
+    <div class="bg-white rounded-lg p-8 w-11/12 md:w-1/2 shadow-lg">
+        <div class="mb-6 ">
+            <h2 class="text-2xl font-bold text-center">Contact Us</h2>
+            <div class="w-24 h-1 bg-red-500 mx-auto mt-4 rounded"></div>
+        </div>
+        <form class="space-y-4">
+            <!-- Name -->
+            <div>
+                <input type="text" placeholder="Full Name"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition" />
+            </div>
+
+            <!-- Email -->
+            <div>
+                <input type="email" placeholder="Email Address"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition" />
+            </div>
+
+            <!-- Mobile Number -->
+            <div>
+                <input type="tel" placeholder="Mobile Number"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition" />
+            </div>
+
+            <!-- Message -->
+            <div>
+                <textarea placeholder="Your Message"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition h-32"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit"
+                    class="w-full py-3 bg-red-600 text-white text-lg font-medium rounded-lg hover:bg-red-700 transition-colors">Submit</button>
+            </div>
+        </form>
+
+        <!-- Close Modal Button -->
+        <button id="close-modal"
+            class="mt-4 w-full text-center py-2 text-black bg-gray-200 rounded-lg hover:bg-gray-300 transition">
+            Close
+        </button>
+    </div>
 </div>
 
 <!-- JavaScript -->
 <script>
-    // Get the toggle button and mobile menu
+    // Toggle mobile menu
     const toggleButton = document.getElementById('mobile-menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    // Add event listener for toggle button
     toggleButton.addEventListener('click', () => {
-        // Toggle the visibility of the mobile menu
-        if (mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.remove('hidden');
-            setTimeout(() => {
-                mobileMenu.style.transform = "translateY(0)"; // Slide the menu down
-            }, 10); // Allow time for the class toggle to take effect
-        } else {
-            mobileMenu.style.transform = "translateY(-100%)"; // Slide the menu up
-            setTimeout(() => {
-                mobileMenu.classList.add('hidden');
-            }, 500); // Wait for the transition to finish before hiding
-        }
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('transform');
+        mobileMenu.classList.toggle('translate-y-0');
     });
+
+    // Open Contact Modal
+    const enquiryBtn = document.getElementById('enquiry-btn');
+    const enquiryMobileBtn = document.getElementById('enquiry-mobile-btn');
+    const contactModal = document.getElementById('contact-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    const openModal = () => {
+        contactModal.classList.remove('hidden');
+    };
+
+    const closeModalFunction = () => {
+        contactModal.classList.add('hidden');
+    };
+
+    enquiryBtn.addEventListener('click', openModal);
+    enquiryMobileBtn.addEventListener('click', openModal);
+    closeModal.addEventListener('click', closeModalFunction);
 </script>
