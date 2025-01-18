@@ -4,13 +4,13 @@
 
 
     <!-- Header Section -->
-  <header class="bg-white shadow mt-8">
+  <header class="bg-white shadow mt-8"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
     <div class="container mx-auto px-4 py-6 flex items-center justify-between">
       <div class="flex items-center space-x-4">
         <img src="{{asset('assets/img/logo (2).png')}}" alt="Software Logo" class="w-12 h-12 rounded-md">
         <div>
-          <h1 class="text-3xl font-bold text-red-700">Software Name</h1>
-          <p class="text-gray-600">Your tagline or slogan goes here</p>
+          <h1 class="text-3xl font-bold text-red-700"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">Software Name</h1>
+          <p class="text-gray-600"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">Your tagline or slogan goes here</p>
         </div>
       </div>
       <button class="bg-red-600 text-white px-6 py-2 rounded-lg font-medium shadow-lg hover:bg-red-700">
@@ -20,7 +20,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-red-50 py-16">
+  <section class="bg-red-50 py-16"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-4xl font-extrabold text-red-700">Transform the Way You Work</h2>
       <p class="mt-4 text-lg text-gray-600">
@@ -40,17 +40,17 @@
 
 {{-- SOFTWARE DETAILS --}}
    
-  <div class="min-h-screen bg-gray-50 flex items-center justify-center px-6 py-10">
+  <div class="min-h-screen bg-gray-50 flex items-center justify-center px-6 py-10"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
     <div class="relative w-full max-w-6xl">
         <!-- 3D Software Detail Section -->
-        <div class="bg-gray-50 p-10 rounded-3xl shadow-2xl transform perspective-3d rotate-y-2 hover:rotate-y-0 transition-transform duration-500">
+        <div class="bg-gray-50 p-10 rounded-3xl shadow-2xl transform perspective-3d rotate-y-2 hover:rotate-y-0 transition-transform duration-500"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
             <h2 class="text-4xl md:text-5xl font-bold text-red-700 text-center mb-6">Software Details</h2>
             <p class="text-lg text-black text-center mb-8">
                 Discover the cutting-edge features and capabilities of our software, designed to simplify your tasks.
             </p>
 
             <!-- Features in Columns -->
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-8"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                 <!-- Feature Item 1 -->
                 <div class="bg-gray-300 p-6 rounded-xl shadow-lg hover:scale-105 transform transition-transform duration-300">
                     <div class="text-center">

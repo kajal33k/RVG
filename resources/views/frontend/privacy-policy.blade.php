@@ -3,15 +3,15 @@
 
   
 
-  <div class="min-h-screen flex flex-col justify-center items-center">
+  <div class="min-h-screen flex flex-col justify-center items-center"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
     <!-- Header -->
-    <header class="text-center m-10">
+    <header class="text-center m-10"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
       <h1 class="text-4xl font-bold text-red-700 drop-shadow-lg">Privacy Policy</h1>
      
     </header>
 
     <!-- Privacy Policy Card -->
-    <div class="card bg-white shadow-2xl rounded-lg p-8 max-w-7xl">
+    <div class="card bg-white shadow-2xl rounded-lg p-8 max-w-7xl"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
       <div>
         <p class="text-lg font-semibold text-red-600">Welcome to www.realvictorygroups.com</p>
         <p class="mt-4 text-black">
@@ -23,7 +23,7 @@
       </div>
 
       <!-- Information We Collect -->
-      <section class="mt-6">
+      <section class="mt-6"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <h2 class="text-2xl font-bold text-red-600">1. Information We Collect</h2>
         <ul class="mt-4 space-y-3">
           <li><span class="font-semibold">Personal Data:</span> Information like name, email, phone number, and details you voluntarily provide.</li>
@@ -33,43 +33,43 @@
       </section>
 
       <!-- How We Use Your Information -->
-      <section class="mt-6">
+      <section class="mt-6"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <h2 class="text-2xl font-bold text-red-600">2. How We Use Your Information</h2>
         <p class="mt-4">We use the information to operate, personalize, and improve your experience on our site.</p>
       </section>
 
       <!-- Disclosure of Information -->
-      <section class="mt-6">
+      <section class="mt-6"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <h2 class="text-2xl font-bold text-red-600">3. Disclosure of Your Information</h2>
         <p class="mt-4">Information may be shared with service providers, during business transfers, or to meet legal obligations.</p>
       </section>
 
       <!-- Security -->
-      <section class="mt-6">
+      <section class="mt-6"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <h2 class="text-2xl font-bold text-red-600">4. Security of Your Information</h2>
         <p class="mt-4">We implement various security measures, but no method is entirely foolproof.</p>
       </section>
 
       <!-- Third-Party Links 0-->
-      <section class="mt-6">
+      <section class="mt-6"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <h2 class="text-2xl font-bold text-red-600">5. Third-Party Websites</h2>
         <p class="mt-4">Our site may link to external sites. Please review their privacy policies.</p>
       </section>
 
       <!-- Privacy Rights -->
-      <section class="mt-6">
+      <section class="mt-6"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <h2 class="text-2xl font-bold text-red-600">6. Your Privacy Rights</h2>
         <p class="mt-4">Depending on your location, you may access, correct, or delete your data and opt out of marketing communications.</p>
       </section>
 
       <!-- Changes -->
-      <section class="mt-6">
+      <section class="mt-6"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <h2 class="text-2xl font-bold text-red-600">7. Changes to This Policy</h2>
         <p class="mt-4">We may update this Privacy Policy periodically and encourage you to review it regularly.</p>
       </section>
 
       <!-- Contact Information -->
-      <section class="mt-6">
+      <section class="mt-6"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
         <h2 class="text-2xl font-bold text-red-600">8. Contact Us</h2>
         <p class="mt-4">
           Real Victory Groups<br>

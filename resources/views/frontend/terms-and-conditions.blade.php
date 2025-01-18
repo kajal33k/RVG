@@ -6,12 +6,12 @@
   <div class="min-h- w-full flex flex-col justify-center items-center">
     <!-- Header -->
     <header class="text-center m-10">
-      <h1 class="text-4xl font-bold text-red-700 drop-shadow-lg">Terms & Conditions</h1>
+      <h1 class="text-4xl font-bold text-red-700 drop-shadow-lg"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">Terms & Conditions</h1>
 
     </header>
 
     <!-- Terms and Conditions Card -->
-    <div class="card bg-white shadow-2xl rounded-lg p-8 max-w-7xl">
+    <div class="card bg-white shadow-2xl rounded-lg p-8 max-w-7xl"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
       <div>
         <p class="text-lg font-semibold text-red-600">Welcome to www.realvictorygroups.com</p>
         <p class="mt-4 text-black">
@@ -26,7 +26,7 @@
 
       <!-- Terms List -->
       <section class="mt-6">
-        <ol class="list-decimal list-inside space-y-4">
+        <ol class="list-decimal list-inside space-y-4"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
           <li>
             You agree to provide accurate and complete information and are responsible for all actions under your account.
           </li>
@@ -66,7 +66,7 @@
 
       <!-- Contact Information -->
       <section class="mt-6">
-        <h2 class="text-2xl font-bold text-red-600">Contact Us</h2>
+        <h2 class="text-2xl font-bold text-red-600"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">Contact Us</h2>
         <p class="mt-4">
           All concerns or communications must be directed to us using the contact information provided below:
         </p>
