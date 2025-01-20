@@ -46,16 +46,6 @@
             border: none;
         }
 
-        /* Main content styling */
-        .content {
-            position: relative;
-            z-index: 1;
-            padding: 2rem;
-            /* Slight white background for better readability */
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
         /* Color theme */
         .text-primary {
             color: #EF4444; /* Red */

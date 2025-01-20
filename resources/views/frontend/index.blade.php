@@ -1,46 +1,44 @@
 @extends('components.main')
 @section('content')
-    <!-- Smartphone Container -->
-    <div class="flex justify-center mt-8 py-12">
-        <!-- Smartphone -->
-        <div class="relative bg-black w-[400px] h-[800px] rounded-3xl shadow-lg">
-            <!-- Screen -->
-            <div class="absolute inset-4 bg-gray-100 rounded-2xl overflow-hidden">
-                <!-- Slider Section -->
-                <div class="flex overflow-x-auto space-x-4 px-4 pt-4 h-full w-full">
-                    <!-- Images -->
-                    <img src="{{ asset('assets/img/card1.avif') }}" alt="Image 1"
-                        class=" object-cover rounded-lg shadow-md cursor-pointer hover:opacity-80 transition"
-                        onclick="showPopup(this.src)">
-                    <img src="{{ asset('assets/img/card2.avif') }}" alt="Image 2"
-                        class=" object-cover rounded-lg shadow-md cursor-pointer hover:opacity-80 transition"
-                        onclick="showPopup(this.src)">
-                    <img src="{{ asset('assets/img/card3.avif') }}" alt="Image 3"
-                        class=" object-cover rounded-lg shadow-md cursor-pointer hover:opacity-80 transition"
-                        onclick="showPopup(this.src)">
-                    <img src="{{ asset('assets/img/card4.avif') }}" alt="Image 4"
-                        class="object-cover rounded-lg shadow-md cursor-pointer hover:opacity-80 transition"
-                        onclick="showPopup(this.src)">
-                </div>
-            </div>
 
-            <!-- Front Camera -->
-            <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gray-800 rounded-full shadow-inner">
-            </div>
+{{-- Hero section  --}}
+<div class="relative">
+  <!-- Video Section -->
+  <video 
+    src="{{ asset('assets/img/videosfsd.mp4') }}" 
+    autoplay 
+    loop 
+    muted 
+    playsinline 
+    preload="auto" 
+    class="w-screen h-auto object-cover">
+    Your browser does not support the video tag.
+  </video>
 
-            <!-- Speaker -->
-            <div class="absolute top-10 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gray-700 rounded-full"></div>
-
-            <!-- Volume Buttons -->
-            <div class="absolute top-20 -left-2 w-1 h-12 bg-gray-800 rounded-r-md"></div>
-            <div class="absolute top-36 -left-2 w-1 h-8 bg-gray-800 rounded-r-md"></div>
-
-            <!-- Power Button -->
-            <div class="absolute top-28 -right-2 w-1 h-14 bg-gray-800 rounded-l-md"></div>
-
-            
-        </div>
+  <!-- Overlay Content -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white text-center">
+    <h1 class="lg:text-7xl md:text-5xl text-2xl font-bold mb-4">
+      365 Days, 365 Posters
+    </h1>
+    <p class="text-lg md:text-2xl mb-6">
+      Your brand, your story, our design
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <button 
+        class="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-12 rounded-lg shadow transition-all duration-300"
+      >
+        Get Started
+      </button>
+      <button 
+        class="bg-transparent border border-white hover:bg-white hover:text-black text-white font-medium py-3 px-12 rounded-lg shadow transition-all duration-300"
+      >
+        Learn More
+      </button>
     </div>
+  </div>
+</div>
+
+
 
     <!-- Popup Modal -->
     <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden mt-12">
@@ -76,9 +74,15 @@
 
         <!-- Slide Images -->
         <div class="slides ">
-            <img src="{{ asset('assets/img/slide5.jpg') }}" class="slide rounded-xl w-4xl" alt="Slide 1"  onclick="showPopup(this.src)">
-            <img src="{{ asset('assets/img/slide4.jpg') }}" class="slide rounded-xl w-4xl" alt="Slide 2"  onclick="showPopup(this.src)">
-            <img src="{{ asset('assets/img/slide3.jpg') }}" class="slide rounded-xl w-4xl" alt="Slide 3" onclick="showPopup(this.src)">
+            
+              <img src="{{ asset('assets/img/one.jpg') }}" class="slide rounded-xl w-4xl h-96" alt="Slide 1"  onclick="showPopup(this.src)">
+            
+       
+            <img src="{{ asset('assets/img/two.jpg') }}" class="slide rounded-xl w-4xl h-96" alt="Slide 2"  onclick="showPopup(this.src)">
+           
+           
+            <img src="{{ asset('assets/img/one.jpg') }}" class="slide rounded-xl w-4xl h-96" alt="Slide 3" onclick="showPopup(this.src)">
+         
         </div>
 
         <!-- Navigation Arrows -->
