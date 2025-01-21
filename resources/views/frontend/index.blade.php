@@ -43,7 +43,7 @@
     <!-- Popup Modal -->
     <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden mt-12">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
-            <button onclick="hidePopup()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+            <button onclick="hidePopup()" class="absolute top-2 right-2 text-red-700 hover:text-red-600">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -73,7 +73,7 @@
     <div class="slider-container mt-10 flex justify-center">
 
         <!-- Slide Images -->
-        <div class="slides ">
+        <div class="slides p-4">
             
               <img src="{{ asset('assets/img/one.jpg') }}" class="slide rounded-xl w-4xl h-96" alt="Slide 1"  onclick="showPopup(this.src)">
             
@@ -260,11 +260,27 @@
             height: 100%;
             object-fit: cover;
         }
+
+        /* Position the next/prev buttons at top-right */
+    .swiper-button-next, .swiper-button-prev {
+        position: absolute;
+        top: 0;
+        color: red;
+        right: 0;
+        z-index: 10; /* Make sure buttons stay on top */
+        margin-top: 10px;
+        padding: 2px; /* Optional: Adjust margin from the top */
+    }
+
+    .swiper-button-prev {
+        right: auto;
+        left: 0;
+    }
     </style>
     
         <!-- Swiper -->
         <div class="swiper mySwiper mb-4">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper p-4">
                 <div class="swiper-slide"><div class=" ">
                     <h1 class="text-center text-3xl font-bold mb-4 text-red-600">Jewellery Poster</h1>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
@@ -367,160 +383,7 @@
             </div>
         </div>
         
-       
-        {{-- <div id="carousel" class="relative w-full max-w-7xl mt-8">
-          <!-- Carousel wrapper -->
-          <div class="relative flex overflow-hidden rounded-lg px-4 sm:px-8 md:px-16">
-            <!-- Slides -->
-            <div
-              id="carousel-slides"
-              class="flex transition-transform duration-700 ease-in-out"
-            >
-              <!-- Slide 1 -->
-              <div class="w-full sm:w-[300px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 p-2 md:p-4">
-                <img
-                  src="{{ asset('assets/img/calling.jpg') }}"
-                  alt="Slide 1"
-                  class="w-full h-full object-cover rounded-lg"
-                  onclick="showPopup(this.src)"
-                />
-              </div>
-              <!-- Slide 2 -->
-              <div class="w-full sm:w-[300px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 p-2 md:p-4">
-                <img
-                  src="{{ asset('assets/img/calling.jpg') }}"
-                  alt="Slide 2"
-                  class="w-full h-full object-cover rounded-lg"
-                  onclick="showPopup(this.src)"
-                />
-              </div>
-              <!-- Slide 3 -->
-              <div class="w-full sm:w-[300px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 p-2 md:p-4">
-                <img
-                  src="{{ asset('assets/img/calling.jpg') }}"
-                  alt="Slide 3"
-                  class="w-full h-full object-cover rounded-lg"
-                  onclick="showPopup(this.src)"
-                />
-              </div>
-              <!-- Add more slides as needed -->
-            </div>
-          </div>
-        
-          <!-- Indicators -->
-          <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            <button
-              class="w-3 h-3 bg-gray-500 rounded-full transition-all duration-300"
-              aria-label="Slide 1"
-              data-carousel-slide-to="0"
-            ></button>
-            <button
-              class="w-3 h-3 bg-gray-500 rounded-full transition-all duration-300"
-              aria-label="Slide 2"
-              data-carousel-slide-to="1"
-            ></button>
-            <button
-              class="w-3 h-3 bg-gray-500 rounded-full transition-all duration-300"
-              aria-label="Slide 3"
-              data-carousel-slide-to="2"
-            ></button>
-          </div>
-        
-          <!-- Controls -->
-          <button
-            id="prev"
-            class="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-400"
-            aria-label="Previous Slide"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button
-            id="next"
-            class="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-400"
-            aria-label="Next Slide"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
-        
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const slides = document.getElementById("carousel-slides");
-            const prevButton = document.getElementById("prev");
-            const nextButton = document.getElementById("next");
-            const indicators = document.querySelectorAll("[data-carousel-slide-to]");
-            let currentIndex = 0;
-        
-            const getSlideWidth = () => slides.children[0].getBoundingClientRect().width;
-        
-            const updateCarousel = () => {
-              const slideWidth = getSlideWidth();
-              slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        
-              // Update indicators
-              indicators.forEach((indicator, index) => {
-                indicator.classList.toggle("bg-gray-900", index === currentIndex);
-                indicator.classList.toggle("bg-gray-500", index !== currentIndex);
-                indicator.setAttribute("aria-current", index === currentIndex ? "true" : "false");
-              });
-            };
-        
-            // Controls
-            prevButton.addEventListener("click", () => {
-              currentIndex = (currentIndex - 1 + slides.children.length) % slides.children.length;
-              updateCarousel();
-            });
-        
-            nextButton.addEventListener("click", () => {
-              currentIndex = (currentIndex + 1) % slides.children.length;
-              updateCarousel();
-            });
-        
-            // Indicators
-            indicators.forEach((indicator, index) => {
-              indicator.addEventListener("click", () => {
-                currentIndex = index;
-                updateCarousel();
-              });
-            });
-        
-            // Resize event with debounce
-            let resizeTimeout;
-            window.addEventListener("resize", () => {
-              clearTimeout(resizeTimeout);
-              resizeTimeout = setTimeout(() => {
-                updateCarousel();
-              }, 100);
-            });
-        
-            // Initial update
-            updateCarousel();
-          });
-        </script> --}}
+      
 
        <div class="relative w-full max-w-5xl mx-auto mt-8">
   <!-- Carousel Container -->
@@ -723,7 +586,7 @@
         </div>
 
         <!-- Gallery Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 p-4">
             <!-- Gallery Items -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="{{asset('assets/img/card2.avif')}}" alt="World Food Day" class="w-full h-64 object-cover" onclick="showPopup(this.src)"/>
