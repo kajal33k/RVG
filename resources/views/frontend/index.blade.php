@@ -17,20 +17,20 @@
 
   <!-- Overlay Content -->
   <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white text-center">
-    <h1 class="lg:text-7xl md:text-5xl text-2xl font-bold mb-4">
+    <h1 class="lg:text-7xl md:text-5xl text-2xl font-bold md:mb-4">
       365 Days, 365 Posters
     </h1>
-    <p class="text-lg md:text-2xl mb-6">
+    <p class="text-lg md:text-2xl md:mb-6">
       Your brand, your story, our design
     </p>
-    <div class="flex flex-wrap justify-center gap-4">
+    <div class="flex flex-wrap justify-center md:gap-4 gap-2">
       <button 
-        class="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-12 rounded-lg shadow transition-all duration-300"
+        class="bg-red-600 hover:bg-red-700 text-white font-medium md:py-3 md:px-12 p-2 rounded-lg shadow transition-all duration-300"
       >
         Get Started
       </button>
       <button 
-        class="bg-transparent border border-white hover:bg-white hover:text-black text-white font-medium py-3 px-12 rounded-lg shadow transition-all duration-300"
+        class="bg-transparent border border-white hover:bg-white hover:text-black text-white font-medium md:py-3 md:px-12 p-2 rounded-lg shadow transition-all duration-300"
       >
         Learn More
       </button>
@@ -361,145 +361,352 @@
                 <p class="text-base sm:text-lg md:text-xl mb-4 sm:mb-5">
                  We provide 365 post, at the 365 days
                 </p>
-                <button class="bg-[#008CBA] text-white border-none py-2 px-4 sm:py-3 sm:px-6 text-sm sm:text-lg rounded-lg cursor-pointer hover:bg-[#007B9A] transition duration-300">
+                <button class="bg-red-600 text-white border-none py-2 px-4 sm:py-3 sm:px-6 text-sm sm:text-lg rounded-lg cursor-pointer hover:bg-red-700 transition duration-300">
                     View More
                 </button>
             </div>
         </div>
         
        
-       {{-- fhdxfju --}}
-       <div id="carousel" class="relative w-full max-w-7xl mt-8">
-        <!-- Carousel wrapper -->
-        <div class="relative flex overflow-hidden rounded-lg px-4 sm:px-8 md:px-16">
-          <!-- Slides -->
-          <div
-            class="flex transition-transform duration-700 ease-in-out"
-            id="carousel-slides"
-          >
-            <div class="w-full sm:w-[300px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 p-2 md:p-4">
-              <img
-                src="{{asset('assets/img/calling.jpg')}}"
-                alt="Slide 1"
-                class="w-full h-full object-cover rounded-lg"
-                onclick="showPopup(this.src)"
-              />
+        {{-- <div id="carousel" class="relative w-full max-w-7xl mt-8">
+          <!-- Carousel wrapper -->
+          <div class="relative flex overflow-hidden rounded-lg px-4 sm:px-8 md:px-16">
+            <!-- Slides -->
+            <div
+              id="carousel-slides"
+              class="flex transition-transform duration-700 ease-in-out"
+            >
+              <!-- Slide 1 -->
+              <div class="w-full sm:w-[300px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 p-2 md:p-4">
+                <img
+                  src="{{ asset('assets/img/calling.jpg') }}"
+                  alt="Slide 1"
+                  class="w-full h-full object-cover rounded-lg"
+                  onclick="showPopup(this.src)"
+                />
+              </div>
+              <!-- Slide 2 -->
+              <div class="w-full sm:w-[300px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 p-2 md:p-4">
+                <img
+                  src="{{ asset('assets/img/calling.jpg') }}"
+                  alt="Slide 2"
+                  class="w-full h-full object-cover rounded-lg"
+                  onclick="showPopup(this.src)"
+                />
+              </div>
+              <!-- Slide 3 -->
+              <div class="w-full sm:w-[300px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 p-2 md:p-4">
+                <img
+                  src="{{ asset('assets/img/calling.jpg') }}"
+                  alt="Slide 3"
+                  class="w-full h-full object-cover rounded-lg"
+                  onclick="showPopup(this.src)"
+                />
+              </div>
+              <!-- Add more slides as needed -->
             </div>
-            <div class="w-full sm:w-[300px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 p-2 md:p-4">
-              <img
-                src="{{asset('assets/img/calling.jpg')}}"
-                alt="Slide 2"
-                class="w-full h-full object-cover rounded-lg"
-                onclick="showPopup(this.src)"
-              />
-            </div>
-            <div class="w-full sm:w-[300px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 p-2 md:p-4">
-              <img
-                src="{{asset('assets/img/calling.jpg')}}"
-                alt="Slide 3"
-                class="w-full h-full object-cover rounded-lg"
-                onclick="showPopup(this.src)"
-              />
-            </div>
-            <!-- Add more slides as needed -->
           </div>
-        </div>
-      
-        <!-- Indicators -->
-        <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        
+          <!-- Indicators -->
+          <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <button
+              class="w-3 h-3 bg-gray-500 rounded-full transition-all duration-300"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <button
+              class="w-3 h-3 bg-gray-500 rounded-full transition-all duration-300"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+            <button
+              class="w-3 h-3 bg-gray-500 rounded-full transition-all duration-300"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"
+            ></button>
+          </div>
+        
+          <!-- Controls -->
           <button
-            class="w-3 h-3 bg-gray-500 rounded-full"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"
-          ></button>
-          <button
-            class="w-3 h-3 bg-gray-500 rounded-full"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"
-          ></button>
-          <button
-            class="w-3 h-3 bg-gray-500 rounded-full"
-            aria-label="Slide 3"
-            data-carousel-slide-to="2"
-          ></button>
-        </div>
-      
-        <!-- Controls -->
-        <button
-          class="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 p-2 text-white rounded-full focus:outline-none"
-          id="prev"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+            id="prev"
+            class="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-400"
+            aria-label="Previous Slide"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-        <button
-          class="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 p-2 text-white rounded-full focus:outline-none"
-          id="next"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            id="next"
+            class="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-400"
+            aria-label="Next Slide"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
-      </div>
-      
-          <script>
-            document.addEventListener('DOMContentLoaded', () => {
-              const slides = document.getElementById('carousel-slides');
-              const prevButton = document.getElementById('prev');
-              const nextButton = document.getElementById('next');
-              const indicators = document.querySelectorAll('[data-carousel-slide-to]');
-              const slideWidth = slides.firstElementChild.offsetWidth;
-              let currentIndex = 0;
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
         
-              function updateCarousel() {
-                slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-                indicators.forEach((indicator, index) => {
-                  indicator.classList.toggle('bg-gray-900', index === currentIndex);
-                });
-              }
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.getElementById("carousel-slides");
+            const prevButton = document.getElementById("prev");
+            const nextButton = document.getElementById("next");
+            const indicators = document.querySelectorAll("[data-carousel-slide-to]");
+            let currentIndex = 0;
         
-              prevButton.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + indicators.length) % indicators.length;
-                updateCarousel();
-              });
+            const getSlideWidth = () => slides.children[0].getBoundingClientRect().width;
         
-              nextButton.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % indicators.length;
-                updateCarousel();
-              });
+            const updateCarousel = () => {
+              const slideWidth = getSlideWidth();
+              slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
         
+              // Update indicators
               indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                  currentIndex = index;
-                  updateCarousel();
-                });
+                indicator.classList.toggle("bg-gray-900", index === currentIndex);
+                indicator.classList.toggle("bg-gray-500", index !== currentIndex);
+                indicator.setAttribute("aria-current", index === currentIndex ? "true" : "false");
               });
+            };
         
-              // Initial update
+            // Controls
+            prevButton.addEventListener("click", () => {
+              currentIndex = (currentIndex - 1 + slides.children.length) % slides.children.length;
               updateCarousel();
             });
-          </script>
+        
+            nextButton.addEventListener("click", () => {
+              currentIndex = (currentIndex + 1) % slides.children.length;
+              updateCarousel();
+            });
+        
+            // Indicators
+            indicators.forEach((indicator, index) => {
+              indicator.addEventListener("click", () => {
+                currentIndex = index;
+                updateCarousel();
+              });
+            });
+        
+            // Resize event with debounce
+            let resizeTimeout;
+            window.addEventListener("resize", () => {
+              clearTimeout(resizeTimeout);
+              resizeTimeout = setTimeout(() => {
+                updateCarousel();
+              }, 100);
+            });
+        
+            // Initial update
+            updateCarousel();
+          });
+        </script> --}}
+
+       <div class="relative w-full max-w-5xl mx-auto mt-8">
+  <!-- Carousel Container -->
+  <div class="overflow-hidden rounded-lg" id="carousel">
+    <h1 class="text-3xl font-bold text-center text-red-600">Our Demo</h1>
+    <div class="flex transition-transform duration-700 ease-in-out gap-4 mt-4" id="carousel-slides">
+      
+      <!-- Slide 1 -->
+      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-64">
+        <img
+          src="{{asset('assets/img/calling.jpg')}}"
+          alt="Slide 1"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+      <!-- Slide 2 -->
+      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-64">
+        <img
+          src="{{asset('assets/img/calling.jpg')}}"
+          alt="Slide 2"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+      <!-- Slide 3 -->
+      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-64">
+        <img
+          src="{{asset('assets/img/calling.jpg')}}"
+          alt="Slide 3"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+      <!-- Slide 4 -->
+      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-64">
+        <img
+          src="{{asset('assets/img/calling.jpg')}}"
+          alt="Slide 4"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+      <!-- Slide 5 -->
+      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-64">
+        <img
+          src="{{asset('assets/img/calling.jpg')}}"
+          alt="Slide 5"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+      <!-- Slide 6 -->
+      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-64">
+        <img
+          src="{{asset('assets/img/calling.jpg')}}"
+          alt="Slide 6"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+      <!-- Slide 7 -->
+      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-64">
+        <img
+          src="{{asset('assets/img/calling.jpg')}}"
+          alt="Slide 7"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button
+    class="absolute top-1/2 left-4 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-400"
+    id="prev"
+    aria-label="Previous Slide"
+  >
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M15 19l-7-7 7-7"
+      />
+    </svg>
+  </button>
+  <button
+    class="absolute top-1/2 right-4 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-400"
+    id="next"
+    aria-label="Next Slide"
+  >
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M9 5l7 7-7 7"
+      />
+    </svg>
+  </button>
+
+  <!-- Indicators -->
+  <div class="flex justify-center mt-4 space-x-2">
+    <button
+      class="w-3 h-3 rounded-full transition-all bg-gray-900"
+      data-carousel-slide-to="0"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      class="w-3 h-3 rounded-full transition-all bg-gray-500"
+      data-carousel-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      class="w-3 h-3 rounded-full transition-all bg-gray-500"
+      data-carousel-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+    <button
+      class="w-3 h-3 rounded-full transition-all bg-gray-500"
+      data-carousel-slide-to="3"
+      aria-label="Slide 4"
+    ></button>
+    <button
+      class="w-3 h-3 rounded-full transition-all bg-gray-500"
+      data-carousel-slide-to="4"
+      aria-label="Slide 5"
+    ></button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.getElementById("carousel-slides");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    const indicators = document.querySelectorAll("[data-carousel-slide-to]");
+
+    let slideWidth = slides.children[0].offsetWidth;
+    let currentIndex = 0;
+
+    const updateCarousel = () => {
+      // Dynamically calculate the number of slides to show based on screen size
+      const containerWidth = document.getElementById("carousel").offsetWidth;
+      const visibleSlides = containerWidth < 640 ? 1 : containerWidth < 1024 ? 2 : 3; // 1 on mobile, 2 on tablets, 3 on desktops
+      slideWidth = slides.children[0].offsetWidth * visibleSlides; // Adjust slide width
+
+      slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle("bg-gray-900", index === currentIndex);
+        indicator.classList.toggle("bg-gray-500", index !== currentIndex);
+      });
+    };
+
+    prevButton.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.children.length - 2) % (slides.children.length - 2); // Adjust for showing multiple slides
+      updateCarousel();
+    });
+
+    nextButton.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % (slides.children.length - 2); // Adjust for showing multiple slides
+      updateCarousel();
+    });
+
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener("click", () => {
+        currentIndex = index;
+        updateCarousel();
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      updateCarousel();
+    });
+
+    updateCarousel();
+  });
+</script>
+
+        
         
         
         
