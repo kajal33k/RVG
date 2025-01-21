@@ -235,130 +235,222 @@
 
 
     {{-- slider --}}
-
-    <!-- Demo styles -->
-    <style>
-        
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-        
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Position the next/prev buttons at top-right */
-    .swiper-button-next, .swiper-button-prev {
-        position: absolute;
-        top: 0;
-        color: red;
-        right: 0;
-        z-index: 10; /* Make sure buttons stay on top */
-        margin-top: 10px;
-        padding: 2px; /* Optional: Adjust margin from the top */
-    }
-
-    .swiper-button-prev {
-        right: auto;
-        left: 0;
-    }
-    </style>
     
-        <!-- Swiper -->
-        <div class="swiper mySwiper mb-4">
-            <div class="swiper-wrapper p-4">
-                <div class="swiper-slide"><div class=" ">
-                    <h1 class="text-center text-3xl font-bold mb-4 text-red-600">Jewellery Poster</h1>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                      <div><img src="{{asset('assets/img/slide5.jpg')}}" alt="Jewellery 1" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide5.jpg')}}" alt="Jewellery 2" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide5.jpg')}}" alt="Jewellery 3" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide5.jpg')}}" alt="Jewellery 4" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
+        <style>
+            .swiper-button-next,
+            .swiper-button-prev {
+                --swiper-theme-color: #dc2626;
+                --swiper-navigation-size: 20px;
+            }
+        </style>
+    
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Jewelry Slide -->
+                    <div class="swiper-slide">
+                        <div class=" rounded-lg shadow-md p-6">
+                            <h1 class="text-center text-3xl font-bold mb-8 text-red-600">Jewelry Collection</h1>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                                <div class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                    <img src="{{asset('assets/img/slide7.jpg')}}"  onclick="showPopup(this.src)" alt="Jewelry 1" class="w-full h-64 object-cover" onclick="showPopup(this.src)">
+                                    
+                                </div>
+                                <div class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                    <img src="{{asset('assets/img/slide7.jpg')}}"  onclick="showPopup(this.src)" alt="Jewelry 2" class="w-full h-64 object-cover" onclick="showPopup(this.src)">
+                                    
+                                </div>
+                                <div class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                    <img src="{{asset('assets/img/slide7.jpg')}}"  onclick="showPopup(this.src)" alt="Jewelry 3" class="w-full h-64 object-cover" onclick="showPopup(this.src)">
+                                    
+                                </div>
+                                <div class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                    <img src="{{asset('assets/img/slide7.jpg')}}"  onclick="showPopup(this.src)" alt="Jewelry 4" class="w-full h-64 object-cover" onclick="showPopup(this.src)">
+                                    
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a href="#" class="inline-block px-8 py-3 text-lg font-semibold text-red-600 border-2 border-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-300">Shop Now</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-center">
-                      <button class="px-6 py-2 border border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-700 hover:text-white transition duration-200">
-                        Shop Now
-                      </button>
+    
+                    <!-- Tyre Slide -->
+                    <div class="swiper-slide">
+                        <div class="rounded-lg shadow-md p-6">
+                            <h1 class="text-center text-3xl font-bold mb-8 text-red-600">Tyre Collection</h1>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                              <div class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                  <img src="{{asset('assets/img/slide7.jpg')}}"  onclick="showPopup(this.src)" alt="Jewelry 1" class="w-full h-64 object-cover" onclick="showPopup(this.src)">
+                                  
+                              </div>
+                              <div class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                  <img src="{{asset('assets/img/slide7.jpg')}}"  onclick="showPopup(this.src)" alt="Jewelry 2" class="w-full h-64 object-cover" onclick="showPopup(this.src)">
+                                  
+                              </div>
+                              <div class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                  <img src="{{asset('assets/img/slide7.jpg')}}"  onclick="showPopup(this.src)" alt="Jewelry 3" class="w-full h-64 object-cover" onclick="showPopup(this.src)">
+                                 
+                              </div>
+                              <div class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                  <img src="{{asset('assets/img/slide7.jpg')}}"  onclick="showPopup(this.src)" alt="Jewelry 4" class="w-full h-64 object-cover" onclick="showPopup(this.src)">
+                                  
+                              </div>
+                          </div>
+
+                            <div class="text-center">
+                                <a href="#" class="inline-block px-8 py-3 text-lg font-semibold text-red-600 border-2 border-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-300">Shop Now</a>
+                            </div>
+                        </div>
                     </div>
-                  </div></div>
-                <div class="swiper-slide"><div class=" ">
-                    <h1 class="text-center text-3xl font-bold mb-4 text-red-600">Jewellery Poster</h1>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                      <div><img src="{{asset('assets/img/slide5.jpg')}}" alt="Jewellery 1" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide5.jpg')}}" alt="Jewellery 2" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide5.jpg')}}" alt="Jewellery 3" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide5.jpg')}}" alt="Jewellery 4" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                    </div>
-                    <div class="text-center">
-                      <button class="px-6 py-2 border border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-700 hover:text-white transition duration-200">
-                        Shop Now
-                      </button>
-                    </div>
-                  </div></div>
-                <div class="swiper-slide"><div class=" ">
-                    <h1 class="text-center text-3xl font-bold mb-4 text-red-600">Tyre Poster</h1>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                      <div><img src="{{asset('assets/img/slide2.jpg')}}" alt="Jewellery 1" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide2.jpg')}}" alt="Jewellery 2" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide2.jpg')}}" alt="Jewellery 3" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide2.jpg')}}" alt="Jewellery 4" class="w-full h-auto object-cover"  onclick="showPopup(this.src)"></div>
-                    </div>
-                    <div class="text-center">
-                      <button class="px-6 py-2 border border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-700 hover:text-white transition duration-200">
-                        Shop Now
-                      </button>
-                    </div>
-                  </div></div>
-                <div class="swiper-slide"><div class=" ">
-                    <h1 class="text-center text-3xl font-bold mb-4 text-red-600">Phone Poster</h1>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                      <div><img src="{{asset('assets/img/slide4.jpg')}}" alt="Jewellery 1" class="w-full h-auto object-cover" onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide4.jpg')}}" alt="Jewellery 2" class="w-full h-auto object-cover" onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide4.jpg')}}" alt="Jewellery 3" class="w-full h-auto object-cover" onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide4.jpg')}}" alt="Jewellery 4" class="w-full h-auto object-cover" onclick="showPopup(this.src)"></div>
-                    </div>
-                    <div class="text-center">
-                      <button class="px-6 py-2 border border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-700 hover:text-white transition duration-200">
-                        Shop Now
-                      </button>
-                    </div>
-                  </div></div>
-                <div class="swiper-slide"><div class=" ">
-                    <h1 class="text-center text-3xl font-bold mb-4 text-red-600 ">Food Poster</h1>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                      <div><img src="{{asset('assets/img/slide3.jpg')}}" alt="Jewellery 1" class="w-full h-auto object-cover" onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide3.jpg')}}" alt="Jewellery 2" class="w-full h-auto object-cover" onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide3.jpg')}}" alt="Jewellery 3" class="w-full h-auto object-cover" onclick="showPopup(this.src)"></div>
-                      <div><img src="{{asset('assets/img/slide3.jpg')}}" alt="Jewellery 4" class="w-full h-auto object-cover" onclick="showPopup(this.src)"></div>
-                    </div>
-                    <div class="text-center">
-                      <button class="px-6 py-2 border border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-700 hover:text-white transition duration-200">
-                        Shop Now
-                      </button>
-                    </div>
-                  </div></div>
-                
+    
+                    <!-- Add more slides following the same pattern -->
+                </div>
+                <div class="swiper-button-next bg-white rounded-full shadow-lg p-6"></div>
+                <div class="swiper-button-prev bg-white rounded-full shadow-lg p-6"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            {{-- <div class="swiper-pagination"></div> --}}
         </div>
-
-
+    
+        <!-- Image Modal -->
+        <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden" onclick="hidePopup()">
+            <div class="absolute top-4 right-4">
+                <button class="text-white text-4xl hover:text-gray-300" onclick="hidePopup()">&times;</button>
+            </div>
+            <img id="modalImage" src="" alt="Enlarged product image" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[90%] max-h-[90vh]">
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+        <script>
+            // Initialize Swiper
+            const swiper = new Swiper('.product-swiper', {
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                }
+            });
+    
+            // Modal functionality
+            function showPopup(src) {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                modal.classList.remove('hidden');
+                modalImg.src = src;
+            }
+    
+            function hidePopup() {
+                document.getElementById('imageModal').classList.add('hidden');
+            }
+    
+            // Close modal on escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    hidePopup();
+                }
+            });
+        </script>
+ 
+        <!-- Modal for image preview -->
+        {{-- <div class="modal" id="imageModal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="modalImage" alt="Modal preview">
+        </div>
+     --}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/9.0.0/swiper-bundle.min.js"></script>
+        
+        <script>
+            // Initialize Swiper with enhanced options
+            const swiper = new Swiper('.mySwiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                grabCursor: true,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true
+                },
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true
+                },
+                a11y: {
+                    prevSlideMessage: 'Previous slide',
+                    nextSlideMessage: 'Next slide',
+                    firstSlideMessage: 'This is the first slide',
+                    lastSlideMessage: 'This is the last slide'
+                }
+            });
+    
+            // Modal functionality
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeBtn = document.querySelector('.modal-close');
+            
+            // Image click handler with loading optimization
+            document.querySelectorAll('.product-image').forEach(img => {
+                img.addEventListener('click', function() {
+                    modal.style.display = 'block';
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+    
+            // Close modal handlers
+            closeBtn.onclick = closeModal;
+            modal.onclick = (e) => {
+                if (e.target === modal) closeModal();
+            };
+            
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+    
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+    
+            // Performance optimizations
+            document.addEventListener('DOMContentLoaded', () => {
+                // Preload next slide images
+                const preloadNextSlide = () => {
+                    const nextSlide = swiper.slides[swiper.activeIndex + 1];
+                    if (nextSlide) {
+                        const images = nextSlide.querySelectorAll('img[loading="lazy"]');
+                        images.forEach(img => img.loading = 'eager');
+                    }
+                };
+    
+                swiper.on('slideChange', preloadNextSlide);
+            });
+        </script>
+   
+    
+    
         <div class="relative w-full overflow-hidden">
             <!-- Aspect ratio container -->
             <div class="relative pt-[56.132%]">
@@ -385,7 +477,7 @@
         
       
 
-       <div class="relative w-full max-w-5xl mx-auto mt-8">
+<div class="relative w-full max-w-5xl mx-auto mt-8">
   <!-- Carousel Container -->
   <div class="overflow-hidden rounded-lg" id="carousel">
     <h1 class="text-3xl font-bold text-center text-red-600">Our Demo</h1>
@@ -396,7 +488,7 @@
         <img
           src="{{asset('assets/img/calling.jpg')}}"
           alt="Slide 1"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg"  onclick="showPopup(this.src)"
         />
       </div>
       <!-- Slide 2 -->
@@ -404,7 +496,7 @@
         <img
           src="{{asset('assets/img/calling.jpg')}}"
           alt="Slide 2"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg"  onclick="showPopup(this.src)"
         />
       </div>
       <!-- Slide 3 -->
@@ -412,7 +504,7 @@
         <img
           src="{{asset('assets/img/calling.jpg')}}"
           alt="Slide 3"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg"  onclick="showPopup(this.src)"
         />
       </div>
       <!-- Slide 4 -->
@@ -420,7 +512,7 @@
         <img
           src="{{asset('assets/img/calling.jpg')}}"
           alt="Slide 4"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg"  onclick="showPopup(this.src)"
         />
       </div>
       <!-- Slide 5 -->
@@ -428,7 +520,7 @@
         <img
           src="{{asset('assets/img/calling.jpg')}}"
           alt="Slide 5"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg"  onclick="showPopup(this.src)"
         />
       </div>
       <!-- Slide 6 -->
@@ -436,7 +528,7 @@
         <img
           src="{{asset('assets/img/calling.jpg')}}"
           alt="Slide 6"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg"  onclick="showPopup(this.src)"
         />
       </div>
       <!-- Slide 7 -->
@@ -444,7 +536,7 @@
         <img
           src="{{asset('assets/img/calling.jpg')}}"
           alt="Slide 7"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg"  onclick="showPopup(this.src)"
         />
       </div>
     </div>
