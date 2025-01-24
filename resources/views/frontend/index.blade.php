@@ -62,30 +62,26 @@
     </script>
 
     <!-- Slider Container -->
-    <div class="slider-container mt-10 flex justify-center">
+    <div class="slider-container mt-10 flex justify-center relative">
 
         <!-- Slide Images -->
         <div class="slides p-4">
-
-            <img src="{{ asset('assets/img/1200 x 800 dpi.jpg') }}" class="slide rounded-xl w-full h-full object-cover" alt="Slide 1"
-                onclick="showPopup(this.src)">
-
-
-            <img src="{{ asset('assets/img/festive vibes.jpg') }}" class="slide rounded-xl  w-full h-full object-cover" alt="Slide 2"
-                onclick="showPopup(this.src)">
-
-
-            <img src="{{ asset('assets/img/vibes poster.jpg') }}" class="slide rounded-xl  w-full h-full object-cover" alt="Slide 3"
-                onclick="showPopup(this.src)">
-
+            <img src="{{ asset('assets/img/1200 x 800 dpi.jpg') }}" class="slide rounded-xl w-full h-full object-cover"
+                alt="Slide 1" onclick="showPopup(this.src)">
+            <img src="{{ asset('assets/img/1200 x 800 dpi ( 2 ) poster.jpg') }}"
+                class="slide rounded-xl w-full h-full object-cover" alt="Slide 2" onclick="showPopup(this.src)">
+            <img src="{{ asset('assets/img/1200 x 800 dpi ( 3 ).jpg') }}"
+                class="slide rounded-xl w-full h-full object-cover" alt="Slide 3" onclick="showPopup(this.src)">
         </div>
 
         <!-- Navigation Arrows -->
-        {{-- <div class="prev cursor-pointer" onclick="moveSlide(-1)">&#10094;</div>
-        <div class="next cursor-pointer" onclick="moveSlide(1)">&#10095;</div> --}}
+        <div class="prev cursor-pointer text-xl text-red-600 rounded-full bg-white p-4 shadow-md hover:bg-gray-100 hover:text-red-800 absolute top-1/2 left-4 transform -translate-y-1/2 z-10"
+            onclick="moveSlide(-1)">&#10094;</div>
+        <div class="next cursor-pointer text-xl text-red-600 rounded-full bg-white p-4 shadow-md hover:bg-gray-100 hover:text-red-800 absolute top-1/2 right-4 transform -translate-y-1/2 z-10"
+            onclick="moveSlide(1)">&#10095;</div>
 
         <!-- Dots -->
-        <div class="dots">
+        <div class="dots absolute bottom-4 left-1/2 transform -translate-x-1/2">
             <span class="dot active" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
@@ -95,138 +91,68 @@
 
 
 
-    <div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
+    <!-- Add Swiper Stylesheet -->
+<!-- Marquee Container -->
+<div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="marquee-container overflow-hidden">
+            <marquee behavior="scroll" direction="left" scrollamount="5" class="space-x-8">
+                
                 <!-- Achievement Card 1 -->
-                <div class="relative w-64 mx-auto">
-                    <!-- Pushpin -->
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <div class="w-6 h-6 bg-red-500 rounded-full"></div> <!-- Red pin head -->
-                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2">
-                            <div class="w-8 h-8 bg-yellow-100 rounded-full opacity-80"></div>
-                            <!-- Gold circle behind icon -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <svg class="w-4 h-4 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                                    <line x1="7" y1="8" x2="17" y2="8"></line>
-                                    <line x1="7" y1="12" x2="17" y2="12"></line>
-                                    <line x1="7" y1="16" x2="13" y2="16"></line>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card -->
-                    <div class="bg-gray-900 rounded-xl p-6 pt-8 shadow-lg transform">
-                        <h2 class="text-2xl font-bold text-white mb-2">Industry Leader</h2>
-                        <p class="text-gray-400 text-center">
-                            service most<br />
-                            of jewellers in<br />
-                            india
+                <div class="w-80 max-h-[400px] flex-shrink-0 inline-block">
+                    
+                    
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">8+ Years of Expertise</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Since 2017, delivering excellence across India with trust and dedication.
                         </p>
                     </div>
                 </div>
 
                 <!-- Achievement Card 2 -->
-                <div class="relative w-64 mx-auto">
-                    <!-- Pushpin -->
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <div class="w-6 h-6 bg-red-500 rounded-full"></div> <!-- Red pin head -->
-                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2">
-                            <div class="w-8 h-8 bg-yellow-100 rounded-full opacity-80"></div>
-                            <!-- Gold circle behind icon -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <svg class="w-4 h-4 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                                    <line x1="7" y1="8" x2="17" y2="8"></line>
-                                    <line x1="7" y1="12" x2="17" y2="12"></line>
-                                    <line x1="7" y1="16" x2="13" y2="16"></line>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card -->
-                    <div class="bg-gray-900 rounded-xl p-6 pt-8 shadow-lg transform">
-                        <h2 class="text-2xl font-bold text-white mb-2">Industry Leader</h2>
-                        <p class="text-gray-400 text-center">
-                            service most<br />
-                            of jewellers in<br />
-                            india
+                <div class="w-80 max-h-[400px] flex-shrink-0 inline-block">
+                  
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Trusted by Thousands</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Over 10,000 satisfied clients, ensuring top-notch service and support.
                         </p>
                     </div>
                 </div>
 
                 <!-- Achievement Card 3 -->
-                <div class="relative w-64 mx-auto">
-                    <!-- Pushpin -->
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <div class="w-6 h-6 bg-red-500 rounded-full"></div> <!-- Red pin head -->
-                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2">
-                            <div class="w-8 h-8 bg-yellow-100 rounded-full opacity-80"></div>
-                            <!-- Gold circle behind icon -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <svg class="w-4 h-4 text-gray-700" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                                    <line x1="7" y1="8" x2="17" y2="8"></line>
-                                    <line x1="7" y1="12" x2="17" y2="12"></line>
-                                    <line x1="7" y1="16" x2="13" y2="16"></line>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card -->
-                    <div class="bg-gray-900 rounded-xl p-6 pt-8 shadow-lg transform">
-                        <h2 class="text-2xl font-bold text-white mb-2">Industry Leader</h2>
-                        <p class="text-gray-400 text-center">
-                            service most<br />
-                            of jewellers in<br />
-                            india
+                <div class="w-80 max-h-[400px] flex-shrink-0 inline-block">
+                   
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">
+                            Commitment to Quality
+                        </h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            We ensure premium quality in every aspect without compromise.
                         </p>
                     </div>
                 </div>
-
 
                 <!-- Achievement Card 4 -->
-                <div class="relative w-64 mx-auto">
-                    <!-- Pushpin -->
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <div class="w-6 h-6 bg-red-500 rounded-full"></div> <!-- Red pin head -->
-                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2">
-                            <div class="w-8 h-8 bg-yellow-100 rounded-full opacity-80"></div>
-                            <!-- Gold circle behind icon -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <svg class="w-4 h-4 text-gray-700" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                                    <line x1="7" y1="8" x2="17" y2="8"></line>
-                                    <line x1="7" y1="12" x2="17" y2="12"></line>
-                                    <line x1="7" y1="16" x2="13" y2="16"></line>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card -->
-                    <div class="bg-gray-900 rounded-xl p-6 pt-8 shadow-lg transform">
-                        <h2 class="text-2xl font-bold text-white mb-2">Industry Leader</h2>
-                        <p class="text-gray-400 text-center">
-                            service most<br />
-                            of jewellers in<br />
-                            india
+                <div class="w-80 max-h-[400px] flex-shrink-0 inline-block">
+                   
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-2xl font-semibold text-white mb-4 text-center">
+                            Customer-Centric Approach
+                        </h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Prioritizing client satisfaction with personalized services.
                         </p>
                     </div>
                 </div>
 
-            </div>
+            </marquee>
         </div>
     </div>
+</div>
+
+
 
 
     {{-- slider --}}
@@ -582,7 +508,7 @@
                 // Dynamically calculate the number of slides to show based on screen size
                 const containerWidth = document.getElementById("carousel").offsetWidth;
                 const visibleSlides = containerWidth < 640 ? 1 : containerWidth < 1024 ? 2 :
-                3; // 1 on mobile, 2 on tablets, 3 on desktops
+                    3; // 1 on mobile, 2 on tablets, 3 on desktops
                 slideWidth = slides.children[0].offsetWidth * visibleSlides; // Adjust slide width
 
                 slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
@@ -601,7 +527,7 @@
 
             nextButton.addEventListener("click", () => {
                 currentIndex = (currentIndex + 1) % (slides.children.length -
-                2); // Adjust for showing multiple slides
+                    2); // Adjust for showing multiple slides
                 updateCarousel();
             });
 
