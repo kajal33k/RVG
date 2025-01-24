@@ -21,7 +21,7 @@
                 <div class="w-16 h-1 bg-red-500 mx-auto mt-4 mb-6 rounded"></div>
 
                 <div class="flex items-center gap-4 mb-6">
-                    <div class="w-12 h-12 rounded-full bg-red-500 flex justify-center items-center text-white">
+                    <div class="w-32 h-12 rounded-full bg-red-500 flex justify-center items-center text-white">
                         <span class="material-icons">location_on</span>
                     </div>
                     <p class="text-gray-600">73 Basement, Ekta Enclave Society, Lakhanpur, Khyora, Kanpur, Uttar Pradesh 208024</p>
