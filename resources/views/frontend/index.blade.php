@@ -67,15 +67,15 @@
         <!-- Slide Images -->
         <div class="slides p-4">
 
-            <img src="{{ asset('assets/img/612_x_436.56_dpi[1].jpg') }}" class="slide rounded-xl w-full h-full object-cover" alt="Slide 1"
+            <img src="{{ asset('assets/img/1200 x 800 dpi.jpg') }}" class="slide rounded-xl w-full h-full object-cover" alt="Slide 1"
                 onclick="showPopup(this.src)">
 
 
-            <img src="{{ asset('assets/img/612_x_436.56_dpi[1].jpg') }}" class="slide rounded-xl  w-full h-full object-cover" alt="Slide 2"
+            <img src="{{ asset('assets/img/1200 x 800 dpi.jpg') }}" class="slide rounded-xl  w-full h-full object-cover" alt="Slide 2"
                 onclick="showPopup(this.src)">
 
 
-            <img src="{{ asset('assets/img/612_x_436.56_dpi[1].jpg') }}" class="slide rounded-xl  w-full h-full object-cover" alt="Slide 3"
+            <img src="{{ asset('assets/img/1200 x 800 dpi.jpg') }}" class="slide rounded-xl  w-full h-full object-cover" alt="Slide 3"
                 onclick="showPopup(this.src)">
 
         </div>
