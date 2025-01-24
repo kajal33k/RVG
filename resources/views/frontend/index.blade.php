@@ -74,217 +74,250 @@
                 class="slide rounded-xl w-full h-full object-cover" alt="Slide 3" onclick="showPopup(this.src)">
         </div>
 
-        <!-- Navigation Arrows -->
-        {{-- <div class="prev cursor-pointer text-xl text-red-600 rounded-full bg-white p-4 shadow-md hover:bg-gray-100 hover:text-red-800 absolute top-1/2 left-4 transform -translate-y-1/2 z-10"
-            onclick="moveSlide(-1)">&#10094;</div>
-        <div class="next cursor-pointer text-xl text-red-600 rounded-full bg-white p-4 shadow-md hover:bg-gray-100 hover:text-red-800 absolute top-1/2 right-4 transform -translate-y-1/2 z-10"
-            onclick="moveSlide(1)">&#10095;</div> --}}
-
         <!-- Dots -->
-        <div class="dots absolute bottom-4 left-1/2 transform -translate-x-1/2">
-            <span class="dot active" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+        <div class="dots absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <span class="dot w-4 h-4 bg-white rounded-full cursor-pointer" onclick="currentSlide(1)"></span>
+            <span class="dot w-4 h-4 bg-white rounded-full cursor-pointer" onclick="currentSlide(2)"></span>
+            <span class="dot w-4 h-4 bg-white rounded-full cursor-pointer" onclick="currentSlide(3)"></span>
         </div>
+        
     </div>
+    <script>
+        let slideIndex = 1;
 
+        function showSlide(n) {
+            let slides = document.querySelectorAll('.slide');
+            let dots = document.querySelectorAll('.dot');
 
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
 
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
 
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("bg-red-500");
+                dots[i].classList.add("bg-white");
+            }
 
-    <!-- Automatic Sliding Container -->
-    <div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="relative overflow-hidden">
-                <div id="achievementSlider" class="flex transition-transform duration-500 ease-out space-x-8">
-                    <!-- Achievement Card 1 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">8+ Years of Expertise</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Since 2017, delivering excellence across India with trust and dedication.
-                            </p>
-                        </div>
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.remove("bg-white");
+            dots[slideIndex - 1].classList.add("bg-red-500");
+        }
+
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            showSlide(slideIndex);
+        });
+    </script>
+
+   <!-- Automatic Sliding Container -->
+<div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="relative overflow-hidden" id="achievementSliderContainer">
+            <div id="achievementSlider" class="flex transition-transform duration-500 ease-out space-x-8">
+                <!-- Achievement Card 1 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">8+ Years of Expertise</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Since 2017, delivering excellence across India with trust and dedication.
+                        </p>
                     </div>
-
-                    <!-- Achievement Card 2 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">Trusted by Thousands</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Over 10,000 satisfied clients, ensuring top-notch service and support.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 3 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">
-                                Commitment to Quality
-                            </h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                We ensure premium quality in every aspect without compromise.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 4 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-2xl font-semibold text-white mb-4 text-center">
-                                Customer-Centric Approach
-                            </h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Prioritizing client satisfaction with personalized services.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Achievement Card 5 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">Industry First</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Pioneering innovative solutions to set new benchmarks in the industry.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 6 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">15-Day Money-Back</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Your satisfaction is our priority—get a full refund if you're not satisfied.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 7 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">100% Satisfaction</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Ensuring excellence and satisfaction with every service we provide.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 8 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">Fast & Secure</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Guaranteed quick and safe solutions with complete data security.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 9 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">Certified Pros</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Our team consists of industry experts with certified skills and experience.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 10 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">One-Stop Solution</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Everything you need, all under one roof for your convenience.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 11 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">Transparency</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                No hidden charges, complete honesty in our dealings.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 12 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">Free Consultation</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Get expert advice without any initial cost.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Card 13 -->
-                    <div class="w-80 max-h-[400px] flex-shrink-0">
-                        <div
-                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">Proven Track Record</h2>
-                            <p class="text-gray-400 text-lg text-center text-wrap">
-                                Years of experience with a strong portfolio of successful projects.
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- Achievement Card 2 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Trusted by Thousands</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Over 10,000 satisfied clients, ensuring top-notch service and support.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 3 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Commitment to Quality</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            We ensure premium quality in every aspect without compromise.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 4 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-2xl font-semibold text-white mb-4 text-center">Customer-Centric Approach</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Prioritizing client satisfaction with personalized services.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 5 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Industry First</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Pioneering innovative solutions to set new benchmarks in the industry.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 6 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">15-Day Money-Back</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Your satisfaction is our priority—get a full refund if you're not satisfied.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 7 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">100% Satisfaction</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Ensuring excellence and satisfaction with every service we provide.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 8 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Fast & Secure</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Guaranteed quick and safe solutions with complete data security.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 9 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Certified Pros</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Our team consists of industry experts with certified skills and experience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 10 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">One-Stop Solution</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Everything you need, all under one roof for your convenience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 11 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Transparency</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            No hidden charges, complete honesty in our dealings.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 12 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Free Consultation</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Get expert advice without any initial cost.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 13 -->
+                <div class="w-80 max-h-[400px] flex-shrink-0">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Proven Track Record</h2>
+                        <p class="text-gray-400 text-lg text-center text-wrap">
+                            Years of experience with a strong portfolio of successful projects.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+</div>
 
-    <script>
-        const slider = document.getElementById('achievementSlider');
-        const slideWidth = 320 + 32; // 320px width + 32px (space-x-8)
-        const originalSlides = Array.from(slider.children);
+<script>
+    const slider = document.getElementById('achievementSlider');
+    const sliderContainer = document.getElementById('achievementSliderContainer');
+    const slideWidth = 320 + 32; // 320px width + 32px (space-x-8)
+    const originalSlides = Array.from(slider.children);
 
-        // Clone and append original slides to create an infinite loop
-        originalSlides.forEach(slide => {
-            const clonedSlide = slide.cloneNode(true);
-            slider.appendChild(clonedSlide);
-        });
+    // Clone and append original slides to create an infinite loop
+    originalSlides.forEach(slide => {
+        const clonedSlide = slide.cloneNode(true);
+        slider.appendChild(clonedSlide);
+    });
 
-        let offset = 0;
-        let isTransitioning = false;
+    let offset = 0;
+    let isTransitioning = false;
+    let sliderInterval;
 
-        function slide() {
-            if (isTransitioning) return;
+    // Function to handle automatic sliding
+    function slide() {
+        if (isTransitioning) return;
 
-            isTransitioning = true;
-            offset -= slideWidth;
-            slider.style.transition = 'transform 0.5s ease-out';
-            slider.style.transform = `translateX(${offset}px)`;
+        isTransitioning = true;
+        offset -= slideWidth;
+        slider.style.transition = 'transform 0.5s ease-out';
+        slider.style.transform = `translateX(${offset}px)`;
 
-            setTimeout(() => {
-                // Check if we've moved past the original set of slides
-                if (Math.abs(offset) >= slideWidth * originalSlides.length) {
-                    // Instantly reset to the beginning without animation
-                    slider.style.transition = 'none';
-                    offset = 0;
-                    slider.style.transform = `translateX(${offset}px)`;
-                }
-                isTransitioning = false;
-            }, 500);
-        }
+        setTimeout(() => {
+            // Check if we've moved past the original set of slides
+            if (Math.abs(offset) >= slideWidth * originalSlides.length) {
+                // Instantly reset to the beginning without animation
+                slider.style.transition = 'none';
+                offset = 0;
+                slider.style.transform = `translateX(${offset}px)`;
+            }
+            isTransitioning = false;
+        }, 500);
+    }
 
-        // Start automatic sliding
-        setInterval(slide, 3000);
-    </script>
+    // Start automatic sliding
+    function startSliding() {
+        sliderInterval = setInterval(slide, 3000);
+    }
+
+    // Stop sliding when mouse enters the slider
+    function stopSliding() {
+        clearInterval(sliderInterval);
+    }
+
+    // Start sliding when page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        startSliding();
+
+        // Pause sliding when mouse enters
+        sliderContainer.addEventListener('mouseenter', stopSliding);
+
+        // Resume sliding when mouse leaves
+        sliderContainer.addEventListener('mouseleave', startSliding);
+    });
+</script>
+
 
 
 
