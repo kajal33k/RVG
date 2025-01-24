@@ -75,10 +75,10 @@
         </div>
 
         <!-- Navigation Arrows -->
-        <div class="prev cursor-pointer text-xl text-red-600 rounded-full bg-white p-4 shadow-md hover:bg-gray-100 hover:text-red-800 absolute top-1/2 left-4 transform -translate-y-1/2 z-10"
+        {{-- <div class="prev cursor-pointer text-xl text-red-600 rounded-full bg-white p-4 shadow-md hover:bg-gray-100 hover:text-red-800 absolute top-1/2 left-4 transform -translate-y-1/2 z-10"
             onclick="moveSlide(-1)">&#10094;</div>
         <div class="next cursor-pointer text-xl text-red-600 rounded-full bg-white p-4 shadow-md hover:bg-gray-100 hover:text-red-800 absolute top-1/2 right-4 transform -translate-y-1/2 z-10"
-            onclick="moveSlide(1)">&#10095;</div>
+            onclick="moveSlide(1)">&#10095;</div> --}}
 
         <!-- Dots -->
         <div class="dots absolute bottom-4 left-1/2 transform -translate-x-1/2">
@@ -91,66 +91,83 @@
 
 
 
-    <!-- Add Swiper Stylesheet -->
-<!-- Marquee Container -->
-<div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-        <div class="marquee-container overflow-hidden">
-            <marquee behavior="scroll" direction="left" scrollamount="5" class="space-x-8">
-                
-                <!-- Achievement Card 1 -->
-                <div class="w-80 max-h-[400px] flex-shrink-0 inline-block">
-                    
-                    
-                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">8+ Years of Expertise</h2>
-                        <p class="text-gray-400 text-lg text-center text-wrap">
-                            Since 2017, delivering excellence across India with trust and dedication.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Achievement Card 2 -->
-                <div class="w-80 max-h-[400px] flex-shrink-0 inline-block">
-                  
-                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">Trusted by Thousands</h2>
-                        <p class="text-gray-400 text-lg text-center text-wrap">
-                            Over 10,000 satisfied clients, ensuring top-notch service and support.
-                        </p>
-                    </div>
-                </div>
+    <!-- Automatic Sliding Container -->
+    <div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative overflow-hidden">
+                <div id="slider" class="flex transition-transform duration-500 ease-out space-x-8">
 
-                <!-- Achievement Card 3 -->
-                <div class="w-80 max-h-[400px] flex-shrink-0 inline-block">
-                   
-                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                        <h2 class="text-3xl font-semibold text-white mb-4 text-center">
-                            Commitment to Quality
-                        </h2>
-                        <p class="text-gray-400 text-lg text-center text-wrap">
-                            We ensure premium quality in every aspect without compromise.
-                        </p>
+                    <!-- Achievement Card 1 -->
+                    <div class="w-80 max-h-[400px] flex-shrink-0">
+                        <div
+                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">8+ Years of Expertise</h2>
+                            <p class="text-gray-400 text-lg text-center text-wrap">
+                                Since 2017, delivering excellence across India with trust and dedication.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Achievement Card 4 -->
-                <div class="w-80 max-h-[400px] flex-shrink-0 inline-block">
-                   
-                    <div class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
-                        <h2 class="text-2xl font-semibold text-white mb-4 text-center">
-                            Customer-Centric Approach
-                        </h2>
-                        <p class="text-gray-400 text-lg text-center text-wrap">
-                            Prioritizing client satisfaction with personalized services.
-                        </p>
+                    <!-- Achievement Card 2 -->
+                    <div class="w-80 max-h-[400px] flex-shrink-0">
+                        <div
+                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">Trusted by Thousands</h2>
+                            <p class="text-gray-400 text-lg text-center text-wrap">
+                                Over 10,000 satisfied clients, ensuring top-notch service and support.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-            </marquee>
+                    <!-- Achievement Card 3 -->
+                    <div class="w-80 max-h-[400px] flex-shrink-0">
+                        <div
+                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                            <h2 class="text-3xl font-semibold text-white mb-4 text-center">
+                                Commitment to Quality
+                            </h2>
+                            <p class="text-gray-400 text-lg text-center text-wrap">
+                                We ensure premium quality in every aspect without compromise.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement Card 4 -->
+                    <div class="w-80 max-h-[400px] flex-shrink-0">
+                        <div
+                            class="bg-gray-900 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 h-full">
+                            <h2 class="text-2xl font-semibold text-white mb-4 text-center">
+                                Customer-Centric Approach
+                            </h2>
+                            <p class="text-gray-400 text-lg text-center text-wrap">
+                                Prioritizing client satisfaction with personalized services.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
+    <script>
+        const slider = document.getElementById('slider');
+        let offset = 0;
+        const slideWidth = 320 + 32; // 320px width + 32px (space-x-8)
+        const slideCount = slider.children.length;
+
+        function slide() {
+            offset -= slideWidth;
+            if (Math.abs(offset) >= slideWidth * slideCount) {
+                offset = 0; // Reset to the first slide
+            }
+            slider.style.transform = `translateX(${offset}px)`;
+        }
+
+        setInterval(slide, 3000); // Slide every 3 seconds
+    </script>
+
 
 
 
