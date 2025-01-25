@@ -72,6 +72,8 @@
                 class="slide rounded-xl w-full h-full object-cover" alt="Slide 2" onclick="showPopup(this.src)">
             <img src="{{ asset('assets/img/1200 x 800 dpi ( 3 ).jpg') }}"
                 class="slide rounded-xl w-full h-full object-cover" alt="Slide 3" onclick="showPopup(this.src)">
+            <img src="{{ asset('assets/img/1200x800dpi4.jpg') }}"
+                class="slide rounded-xl w-full h-full object-cover" alt="Slide 4" onclick="showPopup(this.src)">
         </div>
 
         <!-- Dots -->
@@ -79,11 +81,14 @@
             <span class="dot w-4 h-4 bg-white rounded-full cursor-pointer" onclick="currentSlide(1)"></span>
             <span class="dot w-4 h-4 bg-white rounded-full cursor-pointer" onclick="currentSlide(2)"></span>
             <span class="dot w-4 h-4 bg-white rounded-full cursor-pointer" onclick="currentSlide(3)"></span>
+            <span class="dot w-4 h-4 bg-white rounded-full cursor-pointer" onclick="currentSlide(4)"></span>
         </div>
 
     </div>
+
     <script>
         let slideIndex = 1;
+        let autoSlideInterval;
 
         function showSlide(n) {
             let slides = document.querySelectorAll('.slide');
@@ -112,12 +117,29 @@
 
         function currentSlide(n) {
             showSlide(slideIndex = n);
+            resetAutoSlide();
+        }
+
+        function autoSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(autoSlide, 3000); // Change slides every 3 seconds
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
         }
 
         document.addEventListener('DOMContentLoaded', function() {
             showSlide(slideIndex);
+            startAutoSlide(); // Start auto-slide when the page loads
         });
     </script>
+
 
     <!-- Automatic Sliding Container -->
     <div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -370,6 +392,320 @@
             sliderContainer.addEventListener('mouseleave', startSliding);
         });
     </script>
+
+
+    {{-- <!-- Tabs Section -->
+    <div class="flex justify-between bg-white rounded-lg shadow-lg p-2 flex-wrap mx-4">
+        <button id="tab-jewellery"
+            class="tab-button w-1/5 py-2 text-sm text-center bg-gray-100 text-gray-600 rounded-lg font-medium transition duration-300 m-1"
+            onclick="showTab('jewellery')">Jewellery</button>
+        <button id="tab-clothing"
+            class="tab-button w-1/5 py-2 text-sm text-center bg-gray-100 text-gray-600 rounded-lg font-medium transition duration-300 m-1"
+            onclick="showTab('clothing')">Clothing</button>
+        <button id="tab-hardware"
+            class="tab-button w-1/5 py-2 text-sm text-center bg-gray-100 text-gray-600 rounded-lg font-medium transition duration-300 m-1"
+            onclick="showTab('hardware')">Hardware</button>
+        <button id="tab-solar"
+            class="tab-button w-1/5 py-2 text-sm text-center bg-gray-100 text-gray-600 rounded-lg font-medium transition duration-300 m-1"
+            onclick="showTab('solar')">Solar</button>
+        <button id="tab-parlour"
+            class="tab-button w-1/5 py-2 text-sm text-center bg-gray-100 text-gray-600 rounded-lg font-medium transition duration-300 m-1"
+            onclick="showTab('parlour')">Parlour</button>
+        <button id="tab-dentist"
+            class="tab-button w-1/5 py-2 text-sm text-center bg-gray-100 text-gray-600 rounded-lg font-medium transition duration-300 m-1"
+            onclick="showTab('dentist')">Dentist</button>
+        <button id="tab-doctor"
+            class="tab-button w-1/5 py-2 text-sm text-center bg-gray-100 text-gray-600 rounded-lg font-medium transition duration-300 m-1"
+            onclick="showTab('doctor')">Doctor</button>
+        <button id="tab-restaurant"
+            class="tab-button w-1/5 py-2 text-sm text-center bg-gray-100 text-gray-600 rounded-lg font-medium transition duration-300 m-1"
+            onclick="showTab('restaurant')">Restaurant</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="tab-content" class="mt-4 mx-8">
+        <!-- Jewellery Tab -->
+        <div id="jewellery" class="tab-pane hidden flex gap-6">
+            <!-- Left Section: Content -->
+            <div class="bg-white shadow-lg rounded-lg p-6 w-2/5">
+                <h2 class="text-2xl font-bold mb-4">Jewellery Industry</h2>
+                <p class="text-gray-700 mb-4">
+                    We serve the jewellery industry with premium solutions, providing high-quality designs,
+                    crafting tools, and innovative marketing strategies. Our services ensure that your business
+                    stands out in a competitive market.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Custom design solutions</li>
+                    <li>Marketing and branding strategies</li>
+                    <li>Advanced crafting tools</li>
+                </ul>
+                <p class="text-gray-700">
+                    Partner with us to transform your jewellery business and reach new heights of success.
+                </p>
+            </div>
+
+            <!-- Right Section: Image Slider -->
+            <div class="w-3/5">
+                <div class="relative overflow-hidden rounded-lg h-full">
+                    <div id="slider-jewellery" class="absolute flex transition-transform duration-500">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 1"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 2"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 3"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 4"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 5"
+                            class="w-1/3 md:w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clothing Tab -->
+        <div id="clothing" class="tab-pane hidden flex gap-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-2/5">
+                <h2 class="text-2xl font-bold mb-4">Clothing Industry</h2>
+                <p class="text-gray-700 mb-4">
+                    We provide specialized services for the clothing sector, helping brands with fabric selection,
+                    design innovation, and sustainable manufacturing practices. Our solutions cater to both small and
+                    large-scale businesses.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Fabric sourcing and quality assurance</li>
+                    <li>Design and trend analysis</li>
+                    <li>Sustainable production techniques</li>
+                </ul>
+                <p class="text-gray-700">
+                    Let us help you create a clothing line that stands out in the market.
+                </p>
+            </div>
+            <div class="w-3/5">
+                <div class="relative overflow-hidden rounded-lg h-full">
+                    <div id="slider-clothing" class="absolute flex transition-transform duration-500">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 1"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 2"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 3"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 4"
+                            class="w-1/3 md:w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hardware Tab -->
+        <div id="hardware" class="tab-pane hidden flex gap-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-2/5">
+                <h2 class="text-2xl font-bold mb-4">Hardware Industry</h2>
+                <p class="text-gray-700">
+                    Solutions tailored for the hardware industry, from tools and equipment to supply chain
+                    management.
+                </p>
+            </div>
+            <div class="w-3/5">
+                <div class="relative overflow-hidden rounded-lg h-full">
+                    <div id="slider-hardware" class="absolute flex transition-transform duration-500">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 1"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 2"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 3"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 4"
+                            class="w-1/3 md:w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Solar Tab -->
+        <div id="solar" class="tab-pane hidden flex gap-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-2/5">
+                <h2 class="text-2xl font-bold mb-4">Solar Industry</h2>
+                <p class="text-gray-700">
+                    Dedicated services for the solar energy sector, focusing on renewable energy solutions.
+                </p>
+            </div>
+            <div class="w-3/5">
+                <div class="relative overflow-hidden rounded-lg h-full">
+                    <div id="slider-solar" class="absolute flex transition-transform duration-500">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 1"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 2"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 3"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 4"
+                            class="w-1/3 md:w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parlour Tab -->
+        <div id="parlour" class="tab-pane hidden flex gap-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-2/5">
+                <h2 class="text-2xl font-bold mb-4">Parlour Industry</h2>
+                <p class="text-gray-700">
+                    Providing modern solutions for beauty parlours, including equipment and marketing.
+                </p>
+            </div>
+            <div class="w-3/5">
+                <div class="relative overflow-hidden rounded-lg h-full">
+                    <div id="slider-parlour" class="absolute flex transition-transform duration-500">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 1"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 2"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 3"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 4"
+                            class="w-1/3 md:w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dentist Tab -->
+        <div id="dentist" class="tab-pane hidden flex gap-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-2/5">
+                <h2 class="text-2xl font-bold mb-4">Dentist Industry</h2>
+                <p class="text-gray-700">
+                    Specialized services for dental professionals, offering tools and management solutions.
+                </p>
+            </div>
+            <div class="w-3/5">
+                <div class="relative overflow-hidden rounded-lg h-full">
+                    <div id="slider-dentist" class="absolute flex transition-transform duration-500">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 1"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 2"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 3"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 4"
+                            class="w-1/3 md:w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor Tab -->
+        <div id="doctor" class="tab-pane hidden flex gap-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-2/5">
+                <h2 class="text-2xl font-bold mb-4">Doctor Industry</h2>
+                <p class="text-gray-700">
+                    Comprehensive solutions for medical professionals, from clinic management to patient care.
+                </p>
+            </div>
+            <div class="w-3/5">
+                <div class="relative overflow-hidden rounded-lg h-full">
+                    <div id="slider-doctor" class="absolute flex transition-transform duration-500">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 1"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 2"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 3"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 4"
+                            class="w-1/3 md:w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant Tab -->
+        <div id="restaurant" class="tab-pane hidden flex gap-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-2/5">
+                <h2 class="text-2xl font-bold mb-4">Restaurant Industry</h2>
+                <p class="text-gray-700">
+                    Enhancing the restaurant industry with custom solutions, including inventory management
+                    and customer engagement.
+                </p>
+            </div>
+            <div class="w-3/5">
+                <div class="relative overflow-hidden rounded-lg h-full">
+                    <div id="slider-restaurant" class="absolute flex transition-transform duration-500">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 1"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 2"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 3"
+                            class="w-1/3 md:w-full object-cover">
+                        <img src="{{ asset('assets/img/about.png') }}" alt="Slide 4"
+                            class="w-1/3 md:w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function showTab(tabName) {
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            tabPanes.forEach((pane) => pane.classList.add('hidden'));
+
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach((button) => {
+                button.classList.remove('bg-gray-900', 'text-white');
+                button.classList.add('bg-gray-100', 'text-gray-600');
+            });
+
+            document.getElementById(tabName).classList.remove('hidden');
+            document.getElementById(`tab-${tabName}`).classList.remove('bg-gray-100', 'text-gray-600');
+            document.getElementById(`tab-${tabName}`).classList.add('bg-gray-900', 'text-white');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('jewellery');
+        });
+
+        // Initialize the slider
+        function initializeSlider(id, slidesToShow) {
+            const slider = document.getElementById(id);
+            const slides = slider.children;
+            const totalSlides = slides.length;
+            let index = 0;
+
+            setInterval(() => {
+                // Move to the next set of slides
+                index = (index + 1) % totalSlides;
+
+                // Calculate the width based on the number of visible slides
+                const slideWidth = slider.parentElement.offsetWidth / slidesToShow;
+
+                // Update the transform
+                slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            }, 3000); // Change slide every 3 seconds
+        }
+
+        // On page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('jewellery');
+
+            // Detect screen size and adjust the number of slides to show
+            const isMobile = window.innerWidth < 768;
+            const slidesToShow = isMobile ? 1 : 3;
+
+            initializeSlider('slider-jewellery', slidesToShow);
+        });
+
+        // Resize event to handle responsiveness
+        window.addEventListener('resize', () => {
+            const isMobile = window.innerWidth < 768;
+            const slidesToShow = isMobile ? 1 : 3;
+
+            initializeSlider('slider-jewellery', slidesToShow);
+        });
+    </script> --}}
+
+
+
 
 
     {{-- slider --}}

@@ -17,3 +17,4 @@ Route::get('/terms-and-conditions', [HomeController::class, 'condition'])->name(
 Route::get('/refund-policy', [HomeController::class, 'refund'])->name('frontend.refund.policy');
 Route::get('/details', [HomeController::class, 'detail'])->name('frontend.details');
 Route::get('/learn-more', [HomeController::class, 'learnmore'])->name('frontend.learn.more');
+Route::get('/category', [HomeController::class, 'category'])->name('frontend.category');

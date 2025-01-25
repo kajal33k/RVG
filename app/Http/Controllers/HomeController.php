@@ -117,4 +117,12 @@ class HomeController extends Controller
     {
         return view('frontend.learn-more');
     }
+
+    /**
+     * Display the category page.
+     */
+    public function category()
+    {
+        return view('frontend.category');
+    }
 }
