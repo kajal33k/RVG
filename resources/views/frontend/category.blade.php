@@ -76,8 +76,14 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .hidden {
-            display: none;
+        .tab-button.active {
+            background-color: #e11d48;
+            /* Active background color (red-600) */
+            color: white;
+            /* Ensure the text remains visible */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            transform: translateY(0);
+            /* Neutralize hover effect */
         }
     </style>
 
@@ -87,40 +93,39 @@
         </h1>
         <!-- Tabs Navigation -->
         <div class="flex flex-wrap justify-center gap-3 mb-8 bg-gray-100 p-4 rounded-xl shadow-md">
-            <button onclick="showTab('jewellery')"
+            <button onclick="showTab('jewellery', this)"
                 class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
                 Jewellery
             </button>
-            <button onclick="showTab('clothing')"
+            <button onclick="showTab('clothing', this)"
                 class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
                 Clothing
             </button>
-            <button onclick="showTab('hardware')"
+            <button onclick="showTab('hardware', this)"
                 class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
                 Hardware
             </button>
-            <button onclick="showTab('solar')"
+            <button onclick="showTab('solar', this)"
                 class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
                 Solar
             </button>
-            <button onclick="showTab('parlour')"
+            <button onclick="showTab('parlour', this)"
                 class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
                 Parlour
             </button>
-            <button onclick="showTab('dentist')"
+            <button onclick="showTab('dentist', this)"
                 class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
                 Dentist
             </button>
-            <button onclick="showTab('doctor')"
+            <button onclick="showTab('doctor', this)"
                 class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
                 Doctor
             </button>
-            <button onclick="showTab('restaurant')"
+            <button onclick="showTab('restaurant', this)"
                 class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
                 Restaurant
             </button>
         </div>
-
 
         <!-- Tab Content -->
         <div id="tab-content" class="bg-white shadow-2xl rounded-3xl overflow-hidden">
@@ -152,7 +157,6 @@
                     </ul>
                 </div>
 
-
                 <!-- Right Section -->
                 <div class="w-full lg:w-9/12 relative slider-container">
                     <div id="slider-jewellery" class="slider-wrapper">
@@ -166,9 +170,7 @@
                 </div>
             </div>
 
-
             <!-- Clothing Tab -->
-
             <div id="clothing" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
                 <!-- Left Section -->
                 <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
@@ -208,13 +210,162 @@
                     <button class="slider-arrow slider-arrow-right" onclick="moveSlider('clothing', 'right')">→</button>
                 </div>
             </div>
+            
+            <!-- Hardware Tab -->
+            <div id="hardware" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
+                <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-gray-800">
+                        Hardware Industry
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        We provide innovative solutions and tools to enhance hardware manufacturing, retail, and
+                        distribution.
+                    </p>
+                </div>
+
+                <div class="w-full lg:w-9/12 relative slider-container">
+                    <div id="slider-hardware" class="slider-wrapper">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Hardware Slide 1" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Hardware Slide 2" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Hardware Slide 3" class="slider-image">
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" onclick="moveSlider('hardware', 'left')">←</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="moveSlider('hardware', 'right')">→</button>
+                </div>
+            </div>
+
+            <!-- Solar Tab -->
+            <div id="solar" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
+                <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-gray-800">
+                        Solar Industry
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        We offer advanced solar solutions, from residential to commercial systems, to power your
+                        sustainability goals.
+                    </p>
+                </div>
+
+                <div class="w-full lg:w-9/12 relative slider-container">
+                    <div id="slider-solar" class="slider-wrapper">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Solar Slide 1" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Solar Slide 2" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Solar Slide 3" class="slider-image">
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" onclick="moveSlider('solar', 'left')">←</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="moveSlider('solar', 'right')">→</button>
+                </div>
+            </div>
+
+            <!-- Parlour Tab -->
+            <div id="parlour" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
+                <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-gray-800">
+                        Parlour Industry
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Providing parlour and beauty solutions for clients with top-of-the-line beauty products and
+                        services.
+                    </p>
+                </div>
+
+                <div class="w-full lg:w-9/12 relative slider-container">
+                    <div id="slider-parlour" class="slider-wrapper">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Parlour Slide 1" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Parlour Slide 2" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Parlour Slide 3" class="slider-image">
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" onclick="moveSlider('parlour', 'left')">←</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="moveSlider('parlour', 'right')">→</button>
+                </div>
+            </div>
+
+            <!-- Dentist Tab -->
+            <div id="dentist" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
+                <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-gray-800">
+                        Dentist Industry
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Offering state-of-the-art dental solutions, ensuring top-quality care and patient satisfaction.
+                    </p>
+                </div>
+
+                <div class="w-full lg:w-9/12 relative slider-container">
+                    <div id="slider-dentist" class="slider-wrapper">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Dentist Slide 1" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Dentist Slide 2" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Dentist Slide 3" class="slider-image">
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" onclick="moveSlider('dentist', 'left')">←</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="moveSlider('dentist', 'right')">→</button>
+                </div>
+            </div>
+
+            <!-- Doctor Tab -->
+            <div id="doctor" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
+                <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-gray-800">
+                        Doctor Industry
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Comprehensive medical solutions with advanced healthcare technologies for doctors and medical
+                        practitioners.
+                    </p>
+                </div>
+
+                <div class="w-full lg:w-9/12 relative slider-container">
+                    <div id="slider-doctor" class="slider-wrapper">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Doctor Slide 1" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Doctor Slide 2" class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Doctor Slide 3" class="slider-image">
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" onclick="moveSlider('doctor', 'left')">←</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="moveSlider('doctor', 'right')">→</button>
+                </div>
+            </div>
+
+            <!-- Restaurant Tab -->
+            <div id="restaurant" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
+                <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-gray-800">
+                        Restaurant Industry
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Serving the restaurant industry with premium kitchen tools, innovative menu solutions, and customer
+                        experience enhancement.
+                    </p>
+                </div>
+
+                <div class="w-full lg:w-9/12 relative slider-container">
+                    <div id="slider-restaurant" class="slider-wrapper">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Restaurant Slide 1"
+                            class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Restaurant Slide 2"
+                            class="slider-image">
+                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Restaurant Slide 3"
+                            class="slider-image">
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" onclick="moveSlider('restaurant', 'left')">←</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="moveSlider('restaurant', 'right')">→</button>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <script>
-        function showTab(tabName) {
+        function showTab(tabName, button) {
             document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.add('hidden'));
             document.querySelector(`#${tabName}`).classList.remove('hidden');
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to the clicked button
+            button.classList.add('active');
+
+            // Initialize slider for selected tab
             initializeSlider(`slider-${tabName}`);
         }
 
@@ -265,7 +416,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize first tab by default
-            showTab('jewellery');
+            showTab('jewellery', document.querySelector('button'));
         });
     </script>
 @endsection
