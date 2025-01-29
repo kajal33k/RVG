@@ -621,9 +621,9 @@
 
                 <div class="w-full lg:w-9/12 relative slider-container">
                     <div id="slider-hardware" class="slider-wrapper">
-                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Hardware Slide 1" class="slider-image">
-                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Hardware Slide 2" class="slider-image">
-                        <img src="{{ asset('assets/img/attendence.jpg') }}" alt="Hardware Slide 3" class="slider-image">
+                        <img src="{{ asset('assets/img/category/hardware/1.jpg') }}" alt="Hardware Slide 1" class="slider-image">
+                        <img src="{{ asset('assets/img/category/hardware/2.jpg') }}" alt="Hardware Slide 2" class="slider-image">
+                        <img src="{{ asset('assets/img/category/hardware/3.jpg') }}" alt="Hardware Slide 3" class="slider-image">
                     </div>
                     <button class="slider-arrow slider-arrow-left" onclick="moveSlider('hardware', 'left')">←</button>
                     <button class="slider-arrow slider-arrow-right" onclick="moveSlider('hardware', 'right')">→</button>
