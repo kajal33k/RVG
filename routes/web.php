@@ -19,3 +19,4 @@ Route::get('/details', [HomeController::class, 'detail'])->name('frontend.detail
 Route::get('/learn-more', [HomeController::class, 'learnmore'])->name('frontend.learn.more');
 Route::get('/category', [HomeController::class, 'category'])->name('frontend.category');
 Route::get('/testing',[HomeController::class, 'testing'])->name('frontend.testing');
+Route::get('/test',[HomeController::class, 'test'])->name('frontend.test');

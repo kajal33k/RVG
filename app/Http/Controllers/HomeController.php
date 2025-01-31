@@ -130,4 +130,9 @@ class HomeController extends Controller
     {
         return view('frontend.testing');
     }
+
+    public function test()
+    {
+        return view('frontend.test');
+    }
 }
