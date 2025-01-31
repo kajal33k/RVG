@@ -1,3 +1,5 @@
+
+
 @extends('components.main')
 
 @section('content')
@@ -92,17 +94,17 @@
                 </div>
                 <div class="relative slider-container">
                     <div id="slider-jewellery" class="slider-wrapper">
-                        <img src="{{ asset('assets/img/attendence.jpg') }}" 
+                        <img src="{{ asset('assets/img/attendence.jpg') }}"
                              alt="Jewellery Slide 1" class="slider-image">
-                        <img src="{{ asset('assets/img/attendence.jpg') }}" 
+                        <img src="{{ asset('assets/img/attendence.jpg') }}"
                              alt="Jewellery Slide 2" class="slider-image">
-                        <img src="{{ asset('assets/img/attendence.jpg') }}" 
+                        <img src="{{ asset('assets/img/attendence.jpg') }}"
                              alt="Jewellery Slide 3" class="slider-image">
-                              <img src="{{ asset('assets/img/attendence.jpg') }}" 
+                              <img src="{{ asset('assets/img/attendence.jpg') }}"
                              alt="Jewellery Slide 1" class="slider-image">
-                        <img src="{{ asset('assets/img/attendence.jpg') }}" 
+                        <img src="{{ asset('assets/img/attendence.jpg') }}"
                              alt="Jewellery Slide 2" class="slider-image">
-                        <img src="{{ asset('assets/img/attendence.jpg') }}" 
+                        <img src="{{ asset('assets/img/attendence.jpg') }}"
                              alt="Jewellery Slide 3" class="slider-image">
                     </div>
                     <button class="slider-arrow slider-arrow-left absolute left-0 top-1/2 -translate-y-1/2"
@@ -442,13 +444,13 @@
         <div class="flex flex-wrap justify-center gap-4 mb-12 bg-gray-50 p-6 rounded-2xl shadow-lg">
             @php
             $industries = [
-                'jewellery' => '💍', 
-                'clothing' => '👗', 
-                'hardware' => '🔧', 
-                'solar' => '☀️', 
-                'parlour' => '💇', 
-                'dentist' => '🦷', 
-                'doctor' => '👨‍⚕️', 
+                'jewellery' => '💍',
+                'clothing' => '👗',
+                'hardware' => '🔧',
+                'solar' => '☀️',
+                'parlour' => '💇',
+                'dentist' => '🦷',
+                'doctor' => '👨‍⚕️',
                 'restaurant' => '🍽️'
             ];
             @endphp
@@ -709,7 +711,7 @@
         <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center">
             Industry We Served With Premium Solutions and Services 🚀
         </h1>
-        
+
         <!-- Tabs Navigation -->
         <div class="flex flex-wrap justify-center gap-3 mb-8 bg-gray-100 p-4 rounded-xl shadow-md">
             <button onclick="showTab('jewellery')"
@@ -851,7 +853,7 @@
             const sliderWrapper = document.querySelector(`#${sliderId}`);
             const slides = sliderWrapper.querySelectorAll('.slider-image');
             const totalSlides = slides.length;
-            
+
             // Remove existing progress bar if any
             const existingProgress = sliderWrapper.parentElement.querySelector('.slider-progress');
             if (existingProgress) {
@@ -887,11 +889,11 @@
             function handleTouchMove(e) {
                 if (!isDragging) return;
                 e.preventDefault();
-                
+
                 const touch = e.touches[0];
                 const diff = touch.clientX - touchStartX;
                 const slideWidth = sliderWrapper.offsetWidth;
-                
+
                 currentTranslate = startTranslate + diff;
                 sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
             }
@@ -899,10 +901,10 @@
             function handleTouchEnd() {
                 if (!isDragging) return;
                 isDragging = false;
-                
+
                 const slideWidth = sliderWrapper.offsetWidth;
                 const moveRatio = Math.abs(currentTranslate - startTranslate) / slideWidth;
-                
+
                 if (moveRatio > 0.2) {
                     if (currentTranslate < startTranslate) {
                         currentSlide = Math.min(currentSlide + 1, totalSlides - 1);
@@ -910,11 +912,11 @@
                         currentSlide = Math.max(currentSlide - 1, 0);
                     }
                 }
-                
+
                 sliderWrapper.style.transition = 'transform 0.3s ease';
                 currentTranslate = -currentSlide * slideWidth;
                 sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
-                
+
                 updateProgress();
             }
 

@@ -568,7 +568,7 @@
         </div>
 
         <!-- Tab Content -->
-        <div id="tab-content" class="bg-white shadow-2xl rounded-3xl overflow-hidden">\
+        <div id="tab-content" class="bg-white shadow-2xl rounded-3xl overflow-hidden">
 
             <!-- Jewellery Tab -->
             <div id="jewellery" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
