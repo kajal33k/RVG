@@ -356,7 +356,7 @@
     <script>
         function showTab(tabName, button) {
             document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.add('hidden'));
-            document.querySelector(`#${tabName}`).classList.remove('hidden');
+            document.querySelector(#${tabName}).classList.remove('hidden');
 
             // Remove active class from all buttons
             document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
@@ -365,11 +365,11 @@
             button.classList.add('active');
 
             // Initialize slider for selected tab
-            initializeSlider(`slider-${tabName}`);
+            initializeSlider(slider-${tabName});
         }
 
         function initializeSlider(sliderId) {
-            const sliderWrapper = document.querySelector(`#${sliderId}`);
+            const sliderWrapper = document.querySelector(#${sliderId});
             const slides = sliderWrapper.querySelectorAll('.slider-image');
             const totalSlides = slides.length;
 
@@ -381,7 +381,7 @@
             function moveToNextSlide() {
                 currentSlide++;
                 sliderWrapper.style.transition = 'transform 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95)';
-                sliderWrapper.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
+                sliderWrapper.style.transform = translateX(-${currentSlide * (100 / totalSlides)}%);
 
                 if (currentSlide >= totalSlides) {
                     setTimeout(() => {
@@ -396,7 +396,7 @@
         }
 
         function moveSlider(tabName, direction) {
-            const sliderWrapper = document.querySelector(`#slider-${tabName}`);
+            const sliderWrapper = document.querySelector(#slider-${tabName});
             const slides = sliderWrapper.querySelectorAll('.slider-image');
             const totalSlides = slides.length;
 
@@ -410,7 +410,7 @@
             }
 
             sliderWrapper.style.transition = 'transform 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95)';
-            sliderWrapper.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
+            sliderWrapper.style.transform = translateX(-${currentSlide * (100 / totalSlides)}%);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -421,7 +421,7 @@
 @endsection --}}
 
 
-
+{{--
 @extends('components.main')
 
 @section('content')
@@ -626,7 +626,7 @@
             isTransitioning = true;
             offset -= slideWidth;
             slider.style.transition = 'transform 0.5s ease-out';
-            slider.style.transform = `translateX(${offset}px)`;
+            slider.style.transform = translateX(${offset}px);
 
             setTimeout(() => {
                 // Check if we've moved past the original set of slides
@@ -634,7 +634,7 @@
                     // Instantly reset to the beginning without animation
                     slider.style.transition = 'none';
                     offset = 0;
-                    slider.style.transform = `translateX(${offset}px)`;
+                    slider.style.transform = translateX(${offset}px);
                 }
                 isTransitioning = false;
             }, 500);
@@ -661,10 +661,10 @@
             sliderContainer.addEventListener('mouseleave', startSliding);
         });
     </script>
-@endsection
+@endsection  --}}
 
 
-{{-- @extends('components.main')
+@extends('components.main')
 
 @section('content')
     <!-- Swiper CSS -->
@@ -742,4 +742,4 @@
             },
         });
     </script>
-@endsection --}}
+@endsection

@@ -416,7 +416,7 @@
             flex-shrink: 0;
             width: 100%;
             /* Full width on mobile view */
-            height: 400px;
+            height: 500px;
             object-fit: cover;
             transition: transform 0.5s, filter 0.5s;
             filter: brightness(0.7);
@@ -1534,6 +1534,169 @@
 
 
 
+    {{-- categories --}}
+    {{-- <div class="container mx-auto px-4 py-20">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center">
+            Industry We Served With Premium Solutions and Services 🚀
+        </h1>
+        <!-- Tabs Navigation -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8 bg-gray-100 p-4 rounded-xl shadow-md">
+            <button onclick="showTab('menu', this)"
+                class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
+                Menu Design
+            </button>
+            <button onclick="showTab('catalogue', this)"
+                class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
+                Catalogue Design
+            </button>
+            <button onclick="showTab('box', this)"
+                class="tab-button px-6 py-3 text-sm font-semibold rounded-full bg-gray-900 text-white hover:bg-gray-800">
+                Box Design
+            </button>
+
+
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tab-content" class="bg-white shadow-2xl rounded-3xl overflow-hidden">
+
+            <!-- Jewellery Tab -->
+            <div id="menu" class="tab-pane active flex flex-col lg:flex-row gap-6 p-8 hidden">
+                <!-- Left Section -->
+                <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <h2
+                        class="text-2xl sm:text-3xl font-bold mb-6 text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-blue-600">
+                        Menu Design
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        We serve the menu desugn with premium solutions, providing high-quality designs,
+                        crafting tools, and innovative marketing strategies.
+                    </p>
+                    <ul class="space-y-4 mb-6 text-gray-600">
+                        <li class="flex items-center space-x-3">
+                            <span class="material-icons text-2xl">design_services</span>
+                            <span>Custom Design Solutions</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="material-icons text-2xl">insights</span>
+                            <span>Marketing Strategies</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="material-icons text-2xl">build</span>
+                            <span>Advanced Crafting Tools</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Section -->
+                <div class="w-full lg:w-4/5 relative slider-container">
+                    <div id="slider-menu" class="slider-wrapper">
+                        <!-- Image Slider -->
+                        <img src="{{ asset('assets/img/category/menu-design/Page 10.jpg') }}" alt="menu Slide 1"
+                            class="slider-image object-cover ">
+                        <img src="{{ asset('assets/img/category/menu-design/Page 11.jpg') }}" alt="menu Slide 2"
+                            class="slider-image object-cover">
+                        <img src="{{ asset('assets/img/category/menu-design/Page 7.jpg') }}" alt="menu Slide 3"
+                            class="slider-image object-cover">
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" onclick="moveSlider('menu', 'left')">←</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="moveSlider('menu', 'right')">→</button>
+                </div>
+            </div>
+
+            <!-- Cakes Tab -->
+            <div id="catalogue" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
+                <!-- Left Section -->
+                <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <h2
+                        class="text-2xl sm:text-3xl font-bold mb-6 text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-blue-600">
+                        Catalogue Design
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Empowering the Catalogue industry with innovative solutions, exceptional quality, and creative
+                        marketing.
+                    </p>
+                    <ul class="space-y-4 mb-6 text-gray-600">
+                        <li class="flex items-center space-x-3">
+                            <span class="material-icons text-blue-500 text-3xl">design_services</span>
+                            <span>Creative Design Services</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="material-icons text-green-500 text-3xl">insights</span>
+                            <span>Market Insights and Strategies</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="material-icons text-purple-500 text-3xl">build</span>
+                            <span>Innovative Production Tools</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Section -->
+                <div class="w-full lg:w-9/12 relative slider-container">
+                    <div id="slider-catalogue" class="slider-wrapper">
+                        <!-- Image Slider -->
+                        <img src="{{ asset('assets/img/category/box/Page 1.jpg') }}" alt="cakes Slide 1"
+                            class="slider-image">
+                        <img src="{{ asset('assets/img/category/catalogue/Page 4.jpg') }}" alt="cakes Slide 2"
+                            class="slider-image">
+                        <img src="{{ asset('assets/img/category/catalogue/Page 6.jpg') }}" alt="cakes Slide 3"
+                            class="slider-image">
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" onclick="moveSlider('catalog', 'left')">←</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="moveSlider('catalog', 'right')">→</button>
+                </div>
+            </div>
+
+            <!-- Cosmetics Tab -->
+            <div id="box" class="tab-pane flex flex-col lg:flex-row gap-6 p-8 hidden">
+                <!-- Left Section -->
+                <div class="w-full lg:w-3/12 bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                    <h2
+                        class="text-2xl sm:text-3xl font-bold mb-6 text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-blue-600">
+                        Box Designing
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Empowering the Box designing with innovative solutions, exceptional quality, and creative
+                        marketing.
+                    </p>
+                    <ul class="space-y-4 mb-6 text-gray-600">
+                        <li class="flex items-center space-x-3">
+                            <span class="material-icons text-blue-500 text-3xl">design_services</span>
+                            <span>Creative Design Services</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="material-icons text-green-500 text-3xl">insights</span>
+                            <span>Market Insights and Strategies</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="material-icons text-purple-500 text-3xl">build</span>
+                            <span>Innovative Production Tools</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Section -->
+                <div class="w-full lg:w-9/12 relative slider-container">
+                    <div id="slider-box" class="slider-wrapper">
+                        <!-- Image Slider -->
+                        <img src="{{ asset('assets/img/category/box/Page 1.jpg') }}" alt="box Slide 1"
+                            class="slider-image">
+                        <img src="{{ asset('assets/img/category/box/Page 2.jpg') }}" alt="box Slide 2"
+                            class="slider-image">
+                        <img src="{{ asset('assets/img/category/box/Page 1.jpg') }}" alt="box Slide 3"
+                            class="slider-image">
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" onclick="moveSlider('box', 'left')">←</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="moveSlider('box', 'right')">→</button>
+                </div>
+            </div>
+
+        </div>
+    </div> --}}
+
+    @include('frontend.testing')
+    
     <div class="relative w-full overflow-hidden">
         <!-- Aspect ratio container -->
         <div class="relative pt-[56.132%]">

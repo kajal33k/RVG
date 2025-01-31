@@ -18,3 +18,4 @@ Route::get('/refund-policy', [HomeController::class, 'refund'])->name('frontend.
 Route::get('/details', [HomeController::class, 'detail'])->name('frontend.details');
 Route::get('/learn-more', [HomeController::class, 'learnmore'])->name('frontend.learn.more');
 Route::get('/category', [HomeController::class, 'category'])->name('frontend.category');
+Route::get('/testing',[HomeController::class, 'testing'])->name('frontend.testing');
