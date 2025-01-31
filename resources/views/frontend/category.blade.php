@@ -421,8 +421,8 @@
 @endsection --}}
 
 
-
-{{-- @extends('components.main')
+{{-- 
+@extends('components.main')
 
 @section('content')
     <!-- Infinite Slider Container -->
@@ -661,7 +661,7 @@
             sliderContainer.addEventListener('mouseleave', startSliding);
         });
     </script>
-@endsection --}}
+@endsection  --}}
 
 
 @extends('components.main')
