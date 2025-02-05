@@ -6,17 +6,17 @@
             0%, 100% { transform: translateY(0) rotate(1deg) translateZ(20px); }
             50% { transform: translateY(-15px) rotate(-1deg) translateZ(30px); }
         }
-        
+
         @keyframes spotlight {
             0%, 100% { background-position: 0% 0%; }
             50% { background-position: 100% 100%; }
         }
-        
+
         .hero-text {
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
             animation: textFloat 6s ease-in-out infinite;
         }
-        
+
         @keyframes textFloat {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -27,7 +27,7 @@
             perspective: 2000px;
             backface-visibility: hidden;
         }
-        
+
         .mission-card {
             transform-style: preserve-3d;
             transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -35,7 +35,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .mission-card::after {
             content: '';
             position: absolute;
@@ -53,43 +53,43 @@
             transition: all 0.8s;
             opacity: 0;
         }
-        
+
         .mission-card:hover::after {
             opacity: 1;
             transform: rotate(35deg) translate(50%, 50%);
         }
-        
+
         .mission-card:hover {
             transform: translateZ(50px) rotateX(15deg) rotateY(15deg);
-            box-shadow: 
+            box-shadow:
                 20px 20px 60px rgba(0,0,0,0.2),
                 -20px -20px 60px rgba(255,255,255,0.8),
                 inset 0 0 20px rgba(255,255,255,0.5);
         }
-        
+
         .team-card {
             transform-style: preserve-3d;
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        
+
         .team-card:hover {
             transform: translateY(-20px) rotateX(10deg) rotateY(10deg) translateZ(30px);
-            box-shadow: 
+            box-shadow:
                 35px 35px 70px rgba(0,0,0,0.25),
                 -35px -35px 70px rgba(255,255,255,0.8);
         }
-        
+
         .team-card img {
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        
+
         .team-card:hover img {
             transform: scale(1.05);
         }
-        
+
         .hanging-card {
             animation: float 5s ease-in-out infinite;
-            box-shadow: 
+            box-shadow:
                 0 20px 40px rgba(0,0,0,0.4),
                 0 12px 12px rgba(0,0,0,0.3),
                 inset 0 0 30px rgba(0,0,0,0.2);
@@ -97,13 +97,13 @@
             transform-style: preserve-3d;
             perspective: 1000px;
         }
-        
+
         .pin {
             transform-style: preserve-3d;
             animation: pinFloat 4s ease-in-out infinite;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-        
+
         @keyframes pinFloat {
             0%, 100% { transform: translateY(0) translateZ(10px); }
             50% { transform: translateY(-5px) translateZ(20px); }
@@ -453,10 +453,10 @@
                 const rect = slide.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
+
                 const xRotation = ((y - rect.height / 2) / rect.height) * 10;
                 const yRotation = ((x - rect.width / 2) / rect.width) * 10;
-                
+
                 slide.style.transform = `
                     perspective(1000px)
                     rotateX(${-xRotation}deg)
@@ -544,7 +544,7 @@
         .slide-image {
             transform-style: preserve-3d;
             transition: all 0.6s ease;
-            box-shadow: 
+            box-shadow:
                 20px 20px 60px rgba(0,0,0,0.3),
                 -20px -20px 60px rgba(255,255,255,0.3);
         }
@@ -562,7 +562,7 @@
 
         .nav-button:hover {
             transform: translateY(-5px) translateZ(20px);
-            box-shadow: 
+            box-shadow:
                 0 10px 20px rgba(0,0,0,0.2),
                 0 6px 6px rgba(0,0,0,0.1);
         }
@@ -767,7 +767,7 @@
 
             // Auto-play with pause on hover
             let autoplayInterval;
-            
+
             function startAutoplay() {
                 autoplayInterval = setInterval(nextSlide, 5000);
             }
@@ -785,7 +785,7 @@
 @endsection
 
 
-// slider 4 
+// slider 4
 
 
 @extends('components.main')
@@ -997,10 +997,10 @@
                 const rect = slide.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
+
                 const xRotation = ((y - rect.height / 2) / rect.height) * 10;
                 const yRotation = ((x - rect.width / 2) / rect.width) * 10;
-                
+
                 slide.style.transform = `
                     perspective(1000px)
                     rotateX(${-xRotation}deg)
@@ -1048,6 +1048,326 @@
 
 
 
+////////////////tabs slider new
+
+@extends('components.main')
+
+@section('content')
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-tabs {
+            position: relative;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .tab-nav {
+            background: linear-gradient(to right, #1e293b, #334155);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .tab-btn {
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            background: #e11d48;
+            transform: translateY(-2px);
+        }
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide-content {
+            padding: 2rem;
+        }
+
+        .slide-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .slide-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .slide-image:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-2px);
+            background: #f1f5f9;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e11d48;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-nav:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .slider-prev {
+            left: 1rem;
+        }
+
+        .slider-next {
+            right: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <div class="hero-section">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl font-bold text-center mb-12 text-gray-900">
+                Premium Industry Solutions 🚀
+            </h1>
+
+            <div class="slider-tabs">
+                <!-- Tab Navigation -->
+                <div class="tab-nav">
+                    <button class="tab-btn active" onclick="changeSlide('jewellery')">Jewellery</button>
+                    <button class="tab-btn" onclick="changeSlide('cakes')">Cakes</button>
+                </div>
+
+                <!-- Slider Content -->
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        <!-- Jewellery Slide -->
+                        <div class="slide active" id="jewellery-slide">
+                            <div class="slide-content">
+                                <h2 class="text-3xl font-bold mb-4 text-gray-900">Jewellery Industry</h2>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    Crafting excellence in the jewellery industry with cutting-edge technology
+                                    and artisanal expertise. Our solutions elevate your business to new heights.
+                                </p>
+
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="material-icons">diamond</i>
+                                        </div>
+                                        <span>Premium Design</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="material-icons">analytics</i>
+                                        </div>
+                                        <span>Market Analysis</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="material-icons">verified</i>
+                                        </div>
+                                        <span>Quality Assurance</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="material-icons">precision_manufacturing</i>
+                                        </div>
+                                        <span>Custom Tools</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-images">
+                                <img src="{{ asset('assets/img/jewellery/1.jpg') }}" class="slide-image" alt="Jewellery 1">
+                                <img src="{{ asset('assets/img/jewellery/2.jpg') }}" class="slide-image" alt="Jewellery 2">
+                                <img src="{{ asset('assets/img/jewellery/3.jpg') }}" class="slide-image" alt="Jewellery 3">
+                                <img src="{{ asset('assets/img/jewellery/4.jpg') }}" class="slide-image" alt="Jewellery 4">
+                            </div>
+                        </div>
+
+                        <!-- Cakes Slide -->
+                        <div class="slide" id="cakes-slide">
+                            <div class="slide-content">
+                                <h2 class="text-3xl font-bold mb-4 text-gray-900">Cakes Industry</h2>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    Revolutionizing the baking industry with innovative solutions and
+                                    creative designs. We help your bakery stand out in the market.
+                                </p>
+
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="material-icons">cake</i>
+                                        </div>
+                                        <span>Creative Designs</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="material-icons">trending_up</i>
+                                        </div>
+                                        <span>Growth Solutions</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="material-icons">inventory</i>
+                                        </div>
+                                        <span>Inventory Tools</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="material-icons">support_agent</i>
+                                        </div>
+                                        <span>24/7 Support</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-images">
+                                <img src="{{ asset('assets/img/cakes/1.jpg') }}" class="slide-image" alt="Cakes 1">
+                                <img src="{{ asset('assets/img/cakes/2.jpg') }}" class="slide-image" alt="Cakes 2">
+                                <img src="{{ asset('assets/img/cakes/3.jpg') }}" class="slide-image" alt="Cakes 3">
+                                <img src="{{ asset('assets/img/cakes/4.jpg') }}" class="slide-image" alt="Cakes 4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Navigation -->
+                    <button class="slider-nav slider-prev" onclick="moveSlide('prev')">←</button>
+                    <button class="slider-nav slider-next" onclick="moveSlide('next')">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = ['jewellery', 'cakes'];
+
+        function changeSlide(industry) {
+            // Update current slide index
+            currentSlide = slides.indexOf(industry);
+
+            // Update tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update slides
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            document.getElementById(`${industry}-slide`).classList.add('active');
+
+            // Update slider position
+            const wrapper = document.querySelector('.slider-wrapper');
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function moveSlide(direction) {
+            if (direction === 'prev') {
+                currentSlide = Math.max(0, currentSlide - 1);
+            } else {
+                currentSlide = Math.min(slides.length - 1, currentSlide + 1);
+            }
+
+            // Update tabs and slides
+            changeSlide(slides[currentSlide]);
+        }
+
+        // Auto-slide functionality
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            changeSlide(slides[currentSlide]);
+        }, 5000);
+    </script>
+@endsection
 
 
 
@@ -1056,7 +1376,7 @@
 
 
 
-///////////////About Us 
+///////////////About Us
 
 
 @extends('components.main')

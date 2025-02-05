@@ -1695,8 +1695,10 @@
         </div>
     </div> --}}
 
-    @include('frontend.testing')
-    
+    @include('frontend.test')
+
+    {{-- @include('frontend.testing') --}}
+
     <div class="relative w-full overflow-hidden">
         <!-- Aspect ratio container -->
         <div class="relative pt-[56.132%]">
