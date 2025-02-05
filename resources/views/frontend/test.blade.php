@@ -1,7 +1,6 @@
 @extends('components.main')
 
 @section('content')
-
     <style>
         .slider-container {
             perspective: 1000px;
@@ -13,8 +12,10 @@
             display: flex;
             white-space: nowrap;
             transition: transform 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-            gap: 10px;
+            gap: 5px;
+            /* Reduce gap */
         }
+
 
         .slider-image {
             flex-shrink: 0;
@@ -78,9 +79,19 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
             transform: translateY(0);
         }
+
+        @media (max-width: 768px) {
+            .slider-image {
+                flex-shrink: 0;
+                width: 100%;
+                max-height: 400px;
+                /* Adjust for mobile */
+                object-fit: cover;
+            }
+        }
     </style>
 
-    <div class="container mx-auto px-4 py-20">
+    <div class="container mx-auto px-4 py-10 sm:py-20">
         <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center">
             Industry We Served With Premium Solutions and Services 🚀
         </h1>
@@ -241,7 +252,6 @@
             });
         });
     </script>
-
 @endsection
 
 
