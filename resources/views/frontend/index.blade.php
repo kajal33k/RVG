@@ -149,9 +149,11 @@
         });
     </script>
 
+    @include('frontend.provide')
+
 
     <!-- Automatic Sliding Container -->
-    <div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
+    {{-- <div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="relative overflow-hidden" id="achievementSliderContainer">
                 <div id="achievementSlider" class="flex transition-transform duration-500 ease-out space-x-8">
@@ -400,7 +402,7 @@
             // Resume sliding when mouse leaves
             sliderContainer.addEventListener('mouseleave', startSliding);
         });
-    </script>
+    </script> --}}
 
 
     @include('components.industry')
