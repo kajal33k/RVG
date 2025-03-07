@@ -20,3 +20,7 @@ Route::get('/learn-more', [HomeController::class, 'learnmore'])->name('frontend.
 Route::get('/category', [HomeController::class, 'category'])->name('frontend.category');
 Route::get('/testing',[HomeController::class, 'testing'])->name('frontend.testing');
 Route::get('/test',[HomeController::class, 'test'])->name('frontend.test');
+
+Route::get('/industry', function () {
+    return view('frontend.industryserve'); 
+})->name('frontend.industryserve');

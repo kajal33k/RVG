@@ -421,10 +421,10 @@
 @endsection --}}
 
 
-{{--
-@extends('components.main')
 
-@section('content')
+{{-- @extends('components.main')
+
+@section('content') --}}
     <!-- Infinite Slider Container -->
     <div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
@@ -661,10 +661,10 @@
             sliderContainer.addEventListener('mouseleave', startSliding);
         });
     </script>
-@endsection  --}}
+{{-- @endsection  --}}
 
 
-@extends('components.main')
+{{-- @extends('components.main')
 
 @section('content')
     <!-- Swiper CSS -->
@@ -742,4 +742,4 @@
             },
         });
     </script>
-@endsection
+@endsection --}}

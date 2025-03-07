@@ -2,6 +2,7 @@
     class="w-full py-12 font-sans bg-gradient-to-b from-red-500 to-red-600 backdrop-blur-xl shadow-lg shadow-black/50 rounded-3xl">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
             <!-- Company Info Section -->
             <div
                 class="bg-white rounded-3xl transform translate-z-0 shadow-xl shadow-black/20 p-6 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 border border-red-100">
@@ -78,6 +79,17 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Business Information Section -->
+            <div
+                class="bg-white rounded-3xl transform translate-z-0 shadow-xl shadow-black/20 p-6 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 border border-red-100">
+
+                <!-- Business Information -->
+                <h3 class="text-2xl font-semibold mb-2 font-serif text-red-600">Business Information</h3>
+                <p class="text-gray-600"><strong>GST Number:</strong> 12ABCDE3456F7Z8</p>
+                <p class="text-gray-600"><strong>TIN Number:</strong> 12345678901234</p>
+            </div>
+
         </div>
 
         <!-- Useful Links Section -->
@@ -95,13 +107,15 @@
                     class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Cancellation & Refund
                     Policy</a>
                 <a href="{{ route('frontend.terms.conditions') }}"
-                    class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Terms & Conditions</a>
+                    class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Terms &
+                    Conditions</a>
                 <a href="{{ route('frontend.privacy.policy') }}"
                     class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Privacy Policy</a>
                 <a href="#" class="text-sm text-gray-200 hover:text-white transition-colors duration-300">Our
                     Clients</a>
             </div>
         </div>
+
 
         <!-- Footer Bottom Section -->
         <div class="mt-12 pt-8 border-t border-white/50">
