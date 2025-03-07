@@ -86,8 +86,7 @@
 
                 <!-- Business Information -->
                 <h3 class="text-2xl font-semibold mb-2 font-serif text-red-600">Business Information</h3>
-                <p class="text-gray-600"><strong>GST Number:</strong> 12ABCDE3456F7Z8</p>
-                <p class="text-gray-600"><strong>TIN Number:</strong> 12345678901234</p>
+                <p class="text-gray-600"><strong>GST Number:</strong> 09CYMPP9152J2ZK</p>
             </div>
 
         </div>
