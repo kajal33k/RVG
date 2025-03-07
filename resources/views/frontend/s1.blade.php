@@ -257,6 +257,12 @@
         </div>
 
     </div>
+    <div class="flex justify-center mt-8">
+        <a href="{{ route('frontend.category') }}"
+            class="px-6 py-3 text-white font-semibold bg-red-500 rounded-lg shadow-md transition-all duration-300 hover:bg-red-600 hover:shadow-lg hover:-translate-y-1 active:translate-y-1">
+            View More
+        </a>
+    </div>
 
 </div>
 

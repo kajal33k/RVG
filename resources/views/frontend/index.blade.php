@@ -805,7 +805,9 @@
         </div>
     </div> --}}
 
-    @include('components.industry-2')
+    {{-- @include('components.industry-2') --}}
+
+    {{-- @include('frontend.s1') --}}
 
 
     <div class="relative w-full overflow-hidden">
