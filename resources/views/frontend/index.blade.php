@@ -1,159 +1,159 @@
  @extends('components.main')
-@section('content')
-    {{-- Hero section  --}}
-    <div class="relative">
-        <!-- Video Section -->
-        <video src="{{ asset('assets/img/videosfsd.mp4') }}" autoplay loop muted playsinline preload="auto"
-            class="w-screen h-auto object-cover">
-            Your browser does not support the video tag.
-        </video>
+ @section('content')
+     {{-- Hero section  --}}
+     <div class="relative">
+         <!-- Video Section -->
+         <video src="{{ asset('assets/img/videosfsd.mp4') }}" autoplay loop muted playsinline preload="auto"
+             class="w-screen h-auto object-cover">
+             Your browser does not support the video tag.
+         </video>
 
-        <!-- Overlay Content -->
-        <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white text-center">
-            <h1 class="lg:text-7xl md:text-5xl text-2xl font-bold md:mb-4">
-                365 Days, 365 Posters
-            </h1>
-            <p class="text-lg md:text-2xl md:mb-6">
-                Your brand, your story, our design
-            </p>
-            <div class="flex flex-wrap justify-center md:gap-4 gap-2">
-                <button
-                    class="bg-red-600 hover:bg-red-700 text-white font-medium md:py-3 md:px-12 p-2 rounded-lg shadow transition-all duration-300">
-                    Get Started
-                </button>
-                <button
-                    class="bg-transparent border border-white hover:bg-white hover:text-black text-white font-medium md:py-3 md:px-12 p-2 rounded-lg shadow transition-all duration-300">
-                    Learn More
-                </button>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Unique Popup Modal -->
-    <div id="unique-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden mt-12">
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
-            <button onclick="hideUniquePopup()" class="absolute top-2 right-2 text-red-700 hover:text-red-600">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-            <img id="unique-popup-image" src="" alt="Popup Image"
-                class="w-full h-full object-contain max-w-lg max-h-screen">
-        </div>
-    </div>
-
-    <!-- Unique Scripts -->
-    <script>
-        function showUniquePopup(imageSrc) {
-            const popup = document.getElementById('unique-popup');
-            const popupImage = document.getElementById('unique-popup-image');
-            popupImage.src = imageSrc;
-            popup.classList.remove('hidden');
-        }
-
-        function hideUniquePopup() {
-            const popup = document.getElementById('unique-popup');
-            popup.classList.add('hidden');
-        }
-    </script>
-
-    <!-- Unique Slider Container -->
-    <div class="unique-slider-container mt-10 flex justify-center relative">
-        <!-- Unique Slide Images -->
-        <div class="unique-slides p-4">
-            <img src="{{ asset('assets/img/1200 x 800 dpi.jpg') }}"
-                class="unique-slide rounded-xl w-full h-full object-cover hidden" alt="Slide 1"
-                onclick="showUniquePopup(this.src)">
-            <img src="{{ asset('assets/img/1200 x 800 dpi ( 2 ) poster.jpg') }}"
-                class="unique-slide rounded-xl w-full h-full object-cover hidden" alt="Slide 2"
-                onclick="showUniquePopup(this.src)">
-            <img src="{{ asset('assets/img/1200 x 800 dpi ( 3 ).jpg') }}"
-                class="unique-slide rounded-xl w-full h-full object-cover hidden" alt="Slide 3"
-                onclick="showUniquePopup(this.src)">
-            <img src="{{ asset('assets/img/1200x800dpi4.jpg') }}"
-                class="unique-slide rounded-xl w-full h-full object-cover hidden" alt="Slide 4"
-                onclick="showUniquePopup(this.src)">
-        </div>
-
-        <!-- Unique Dots (Dynamically generated) -->
-        <div id="unique-dots-container"
-            class="unique-dots absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 flex space-x-2">
-        </div>
-    </div>
-
-    <script>
-        let uniqueSlideIndex = 1;
-        let uniqueAutoSlideInterval;
-
-        function generateDots() {
-            let slides = document.querySelectorAll('.unique-slide');
-            let dotsContainer = document.getElementById('unique-dots-container');
-            dotsContainer.innerHTML = ''; // Clear existing dots
-
-            slides.forEach((_, index) => {
-                let dot = document.createElement('span');
-                dot.classList.add('unique-dot', 'w-4', 'h-4', 'bg-white', 'rounded-full', 'cursor-pointer');
-                dot.setAttribute('onclick', `uniqueCurrentSlide(${index + 1})`);
-                dotsContainer.appendChild(dot);
-            });
-        }
-
-        function showUniqueSlide(n) {
-            let slides = document.querySelectorAll('.unique-slide');
-            let dots = document.querySelectorAll('.unique-dot');
-
-            if (n > slides.length) {
-                uniqueSlideIndex = 1;
-            }
-            if (n < 1) {
-                uniqueSlideIndex = slides.length;
-            }
-
-            slides.forEach(slide => slide.classList.add("hidden"));
-            dots.forEach(dot => {
-                dot.classList.remove("bg-red-500");
-                dot.classList.add("bg-white");
-            });
-
-            slides[uniqueSlideIndex - 1].classList.remove("hidden");
-            dots[uniqueSlideIndex - 1].classList.remove("bg-white");
-            dots[uniqueSlideIndex - 1].classList.add("bg-red-500");
-        }
-
-        function uniqueCurrentSlide(n) {
-            showUniqueSlide(uniqueSlideIndex = n);
-            resetUniqueAutoSlide();
-        }
-
-        function uniqueAutoSlide() {
-            uniqueSlideIndex++;
-            showUniqueSlide(uniqueSlideIndex);
-        }
-
-        function startUniqueAutoSlide() {
-            uniqueAutoSlideInterval = setInterval(uniqueAutoSlide, 3000);
-        }
-
-        function resetUniqueAutoSlide() {
-            clearInterval(uniqueAutoSlideInterval);
-            startUniqueAutoSlide();
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            generateDots(); // Generate dots dynamically based on images
-            showUniqueSlide(uniqueSlideIndex);
-            startUniqueAutoSlide();
-        });
-    </script>
-
-    @include('frontend.provide')
+         <!-- Overlay Content -->
+         <div
+             class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white text-center">
+             <h1 class="lg:text-7xl md:text-5xl text-2xl font-bold md:mb-4">
+                 365 Days, 365 Posters
+             </h1>
+             <p class="text-lg md:text-2xl md:mb-6">
+                 Your brand, your story, our design
+             </p>
+             <div class="flex flex-wrap justify-center md:gap-4 gap-2">
+                 <button
+                     class="bg-red-600 hover:bg-red-700 text-white font-medium md:py-3 md:px-12 p-2 rounded-lg shadow transition-all duration-300">
+                     Get Started
+                 </button>
+                 <button
+                     class="bg-transparent border border-white hover:bg-white hover:text-black text-white font-medium md:py-3 md:px-12 p-2 rounded-lg shadow transition-all duration-300">
+                     Learn More
+                 </button>
+             </div>
+         </div>
+     </div>
 
 
-    <!-- Automatic Sliding Container -->
-    {{-- <div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
+     <!-- Unique Popup Modal -->
+     <div id="unique-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden mt-12">
+         <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+             <button onclick="hideUniquePopup()" class="absolute top-2 right-2 text-red-700 hover:text-red-600">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                     stroke="currentColor" class="w-6 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                 </svg>
+             </button>
+             <img id="unique-popup-image" src="" alt="Popup Image"
+                 class="w-full h-full object-contain max-w-lg max-h-screen">
+         </div>
+     </div>
+
+     <!-- Unique Scripts -->
+     <script>
+         function showUniquePopup(imageSrc) {
+             const popup = document.getElementById('unique-popup');
+             const popupImage = document.getElementById('unique-popup-image');
+             popupImage.src = imageSrc;
+             popup.classList.remove('hidden');
+         }
+
+         function hideUniquePopup() {
+             const popup = document.getElementById('unique-popup');
+             popup.classList.add('hidden');
+         }
+     </script>
+
+     <!-- Unique Slider Container -->
+     <div class="unique-slider-container mt-10 flex justify-center relative">
+         <!-- Unique Slide Images -->
+         <div class="unique-slides p-4">
+             <img src="{{ asset('assets/img/1200 x 800 dpi.jpg') }}"
+                 class="unique-slide rounded-xl w-full h-full object-cover hidden" alt="Slide 1"
+                 onclick="showUniquePopup(this.src)">
+             <img src="{{ asset('assets/img/1200 x 800 dpi ( 2 ) poster.jpg') }}"
+                 class="unique-slide rounded-xl w-full h-full object-cover hidden" alt="Slide 2"
+                 onclick="showUniquePopup(this.src)">
+             <img src="{{ asset('assets/img/1200 x 800 dpi ( 3 ).jpg') }}"
+                 class="unique-slide rounded-xl w-full h-full object-cover hidden" alt="Slide 3"
+                 onclick="showUniquePopup(this.src)">
+             <img src="{{ asset('assets/img/1200x800dpi4.jpg') }}"
+                 class="unique-slide rounded-xl w-full h-full object-cover hidden" alt="Slide 4"
+                 onclick="showUniquePopup(this.src)">
+         </div>
+
+         <!-- Unique Dots (Dynamically generated) -->
+         <div id="unique-dots-container"
+             class="unique-dots absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 flex space-x-2">
+         </div>
+     </div>
+
+     <script>
+         let uniqueSlideIndex = 1;
+         let uniqueAutoSlideInterval;
+
+         function generateDots() {
+             let slides = document.querySelectorAll('.unique-slide');
+             let dotsContainer = document.getElementById('unique-dots-container');
+             dotsContainer.innerHTML = ''; // Clear existing dots
+
+             slides.forEach((_, index) => {
+                 let dot = document.createElement('span');
+                 dot.classList.add('unique-dot', 'w-4', 'h-4', 'bg-white', 'rounded-full', 'cursor-pointer');
+                 dot.setAttribute('onclick', `uniqueCurrentSlide(${index + 1})`);
+                 dotsContainer.appendChild(dot);
+             });
+         }
+
+         function showUniqueSlide(n) {
+             let slides = document.querySelectorAll('.unique-slide');
+             let dots = document.querySelectorAll('.unique-dot');
+
+             if (n > slides.length) {
+                 uniqueSlideIndex = 1;
+             }
+             if (n < 1) {
+                 uniqueSlideIndex = slides.length;
+             }
+
+             slides.forEach(slide => slide.classList.add("hidden"));
+             dots.forEach(dot => {
+                 dot.classList.remove("bg-red-500");
+                 dot.classList.add("bg-white");
+             });
+
+             slides[uniqueSlideIndex - 1].classList.remove("hidden");
+             dots[uniqueSlideIndex - 1].classList.remove("bg-white");
+             dots[uniqueSlideIndex - 1].classList.add("bg-red-500");
+         }
+
+         function uniqueCurrentSlide(n) {
+             showUniqueSlide(uniqueSlideIndex = n);
+             resetUniqueAutoSlide();
+         }
+
+         function uniqueAutoSlide() {
+             uniqueSlideIndex++;
+             showUniqueSlide(uniqueSlideIndex);
+         }
+
+         function startUniqueAutoSlide() {
+             uniqueAutoSlideInterval = setInterval(uniqueAutoSlide, 3000);
+         }
+
+         function resetUniqueAutoSlide() {
+             clearInterval(uniqueAutoSlideInterval);
+             startUniqueAutoSlide();
+         }
+
+         document.addEventListener('DOMContentLoaded', function() {
+             generateDots(); // Generate dots dynamically based on images
+             showUniqueSlide(uniqueSlideIndex);
+             startUniqueAutoSlide();
+         });
+     </script>
+
+     @include('frontend.provide')
+
+
+     <!-- Automatic Sliding Container -->
+     {{-- <div class="min-h-auto py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="relative overflow-hidden" id="achievementSliderContainer">
                 <div id="achievementSlider" class="flex transition-transform duration-500 ease-out space-x-8">
@@ -405,249 +405,157 @@
     </script> --}}
 
 
-    @include('components.industry')
+     @include('components.industry')
 
 
-    {{-- slider --}}
+     {{-- Collenctions --}}
 
-    <style>
-        .swiper-button-next,
-        .swiper-button-prev {
-            --swiper-theme-color: #dc2626;
-            --swiper-navigation-size: 20px;
-        }
-    </style>
+     {{-- slider --}}
+     <style>
+         .swiper-button-next,
+         .swiper-button-prev {
+             --swiper-theme-color: #dc2626;
+             --swiper-navigation-size: 20px;
+         }
+     </style>
 
-    <div class="max-w-7xl mx-auto px-4 py-8">
-        <div class="swiper product-swiper">
-            <div class="swiper-wrapper">
-                <!-- Jewelry Slide -->
-                <div class="swiper-slide">
-                    <div class=" rounded-lg shadow-md p-6">
-                        <h1 class="text-center text-3xl font-bold mb-8 text-red-600">Jewelry Collection</h1>
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                            <div
-                                class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
-                                <img src="{{ asset('assets/img/slide7.jpg') }}" onclick="showPopup(this.src)"
-                                    alt="Jewelry 1" class="w-full h-96 object-cover" onclick="showPopup(this.src)">
+     <div class="max-w-7xl mx-auto px-4 py-8">
+         <div class="swiper product-swiper">
+             <div class="swiper-wrapper">
 
-                            </div>
-                            <div
-                                class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
-                                <img src="{{ asset('assets/img/slide7.jpg') }}" onclick="showPopup(this.src)"
-                                    alt="Jewelry 2" class="w-full h-96 object-cover" onclick="showPopup(this.src)">
+                 <!-- Jewelry Slide -->
+                 <div class="swiper-slide">
+                     <div class="rounded-lg shadow-md p-6">
+                         <h1 class="text-center text-3xl font-bold mb-8 text-red-600">Jewelry Collection</h1>
+                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                             <div
+                                 class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                 <img src="{{ asset('assets/img/slide7.jpg') }}" alt="Jewelry 1"
+                                     class="w-full h-96 object-cover product-image" onclick="showPopup(this.src)">
+                             </div>
+                             <div
+                                 class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                 <img src="{{ asset('assets/img/slide7.jpg') }}" alt="Jewelry 2"
+                                     class="w-full h-96 object-cover product-image" onclick="showPopup(this.src)">
+                             </div>
+                             <div
+                                 class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                 <img src="{{ asset('assets/img/slide7.jpg') }}" alt="Jewelry 3"
+                                     class="w-full h-96 object-cover product-image" onclick="showPopup(this.src)">
+                             </div>
+                             <div
+                                 class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                 <img src="{{ asset('assets/img/slide7.jpg') }}" alt="Jewelry 4"
+                                     class="w-full h-96 object-cover product-image" onclick="showPopup(this.src)">
+                             </div>
+                         </div>
+                         <div class="text-center">
+                             <a href="#"
+                                 class="inline-block px-8 py-3 text-lg font-semibold text-red-600 border-2 border-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-300">Shop
+                                 Now</a>
+                         </div>
+                     </div>
+                 </div>
 
-                            </div>
-                            <div
-                                class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
-                                <img src="{{ asset('assets/img/slide7.jpg') }}" onclick="showPopup(this.src)"
-                                    alt="Jewelry 3" class="w-full h-96 object-cover" onclick="showPopup(this.src)">
+                 <!-- Tyre Slide -->
+                 <div class="swiper-slide">
+                     <div class="rounded-lg shadow-md p-6">
+                         <h1 class="text-center text-3xl font-bold mb-8 text-red-600">Tyre Collection</h1>
+                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                             <div
+                                 class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                 <img src="{{ asset('assets/img/category/cakes/1.jpg') }}" alt="Tyre 1"
+                                     class="w-full h-96 object-cover product-image" onclick="showPopup(this.src)">
+                             </div>
+                             <div
+                                 class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                 <img src="{{ asset('assets/img/category/cakes/1.jpg') }}" alt="Tyre 2"
+                                     class="w-full h-96 object-cover product-image" onclick="showPopup(this.src)">
+                             </div>
+                             <div
+                                 class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                 <img src="{{ asset('assets/img/category/cakes/1.jpg') }}" alt="Tyre 3"
+                                     class="w-full h-96 object-cover product-image" onclick="showPopup(this.src)">
+                             </div>
+                             <div
+                                 class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
+                                 <img src="{{ asset('assets/img/category/cakes/1.jpg') }}" alt="Tyre 4"
+                                     class="w-full h-96 object-cover product-image" onclick="showPopup(this.src)">
+                             </div>
+                         </div>
+                         <div class="text-center">
+                             <a href="#"
+                                 class="inline-block px-8 py-3 text-lg font-semibold text-red-600 border-2 border-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-300">Shop
+                                 Now</a>
+                         </div>
+                     </div>
+                 </div>
 
-                            </div>
-                            <div
-                                class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
-                                <img src="{{ asset('assets/img/slide7.jpg') }}" onclick="showPopup(this.src)"
-                                    alt="Jewelry 4" class="w-full h-96 object-cover" onclick="showPopup(this.src)">
+             </div>
 
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <a href="#"
-                                class="inline-block px-8 py-3 text-lg font-semibold text-red-600 border-2 border-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-300">Shop
-                                Now</a>
-                        </div>
-                    </div>
-                </div>
+             <!-- Swiper Navigation -->
+             <div class="swiper-button-next bg-white rounded-full shadow-lg p-6"></div>
+             <div class="swiper-button-prev bg-white rounded-full shadow-lg p-6"></div>
+         </div>
+     </div>
 
-                <!-- Tyre Slide -->
-                <div class="swiper-slide">
-                    <div class="rounded-lg shadow-md p-6">
-                        <h1 class="text-center text-3xl font-bold mb-8 text-red-600">Tyre Collection</h1>
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                            <div
-                                class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
-                                <img src="{{ asset('assets/img/category/cakes/1.jpg') }}" onclick="showPopup(this.src)"
-                                    alt="Jewelry 1" class="w-full h-96 object-cover" onclick="showPopup(this.src)">
+     <!-- Image Modal -->
+     <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden" onclick="hidePopup()">
+         <div class="absolute top-4 right-4">
+             <button class="text-white text-4xl hover:text-gray-300" onclick="hidePopup()">&times;</button>
+         </div>
+         <img id="modalImage" src="" alt="Enlarged product image"
+             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[90%] max-h-[90vh]">
+     </div>
 
-                            </div>
-                            <div
-                                class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
-                                <img src="{{ asset('assets/img/category/cakes/1.jpg') }}" onclick="showPopup(this.src)"
-                                    alt="Jewelry 2" class="w-full h-96 object-cover" onclick="showPopup(this.src)">
+     <!-- Swiper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
 
-                            </div>
-                            <div
-                                class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
-                                <img src="{{ asset('assets/img/category/cakes/1.jpg') }}" onclick="showPopup(this.src)"
-                                    alt="Jewelry 3" class="w-full h-96 object-cover" onclick="showPopup(this.src)">
+     <script>
+         const swiper = new Swiper('.product-swiper', {
+             slidesPerView: 1,
+             spaceBetween: 30,
+             loop: true,
+             effect: 'fade',
+             fadeEffect: {
+                 crossFade: true
+             },
+             autoplay: {
+                 delay: 5000,
+                 disableOnInteraction: false,
+                 pauseOnMouseEnter: true
+             },
+             navigation: {
+                 nextEl: '.swiper-button-next',
+                 prevEl: '.swiper-button-prev',
+             },
+         });
 
-                            </div>
-                            <div
-                                class="group relative overflow-hidden rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-[1.02]">
-                                <img src="{{ asset('assets/img/category/cakes/1.jpg') }}" onclick="showPopup(this.src)"
-                                    alt="Jewelry 4" class="w-full h-96 object-cover" onclick="showPopup(this.src)">
+         function showPopup(src) {
+             const modal = document.getElementById('imageModal');
+             const modalImg = document.getElementById('modalImage');
+             modal.classList.remove('hidden');
+             modalImg.src = src;
+             document.body.style.overflow = 'hidden';
+         }
 
-                            </div>
-                        </div>
+         function hidePopup() {
+             const modal = document.getElementById('imageModal');
+             modal.classList.add('hidden');
+             document.body.style.overflow = 'auto';
+         }
 
-                        <div class="text-center">
-                            <a href="#"
-                                class="inline-block px-8 py-3 text-lg font-semibold text-red-600 border-2 border-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-300">Shop
-                                Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more slides following the same pattern -->
-            </div>
-            <div class="swiper-button-next bg-white rounded-full shadow-lg p-6"></div>
-            <div class="swiper-button-prev bg-white rounded-full shadow-lg p-6"></div>
-        </div>
-    </div>
-
-    <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden" onclick="hidePopup()">
-        <div class="absolute top-4 right-4">
-            <button class="text-white text-4xl hover:text-gray-300" onclick="hidePopup()">&times;</button>
-        </div>
-        <img id="modalImage" src="" alt="Enlarged product image"
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[90%] max-h-[90vh]">
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
-    <script>
-        // Initialize Swiper
-        const swiper = new Swiper('.product-swiper', {
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            loop: true,
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            }
-        });
-
-        // Modal functionality
-        function showPopup(src) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modal.classList.remove('hidden');
-            modalImg.src = src;
-        }
-
-        function hidePopup() {
-            document.getElementById('imageModal').classList.add('hidden');
-        }
-
-        // Close modal on escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                hidePopup();
-            }
-        });
-    </script>
-
-    <!-- Modal for image preview -->
-    {{-- <div class="modal" id="imageModal">
-            <span class="modal-close">&times;</span>
-            <img class="modal-content" id="modalImage" alt="Modal preview">
-        </div>
-     --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/9.0.0/swiper-bundle.min.js"></script>
-
-    <script>
-        // Initialize Swiper with enhanced options
-        const swiper = new Swiper('.mySwiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            grabCursor: true,
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true
-            },
-            keyboard: {
-                enabled: true,
-                onlyInViewport: true
-            },
-            a11y: {
-                prevSlideMessage: 'Previous slide',
-                nextSlideMessage: 'Next slide',
-                firstSlideMessage: 'This is the first slide',
-                lastSlideMessage: 'This is the last slide'
-            }
-        });
-
-        // Modal functionality
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const closeBtn = document.querySelector('.modal-close');
-
-        // Image click handler with loading optimization
-        document.querySelectorAll('.product-image').forEach(img => {
-            img.addEventListener('click', function() {
-                modal.style.display = 'block';
-                modalImg.src = this.src;
-                modalImg.alt = this.alt;
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        // Close modal handlers
-        closeBtn.onclick = closeModal;
-        modal.onclick = (e) => {
-            if (e.target === modal) closeModal();
-        };
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
-
-        function closeModal() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Performance optimizations
-        document.addEventListener('DOMContentLoaded', () => {
-            // Preload next slide images
-            const preloadNextSlide = () => {
-                const nextSlide = swiper.slides[swiper.activeIndex + 1];
-                if (nextSlide) {
-                    const images = nextSlide.querySelectorAll('img[loading="lazy"]');
-                    images.forEach(img => img.loading = 'eager');
-                }
-            };
-
-            swiper.on('slideChange', preloadNextSlide);
-        });
-    </script>
+         document.addEventListener('keydown', function(event) {
+             if (event.key === 'Escape') {
+                 hidePopup();
+             }
+         });
+     </script>
 
 
 
-    {{-- categories --}}
-    {{-- <div class="container mx-auto px-4 py-20">
+     {{-- categories --}}
+     {{-- <div class="container mx-auto px-4 py-20">
         <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center">
             Industry We Served With Premium Solutions and Services 🚀
         </h1>
@@ -807,38 +715,38 @@
         </div>
     </div> --}}
 
-    {{-- @include('components.industry-2') --}}
+     {{-- @include('components.industry-2') --}}
 
-    {{-- @include('frontend.s1') --}}
-
-
-    <div class="relative w-full overflow-hidden">
-        <!-- Aspect ratio container -->
-        <div class="relative pt-[56.132%]">
-            <iframe src="https://gifer.com/embed/DXNR" class="absolute top-0 left-0 w-full h-full border-none"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <!-- Overlay content -->
-        <div
-            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center ">
-            <p class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-5 leading-tight">
-                Outstanding website design can help you make a lasting impression.
-            </p>
-            <p class="text-base sm:text-lg md:text-xl mb-4 sm:mb-5">
-                We provide 365 post, at the 365 days
-            </p>
-            <button
-                class="bg-red-600 text-white border-none py-2 px-4 sm:py-3 sm:px-6 text-sm sm:text-lg rounded-lg cursor-pointer hover:bg-red-700 transition duration-300">
-                View More
-            </button>
-        </div>
-    </div>
+     {{-- @include('frontend.s1') --}}
 
 
+     <div class="relative w-full overflow-hidden">
+         <!-- Aspect ratio container -->
+         <div class="relative pt-[56.132%]">
+             <iframe src="https://gifer.com/embed/DXNR" class="absolute top-0 left-0 w-full h-full border-none"
+                 allowfullscreen>
+             </iframe>
+         </div>
 
-    {{-- <div class="relative w-full max-w-5xl mx-auto mt-8">
+         <!-- Overlay content -->
+         <div
+             class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center ">
+             <p class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-5 leading-tight">
+                 Outstanding website design can help you make a lasting impression.
+             </p>
+             <p class="text-base sm:text-lg md:text-xl mb-4 sm:mb-5">
+                 We provide 365 post, at the 365 days
+             </p>
+             <button
+                 class="bg-red-600 text-white border-none py-2 px-4 sm:py-3 sm:px-6 text-sm sm:text-lg rounded-lg cursor-pointer hover:bg-red-700 transition duration-300">
+                 View More
+             </button>
+         </div>
+     </div>
+
+
+
+     {{-- <div class="relative w-full max-w-5xl mx-auto mt-8">
         <!-- Carousel Container -->
         <div class="overflow-hidden rounded-lg" id="carousel">
             <h1 class="text-3xl font-bold text-center text-red-600">Our Demo</h1>
@@ -965,128 +873,154 @@
         });
     </script> --}}
 
+     <!-- Socila Media Marketin -->
+     <div class="max-w-7xl mx-auto py-8">
+         <!-- Header Section -->
+         <div class="text-center mb-8">
+             <h1 class="text-4xl font-bold text-red-600 mb-4">Social Media Marketing Post</h1>
+             <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                 Business gets a chance to target, connect, and reach the audience right at the time. Posters help to target
+                 the potential audience and provide an easy way to demonstrate a preview of your content, giving them a
+                 taste
+                 of your awesome brand.
+             </p>
+         </div>
 
-    <div class="max-w-7xl mx-auto pt-24">
-        <!-- Header Section -->
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-red-600 mb-6">Social Media Marketing Post</h1>
-            <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                Business gets a chance to target, connect and reach the audience right at the time, posters help to target
-                the potential audience and provide an easy way to demonstrate a trailer of your content, giving them a bite
-                of your awesome brand.
-            </p>
-            <button class="mt-6 bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition-colors">
-                View More
-            </button>
-        </div>
+         <!-- Gallery Grid -->
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 p-2">
 
-        <!-- Gallery Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 p-4">
-            <!-- Gallery Items -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="World Food Day" class="w-full h-64 object-cover"
-                    onclick="showPopup(this.src)" />
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="Sumera Enterprises"
-                    class="w-full h-64 object-cover" onclick="showPopup(this.src)" />
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="Feel Good Foundation"
-                    class="w-full h-64 object-cover" onclick="showPopup(this.src)" />
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="R.K. Traders" class="w-full h-64 object-cover"
-                    onclick="showPopup(this.src)" />
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="Durga Puja" class="w-full h-64 object-cover"
-                    onclick="showPopup(this.src)" />
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="Karwa Chauth" class="w-full h-64 object-cover"
-                    onclick="showPopup(this.src)" />
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="Eid" class="w-full h-64 object-cover"
-                    onclick="showPopup(this.src)" />
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="Festival Post" class="w-full h-64 object-cover"
-                    onclick="showPopup(this.src)" />
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="Durga Puja Fabtex" class="w-full h-64 object-cover"
-                    onclick="showPopup(this.src)" />
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="{{ asset('assets/img/card2.avif') }}" alt="Animal Day" class="w-full h-64 object-cover"
-                    onclick="showPopup(this.src)" />
-            </div>
-        </div>
-    </div>
+             <!-- Image Cards -->
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/cakes/1.jpg" alt="Cake" class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/cakes/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">Cake</p>
+             </div>
+
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/cosmetics/1.jpg" alt="Cosmetics"
+                     class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/cosmetics/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">Cosmetics</p>
+             </div>
+
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/Dental/1.jpg" alt="Dental"
+                     class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/Dental/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">Dental</p>
+             </div>
+
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/electronics/1.jpg" alt="Electronics"
+                     class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/electronics/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">Electronics</p>
+             </div>
+
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/hardware/1.jpg" alt="Hardware"
+                     class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/hardware/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">Hardware</p>
+             </div>
+
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/kids-wear/1.jpg" alt="Kids Wear"
+                     class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/kids-wear/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">Kids Wear</p>
+             </div>
+
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/marriage-hall/1.jpg" alt="Marriage Hall"
+                     class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/marriage-hall/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">Marriage Hall</p>
+             </div>
+
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/Pipes/1.jpg" alt="Pipes" class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/Pipes/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">Pipes</p>
+             </div>
+
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/plywood/1.jpg" alt="Plywood"
+                     class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/plywood/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">Plywood</p>
+             </div>
+
+             <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                 <img src="assets/img/category/school/1.jpg" alt="School"
+                     class="h-60 w-full object-contain bg-gray-100"
+                     onclick="showPopup('assets/img/category/school/1.jpg')" />
+                 <p class="text-center text-sm font-medium text-gray-800 py-1">School</p>
+             </div>
+
+         </div>
+     </div>
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+         var swiper = new Swiper(".mySwiper", {
+             pagination: {
+                 el: ".swiper-pagination",
+
+             },
+             navigation: {
+                 nextEl: ".swiper-button-next",
+                 prevEl: ".swiper-button-prev",
+             },
+         });
+     </script>
 
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            pagination: {
-                el: ".swiper-pagination",
-
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
 
 
+     <!-- JavaScript for functionality -->
+     <script>
+         let slideIndex = 1;
+         let slides = document.querySelectorAll('.slide');
+         let dots = document.querySelectorAll('.dot');
 
+         // Show the current slide and hide the rest
+         function showSlide(index) {
+             if (index > slides.length) slideIndex = 1;
+             if (index < 1) slideIndex = slides.length;
 
-    <!-- JavaScript for functionality -->
-    <script>
-        let slideIndex = 1;
-        let slides = document.querySelectorAll('.slide');
-        let dots = document.querySelectorAll('.dot');
+             // Hide all slides
+             slides.forEach(slide => slide.style.display = "none");
 
-        // Show the current slide and hide the rest
-        function showSlide(index) {
-            if (index > slides.length) slideIndex = 1;
-            if (index < 1) slideIndex = slides.length;
+             // Reset dots to default color
+             dots.forEach(dot => dot.classList.remove('active'));
 
-            // Hide all slides
-            slides.forEach(slide => slide.style.display = "none");
+             // Show the current slide
+             slides[slideIndex - 1].style.display = "block";
 
-            // Reset dots to default color
-            dots.forEach(dot => dot.classList.remove('active'));
+             // Set the active dot
+             dots[slideIndex - 1].classList.add('active');
+         }
 
-            // Show the current slide
-            slides[slideIndex - 1].style.display = "block";
+         // Move slides forward or backward
+         function moveSlide(n) {
+             showSlide(slideIndex += n);
+         }
 
-            // Set the active dot
-            dots[slideIndex - 1].classList.add('active');
-        }
+         // Move to a specific slide via dots
+         function currentSlide(n) {
+             showSlide(slideIndex = n);
+         }
 
-        // Move slides forward or backward
-        function moveSlide(n) {
-            showSlide(slideIndex += n);
-        }
+         // Initialize the slider
+         showSlide(slideIndex);
 
-        // Move to a specific slide via dots
-        function currentSlide(n) {
-            showSlide(slideIndex = n);
-        }
-
-        // Initialize the slider
-        showSlide(slideIndex);
-
-        // Auto slide every 3 seconds
-        setInterval(() => {
-            moveSlide(1);
-        }, 3000);
-    </script>
-@endsection
+         // Auto slide every 3 seconds
+         setInterval(() => {
+             moveSlide(1);
+         }, 3000);
+     </script>
+ @endsection
